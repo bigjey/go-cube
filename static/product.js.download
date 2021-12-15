@@ -1,0 +1,42 @@
+jQuery(document).ready(function(){
+	setAddToCartViewCartButton();
+	let prodGalleryEls = document.getElementsByClassName("woocommerce-product-gallery__image");
+	console.log("product js is ok",prodGalleryEls.length);
+	if(prodGalleryEls != null){
+		if(prodGalleryEls.length == 1){	
+			if(window.innerWidth <= 480){}
+			jQuery(".wp-post-image").css("border","solid 1.5px rgb(218, 218, 218)");
+		}
+	}
+	if(window.innerWidth <= 860){
+		chooseYourBattlePackTableListener();
+	}
+})
+function setAddToCartViewCartButton(){
+	console.log("try to set cart button addToCartPopup2Button", addToCartPopup2Button);
+	
+	
+	let secondButtonText = addToCartPopup2Button == "view" ? "VIEW CART" : "";
+	secondButtonText = addToCartPopup2Button == "accessories" ? "CONTINUE SHOPPING" : secondButtonText;
+	let seconsButtonLink = addToCartPopup2Button == "view" ? "/cart/" : "";
+	seconsButtonLink = addToCartPopup2Button == "accessories" ? "/accessories/" : seconsButtonLink;
+	console.log("try to set cart button addToCartPopup2Button", addToCartPopup2Button);
+	var ChangeInterval_A = setInterval(function(){
+				if(addToCartPopup2Button == "accessories"){
+					console.log("trying to add class");
+					jQuery(".cube-popup-checkout-button").addClass("vertical-buttons");
+				}		
+				jQuery(".checkout-popup-continue-button div").text(secondButtonText);
+				jQuery(".checkout-popup-continue-button").attr("href", seconsButtonLink);
+				jQuery(".checkout-popup-continue-button div").addClass("view-cart-button-style");				
+	},50);
+}
+
+function chooseYourBattlePackTableListener(){
+	
+	jQuery("#choose-your-battle-pack-table").click(function(){
+		jQuery("#choose-your-battle-pack-table-rows").toggle( "slow", function() {
+		});
+	});
+
+}

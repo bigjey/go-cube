@@ -1,0 +1,6 @@
+// shop gift changes
+		var hardPrice = "$80 / $100 / $170";
+		jQuery('.post-type-archive-product .cube-shop-page-big-gift-item .price').html("");
+		jQuery('.post-type-archive-product .cube-shop-page-big-gift-item .woocommerce-loop-product__title').html("");
+		jQuery('.post-type-archive-product .cube-shop-page-big-gift-item .add_to_cart_button').html("Add to cart");
+	// shop gift changes

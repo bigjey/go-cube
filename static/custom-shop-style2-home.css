@@ -1,0 +1,4963 @@
+._ {
+  width: 100%;
+  height: 0.1px;
+}
+
+.ast-container {
+  margin-top: 130px !important;
+}
+
+.media-logos-wrapper {
+  display: none;
+}
+
+html #wpadminbar {
+  position: fixed !important;
+}
+.zenddesk-fixed-button {
+  position: fixed;
+  right: 10px;
+  background: black;
+  color: white;
+  padding: 0.92857rem 1.57143rem;
+  border-radius: 999rem;
+  bottom: 11px;
+  letter-spacing: 0.6;
+  font-size: 1.07143rem;
+  fill: #ffffff !important;
+  width: 145px;
+  height: 45px;
+  z-index: 111;
+  cursor: pointer;
+}
+
+.zendesk-fixed-button {
+  position: absolute;
+  margin: -5px 0px 0px 39px;
+}
+
+.zendesk-help-icon {
+  fill: white;
+  position: absolute;
+  margin-top: -1px;
+}
+
+.home-middle-shop-container .home-product-block {
+  margin-bottom: 20px !important;
+  margin-top: 250px;
+}
+
+.mobile-info-center {
+  margin-top: 14px;
+  display: block;
+}
+
+.arena-video-popup-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: none;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.88);
+  z-index: 888888800;
+}
+
+.inline-block {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.hero-buy-button {
+  display: inline-block;
+  width: 348px;
+  height: 60px;
+  line-height: 59px;
+  background: #7ed321;
+  border-radius: 9px;
+  color: white;
+  text-align: center;
+  font-size: 27px;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans,
+    Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  font-weight: bold;
+  margin-top: 25px;
+}
+
+.hero-watch-now {
+  margin-top: 10px;
+  display: block;
+  width: 315px;
+  height: 60px;
+  line-height: 60px;
+  color: #1d9ddb;
+  text-align: right;
+  padding-right: 32px;
+  font-size: 20px;
+  margin-right: 10px;
+  margin-left: 5px;
+  text-decoration: underline;
+  font-weight: bold;
+  background: url(https://getgocube.com/wp-content/themes/astra/assets/images/watch-now.png)
+    11px center/ 33px no-repeat;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans,
+    Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+}
+
+.ast-separate-container {
+  background-color: white !important;
+}
+
+.scroll-down-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.scroll-down-button-wrapper {
+  width: 175px;
+  height: 175px;
+  position: absolute;
+  bottom: 21px;
+  margin-left: -87.5px;
+  left: 50%;
+}
+
+.scroll-down-arrow {
+  position: absolute;
+  top: 81px;
+  left: 69px;
+  z-index: 10;
+}
+
+#page {
+  overflow: hidden;
+  margin-bottom: -50px;
+}
+
+.media-strip-super-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.home-product-block .cube-shop-page-packs-item .astra-shop-thumbnail-wrap {
+  width: 100%;
+  height: 505px;
+  overflow: hidden;
+}
+
+.home-product-block .cube-shop-page-packs-item .astra-shop-thumbnail-wrap {
+  width: 100%;
+  height: 505px;
+  overflow: hidden;
+}
+
+.home-product-block {
+  margin-bottom: 30px;
+}
+
+.big-content-section {
+  max-width: 1498px !important;
+}
+
+.landing-description-section {
+  height: 777px;
+  position: relative;
+}
+
+.landing-description-section .cube-product-content-section {
+  width: calc(100% - 60px);
+}
+
+.media-strip-image-wrapper {
+  height: 87px;
+}
+
+.media-strip-image {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+
+.media-strip-image span {
+  display: block;
+  width: 100%;
+  font-size: 20px;
+}
+
+.home-page-family .media-strip-image img {
+  position: relative;
+  display: block;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+}
+
+.media-strip-image-wsj-family img {
+  width: 104px;
+}
+
+.media-strip-image-popsugar-family img {
+  width: 320px;
+}
+
+.media-strip-image-forbes-family img {
+  width: 175px;
+}
+
+.media-strip-image-wired-family img {
+  width: 208px;
+}
+
+.media-strip-image-verge {
+  width: 14.4%;
+  padding-top: 5%;
+}
+
+.media-strip-image-wired {
+  width: 16.4%;
+  margin-left: 5.9%;
+  padding-top: 2.8%;
+}
+
+.media-strip-image-wall {
+  width: 13.5%;
+  margin-left: 6.5%;
+  padding-top: 1.1%;
+}
+
+.media-strip-image-fast {
+  width: 9.5%;
+  margin-left: 9.1%;
+  padding-top: 3.3%;
+}
+
+.media-strip-image-atlas {
+  width: 15.5%;
+  margin-left: 7%;
+  padding-top: 2.2%;
+}
+
+.media-logos-wrapper a {
+  color: transparent !important;
+}
+
+.cube-home-media-wrapper {
+  height: 220px;
+  background: black;
+  padding-top: 48px;
+  top: 0px;
+  z-index: 9999;
+}
+
+span.onsale {
+  display: none !important;
+}
+
+.cube-shop-prod-img-3 .price {
+  margin-top: 24px !important;
+}
+
+.post-type-archive-product .woocommerce ul.products li.product .price,
+.page-id-106902 .woocommerce ul.products li.product .price {
+  color: #7ed321 !important;
+}
+
+.post-type-archive-product del .woocommerce-Price-amount,
+.page-id-106902 del .woocommerce-Price-amount {
+  color: #000000 !important;
+}
+
+.post-type-archive-product del,
+.page-id-106902 del {
+  color: #000000 !important;
+}
+
+.cube-home-video-cover-wrapper {
+  width: 100%;
+  cursor: pointer;
+}
+
+.wrapper-upper-footer {
+  width: 100%;
+  /* background: url(https://getgocube.com/wp-content/themes/astra/assets/images/upper-footer-background.jpg) center top / cover no-repeat; */
+  color: white;
+  vertical-align: top;
+  position: relative;
+}
+
+.wrapper-upper-footer .cube-product-content-section,
+.wrapper-bottom-footer.wrapper-bottom-footer .cube-product-content-section {
+  width: calc(100% - 60px);
+  max-width: 1020px;
+  padding: 40px 0;
+}
+
+.wrapper-footer-subscribe-group {
+  width: 44.9%;
+  float: right;
+  font-size: 18px;
+  margin-left: 5%;
+}
+
+.footer_subscribed_result {
+  width: 100%;
+  font-family: ROBOTO;
+}
+
+.footer-color-strips {
+  width: 100%;
+  height: 4px;
+  display: flex;
+}
+
+.inline-element {
+  display: inline-block;
+}
+
+.footer-color-strip {
+  width: 25%;
+  height: 4px;
+  background: #e62948;
+  display: inline-block;
+  position: relative;
+}
+
+.strip-2 {
+  background: #229cf4;
+}
+
+.strip-3 {
+  background: #fbd100;
+}
+
+.wrapper-upper-footer-text-box {
+  width: 34%;
+  margin-right: 4%;
+  display: inline-block;
+}
+
+.wrapper-upper-footer-logo {
+  display: inline-block;
+  margin-right: 1.2%;
+  margin-top: 18px;
+  vertical-align: top;
+}
+
+.wrapper-upper-footer-big-text {
+  display: inline-block;
+  font-size: 32px;
+  font-family: roboto;
+  vertical-align: top;
+  height: 45px;
+  font-weight: 500;
+}
+
+.wrapper-upper-footer-small-text {
+  display: inline-block;
+  margin-left: 3px;
+  font-size: 18px;
+  font-family: roboto;
+  line-height: 23px;
+  margin-top: 9px;
+}
+
+.wrapper-upper-footer-input-box {
+  display: flex;
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  padding: 2px;
+  vertical-align: top;
+  margin-top: 22.1px;
+}
+
+.wrapper-upper-footer-input-box input {
+  border: none !important;
+}
+
+.wrapper-upper-footer-input {
+  display: inline-block;
+  width: 69%;
+  margin-left: 1%;
+  border-radius: 10px !important;
+}
+
+.wrapper-upper-footer-input input {
+  border-radius: 10px 0 0 10px;
+  background: white;
+  border: none;
+  height: 46px !important;
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 21px;
+  font-family: roboto;
+  font-weight: 400;
+  color: black;
+}
+
+.wrapper-upper-footer-input-button {
+  display: inline-block;
+  width: 30%;
+  background: #229cf4;
+  text-align: center;
+  height: 46px;
+  vertical-align: top;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: roboto;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 0 10px 10px 0;
+  transition: 0.3s;
+}
+
+.wrapper-bottom-footer {
+  position: relative;
+  background: black;
+}
+
+.wrapper-bottom-footer .cube-product-content-section {
+  display: flex;
+}
+
+.footer-background-cube {
+  position: absolute;
+  left: 0;
+  top: 0;
+  left: -32px;
+  height: 100%;
+  width: 100%;
+  background: url(https://getgocube.com/wp-content/themes/astra/assets/images/cube-footer-big.png)
+    no-repeat;
+}
+
+.wrapper-bottom-footer-logo {
+  position: relative;
+  width: 169px;
+  display: inline-block;
+}
+
+.footer-menu {
+  position: relative;
+  display: inline-block;
+  color: white;
+  margin-left: 10.7%;
+  width: 15%;
+  font-family: roboto;
+  vertical-align: top;
+  font-size: 17px;
+}
+
+.footer-menu-number-two {
+  margin-left: 10%;
+}
+
+.footer-menu-title {
+  font-weight: 700;
+  margin-left: 2px;
+}
+
+.folowus-footer-title {
+  margin-top: 65px;
+}
+
+.footer-menu-item {
+  margin-bottom: 3.5px;
+  font-weight: 400;
+  color: white !important;
+  width: 100%;
+}
+
+.footer-button-box-2 {
+  display: flex;
+}
+
+.footer-button-icon {
+  margin: 0 2.5px;
+}
+
+.footer-button-icon:last-child {
+  margin-right: 0;
+}
+
+.footer-button-icon.twitter {
+  width: 32px;
+  height: 35px;
+}
+
+.menu-item .sub-menu {
+  position: absolute;
+  min-width: 200px;
+  display: none;
+  background: black;
+  margin-left: -20px !important;
+  padding: 10px 20px;
+  padding-right: 40px;
+}
+
+#menu-item-1469 a,
+#menu-item-2270 a {
+  display: block;
+  padding-right: 18px;
+  /* color: white !important; background: url(https://getgocube.com/wp-content/themes/astra/assets/images/menu-arrow-white.png) center right / 12px no-repeat; */
+}
+
+.mobile-sub-menu-button {
+  position: absolute;
+  width: 12px;
+  height: 27px;
+  background: url(https://getgocube.com/wp-content/themes/astra/assets/images/menu-arrow-white.png)
+    center right / 12px no-repeat;
+  top: 0;
+  right: 0;
+}
+
+.mobile-sub-menu-button.active {
+  background: url(https://getgocube.com/wp-content/themes/astra/assets/images/menu-arrow-blue.png)
+    center right / 12px no-repeat;
+}
+
+.wrapper-upper-footer-input input {
+  padding-right: 17px;
+  padding-left: 17px;
+}
+
+#transparent-cover-no-white {
+  background: url("https://getgocube.com/wp-content/themes/astra/assets/images/loader_no_white.gif")
+    center center / 130px no-repeat;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 1000000000000000000000000000000000000000000000;
+  display: none;
+}
+
+#cube-header-menu li {
+  position: relative;
+  text-decoration: none;
+  float: right;
+  margin-left: 30px;
+}
+
+#cube-header-menu li a {
+  color: white;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-size: 15px;
+}
+
+.header-menu-mobile-button {
+  /* background: url(https://getgocube.com/wp-content/themes/astra/assets/images/cube-mobile-menu-button.png) center top / 100% no-repeat grey; */
+  margin: 0 auto 0;
+  width: 31px;
+  height: 31px;
+  margin: 27px;
+  display: none;
+  float: right;
+}
+
+.header-cart-background {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000000b8;
+  width: 100%;
+  height: 100%;
+  z-index: 100000000000;
+}
+
+.cube-header-wrapper {
+  width: 100%;
+  background: black;
+  height: 80px;
+  position: fixed;
+  z-index: 10001;
+  top: 50px;
+}
+
+body.page-with-timer .cube-header-wrapper {
+  top: 60px;
+}
+
+.cube-header-content {
+  width: 1180px;
+  height: 100%;
+  margin: 0 auto 0;
+  position: relative;
+}
+
+.cube-header-menu-wrapper {
+  width: 78%;
+  margin-top: 10px;
+}
+
+.cube-cart-contents {
+  cursor: pointer;
+  margin-top: 20px;
+  width: 31px;
+  height: 31px;
+  background: url(https://getgocube.com/wp-content/themes/astra/assets/images/cube-cart-icon.png)
+    center top / 100% no-repeat;
+  position: absolute;
+  display: inline-block;
+  vertical-align: top;
+  top: 7px;
+  right: 0;
+}
+
+.cart-contents-count {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: #229cf4;
+  color: white;
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  line-height: 10px;
+  padding: 5px 0;
+  font-weight: bold;
+  font-family: roboto;
+  font-size: 12px;
+  text-align: center;
+}
+
+.cube-header-logo {
+  margin: 7px 0 0 0;
+  width: 71px;
+  height: 57px;
+  background: url(https://getgocube.com/wp-content/themes/astra/assets/images/cube-header-logo.png)
+    center top / 100% no-repeat;
+}
+
+ul#cube-header-menu {
+  list-style-type: none;
+}
+
+#fixedbutton {
+  position: fixed;
+  margin: 12px 20px;
+  left: 0px;
+  bottom: 0px;
+  width: 160px;
+  height: 47px;
+  border-radius: 25px;
+  background: #7dd320;
+  color: white;
+  padding: 7px 0 0 0px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  z-index: 10000000;
+}
+
+.cube-home-firstslide-wrapper {
+  margin: 0 0 0 115px;
+  position: relative;
+}
+
+.cube-home-firstslide-title {
+  color: #3c3c3c;
+  font-size: 62px;
+  font-family: Roboto;
+  position: absolute;
+  z-index: 2;
+  top: 83px;
+  font-weight: 500;
+  left: -70px;
+  line-height: 75px;
+  text-align: left;
+}
+
+.sale-badge-opener {
+  position: absolute;
+  z-index: 2;
+  top: 222px;
+  left: -87px;
+  width: 468px;
+  margin-top: 22px;
+}
+
+.home-slide-buttons-wrapper {
+  position: absolute;
+  z-index: 2;
+  top: 525px;
+  width: 598px;
+  left: 47px;
+}
+
+.cube-home-firstslide-text {
+  width: 607px;
+  color: #3c3c3c;
+  font-family: Roboto;
+  font-size: 29px;
+  line-height: 42px;
+  position: absolute;
+  top: 368px;
+  left: -69px;
+}
+
+.cube-home-first-slide-wrapper {
+  background: white;
+  overflow: hidden;
+  height: 1050px;
+  margin-bottom: -1px;
+}
+
+.cube-home-firstslide-content {
+  position: relative;
+  max-width: 1282px !important;
+  height: 100%;
+  z-index: 1000;
+}
+
+.cube-home-first-slide-wrapper {
+  position: relative;
+}
+
+.cube-home-learn-wrapper {
+  background: url(https://getgocube.com/wp-content/themes/astra/assets/images/cube-learn-hands.jpg)
+    left top no-repeat;
+  overflow: hidden;
+  height: 620px;
+}
+
+.cube-home-learn-content {
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+}
+
+.cube-home-learn-info-wrapper {
+  margin: 235px 0 0 360px;
+}
+
+.cube-home-learn-title {
+  font-size: 54px;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 60px;
+  color: #176e99;
+}
+
+.cube-home-learn-subtitle {
+  font-family: Roboto;
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.cube-home-learn-text {
+  font-family: Roboto;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 38px;
+  width: 450px;
+  margin-top: -7px;
+}
+
+.cube-home-learn-phone {
+  position: absolute;
+  top: 93px;
+  right: 100px;
+  width: 327px;
+  height: 527px;
+  /* background: url(https://getgocube.com/wp-content/themes/astra/assets/images/cube-learn-phone.jpg) center top / 100% no-repeat; */
+}
+
+.cube-home-improve-wrapper {
+  /* background: url(https://getgocube.com/wp-content/themes/astra/assets/images/cube-improve-back.jpg) center top / cover no-repeat; */
+  overflow: hidden;
+  height: 662px;
+}
+
+.cube-home-the-new-wrapper {
+  height: 676px;
+}
+
+.cube-home-improve-content {
+  overflow: hidden;
+  position: relative;
+}
+
+.cube-home-improve-info-wrapper {
+  width: 40%;
+  max-width: 350px;
+  margin-top: 209px;
+  margin-left: 14%;
+}
+
+.cube-home-the-new-info-wrapper {
+  width: 40%;
+  margin-top: 173px;
+  float: right;
+}
+
+.cube-home-improve-title {
+  font-family: Roboto;
+  font-size: 52px;
+  line-height: 52px;
+  font-weight: 400;
+  color: white;
+}
+
+.cube-home-the-new-title {
+  font-family: Roboto;
+  font-size: 70px;
+  line-height: 23px;
+  font-weight: 500;
+  color: #176e99;
+}
+
+.cube-home-improve-sub-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 26px;
+  color: white;
+  margin-top: 13px;
+  padding-left: 4px;
+}
+
+.cube-home-improve-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  color: white;
+  line-height: 35px;
+  margin-top: 5px;
+  padding-left: 5px;
+}
+
+.cube-home-the-new-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 31.8px;
+  color: black;
+  line-height: 45px;
+  margin-top: 51px;
+  max-width: 600px;
+  padding-left: 5px;
+}
+
+.cube-home-battle-wrapper {
+  background: url(https://getgocube.com/wp-content/themes/astra/assets/images/cube-battle-cube-top.jpg)
+    left top no-repeat #dfdfdf;
+  overflow: hidden;
+  height: 783px;
+  position: relative;
+}
+
+.cube-home-battle-content {
+}
+
+.cube-home-battle-info-wrapper {
+  margin: 34px 0 0 0;
+}
+
+.cube-home-battle-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 52px;
+  text-align: center;
+  color: #176e99;
+}
+
+.cube-home-battle-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 32px;
+  text-align: center;
+  color: #3c3c3c;
+  margin-top: -10px;
+}
+
+.cube-home-battle-phone {
+  width: 70.5%;
+  height: 500px;
+  /*  background: url(https://getgocube.com/wp-content/themes/astra/assets/images/battle-phone-image.png) center top / 100% no-repeat; */
+  margin: 38px auto 0;
+}
+
+.cube-home-play-wrapper {
+  /* background: url(https://getgocube.com/wp-content/themes/astra/assets/images/play-back.jpg) center top / cover no-repeat; */
+  background: url();
+  height: 720px;
+  position: relative;
+}
+
+.cube-home-play-content {
+  position: relative;
+  height: 100%;
+}
+
+.cube-home-play-cube {
+  position: absolute;
+  top: -60px;
+  left: 45px;
+  width: 380px;
+  height: 380px;
+  /*  background: url(https://getgocube.com/wp-content/themes/astra/assets/images/cube-play-cube.png) center top / 100% no-repeat; */
+}
+
+.cube-home-play-info-wrapper {
+  margin: 183px 0 0 455px;
+  /* visibility: hidden; */
+}
+
+.cube-home-play-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 52px;
+  color: #176e99;
+}
+
+.cube-home-play-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 119.53%;
+  margin-top: 10px;
+  color: white;
+}
+
+.cube-home-play-bottom-phone {
+  position: absolute;
+  bottom: 3px;
+  right: -66px;
+  width: 859px;
+  height: 440px;
+  /* background: url(https://getgocube.com/wp-content/themes/astra/assets/images/cube-play-phone.png) center top / 100% no-repeat; */
+}
+
+.cube-trigger-stand {
+  position: absolute;
+  bottom: -20px;
+  left: 0px;
+  width: 1px;
+  height: 1px;
+  background: grey;
+}
+
+.cube-home-stand-wrapper {
+  background: white;
+  height: 910px;
+}
+
+.cube-home-stand-content {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.cube-home-stand-info-wrapper {
+  z-index: 9999 !important;
+  position: relative;
+  height: 100%;
+}
+
+.cube-home-stand-title {
+  position: relative;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 61px;
+  color: #176e99;
+  margin: 57px 0 0 935px;
+  width: 360px;
+  z-index: 100000;
+}
+
+.cube-home-stand-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 31px;
+  color: #3c3c3c;
+  margin: 16px 0 0 940px;
+  width: 360px;
+  z-index: 100000;
+  position: absolute;
+}
+
+.cube-home-stand-stand {
+  width: 100%;
+  height: 1200px;
+  background: url(https://getgocube.com/wp-content/themes/astra/assets/images/charging-stand-image.png)
+    center top / 95% no-repeat;
+  position: absolute;
+  left: 20px;
+  top: 117px;
+}
+
+._ {
+  width: 100%;
+  height: 0.1px;
+}
+
+.cube-summary-wrapper .price,
+.product_meta,
+.woocommerce-breadcrumb,
+.price {
+  display: none !important;
+}
+
+.inline-element {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.single-product .ast-container,
+.page-id-1800 .ast-container,
+.page-id-1914 .ast-container,
+.page-id-2014 .ast-container,
+.page-id-2982 .ast-container,
+.page-id-33192 .ast-container,
+.page-id-6123 .ast-container,
+.specific-homepage .ast-container {
+  width: 100% !important;
+  max-width: unset !important;
+  padding: unset !important;
+  max-width: none !important;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.cube-product-content-section-wrapper {
+  width: 100%;
+}
+
+.cube-product-content-section {
+  width: 100%;
+  height: 100%;
+  max-width: 1322px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+.cube-product-content-section.the-new {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1618px;
+  position: relative;
+  z-index: 10;
+}
+
+.cube-home-the-new-button {
+  display: inline-block;
+  width: 487px;
+  height: 82px;
+  line-height: 91px;
+  background: #7ed321;
+  border-radius: 9px;
+  color: white;
+  text-align: center;
+  font-size: 38px;
+  font-weight: 500;
+  margin-top: 126px;
+  margin-left: 7px;
+  font-family: Roboto;
+}
+
+.cube-shop-page-cat-wrapper {
+  width: calc(100% - 30px);
+  max-width: 1400px;
+  margin: 63px auto 0;
+  text-align: center;
+}
+
+.post-type-archive-product .price,
+.page-id-106902 .price {
+  display: block !important;
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  font-size: 23px !important;
+  font-family: Roboto;
+}
+
+.post-type-archive-product .site-content h2,
+.page-id-106902 .site-content h2 {
+  display: block !important;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #2b2b2b;
+  font-size: 22px !important;
+  font-family: Roboto Condensed;
+}
+
+.post-type-archive-product .price del,
+.page-id-106902 .price del {
+  position: absolute !important;
+  top: 30px !important;
+  left: 0px !important;
+  font-size: 16px;
+}
+
+.post-type-archive-product .price ins,
+.page-id-106902 .price ins {
+  position: absolute !important;
+  top: 0px !important;
+  left: 0px !important;
+}
+
+.cube-shop-page-packs-item .astra-shop-thumbnail-wrap {
+  width: 350px;
+  height: 405px;
+  overflow: hidden;
+}
+
+.post-type-archive-product .astra-shop-thumbnail-wrap img,
+.page-id-106902 .astra-shop-thumbnail-wrap img {
+  /* margin-top: 100px !important; */
+  opacity: 0;
+  filter: alpha(opacity=90);
+}
+
+.post-type-archive-product .woocommerce-result-count,
+.post-type-archive-product ul.products,
+.menu-item .sub-menu .woocommerce-pagination,
+.post-type-archive-product .woocommerce-ordering,
+.page-id-106902 .woocommerce-result-count,
+.page-id-106902 ul.products,
+.page-id-106902 .woocommerce-pagination,
+.page-id-106902 .woocommerce-ordering {
+  display: none !important;
+}
+
+.post-type-archive-product ul.products,
+.page-id-106902 ul.products {
+  display: block !important;
+}
+
+.cube-shop-page-packs-item .woocommerce ul.products li.product .button,
+.cube-shop-page-packs-item .woocommerce-page ul.products li.product .button {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  margin-top: -1px;
+}
+
+.cube-shop-prod-img-3 .woocommerce-loop-product__title {
+  width: 172px;
+}
+
+.cube-shop-prod-item .button {
+  visibility: hidden;
+}
+
+.cube-shop-prod-item:hover .button {
+  background: #0274be !important;
+}
+
+.post-type-archive-product .onsale,
+.ast-woo-product-category,
+.page-id-106902 .onsale {
+  display: none !important;
+}
+
+.post-type-archive-product .woocommerce.columns-1 ul.products li.product,
+.page-id-106902 .woocommerce.columns-1 ul.products li.product {
+  width: 100%;
+  background: unset;
+  background-color: transparent;
+}
+
+.site-content {
+  background: white;
+}
+
+.post-type-archive-product .ast-article-single,
+.page-id-106902 .ast-article-single {
+  padding-top: 0px !important;
+}
+
+.cube-shop-prod-img-1 {
+  background: url(https://getgocube.com/wp-content/themes/astra/assets/images/shop-gocube.jpg)
+    center 40px / 100% no-repeat;
+}
+
+.cube-shop-prod-img-2 {
+  background: url(https://getgocube.com/wp-content/themes/astra/assets/images/shop-full-pack.jpg)
+    center 60px / 100% no-repeat;
+}
+
+.cube-shop-prod-img-3 {
+  background: url(https://getgocube.com/wp-content/themes/astra/assets/images/shop-full-pack-2.jpg)
+    center 60px / 100% no-repeat;
+}
+
+.cube-cart-total-table td,
+th,
+tr {
+  border: 0px solid white !important;
+}
+
+.woocommerce-Price-amount {
+  font-family: roboto;
+}
+
+.woocommerce-Price-amount {
+  font-family: roboto;
+}
+
+.cube-popup-close-button {
+  float: right;
+  margin: 10px 10px 0 0;
+  background: url(https://getgocube.com/wp-content/themes/astra/assets/images/popup-cross.png)
+    center center / cover no-repeat;
+  height: 19px;
+  width: 19px;
+  cursor: pointer;
+}
+
+.cube-popup-title-icon {
+  width: 300px;
+  height: 40px;
+  background: url(https://getgocube.com/wp-content/themes/astra/assets/images/popup-busket.png)
+    10px 12px no-repeat;
+  font-size: 28px;
+  padding: 10px 0 0 50px;
+  line-height: 34px;
+  font-family: Roboto Condensed;
+  margin: 10px 0 0 30px;
+}
+
+.xoo-cp-content {
+  padding: 0 35px !important;
+}
+
+.xoo-cp-container {
+  background: url(https://getgocube.com/wp-content/themes/astra/assets/images/shop-popup-line.png)
+    center bottom / 100% no-repeat white;
+  border: solid 0px white;
+  top: 35px;
+}
+
+.show-mobile {
+  display: none !important;
+}
+
+.show-mobile-flex {
+  display: none !important;
+}
+
+.content-home-find-wrapper {
+  height: 194px;
+  background: #eeeeee;
+}
+
+.cube-find-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cube-find-text {
+  font-size: 36px;
+  color: #757575;
+  margin-right: 63px;
+}
+
+.home-page-family .cube-find-text {
+  margin-right: 0 !important;
+}
+
+.cube-find-amazon-logo {
+  position: relative;
+  top: 5px;
+  margin-right: 61px;
+}
+
+.home-page-family .cube-find-amazon-logo {
+  margin-right: 5px;
+  margin-left: 20px;
+}
+
+.cube-find-apple-logo {
+  position: relative;
+  top: -5px;
+}
+
+.home-page-family .cube-find-apple-logo {
+  margin-right: 8px;
+}
+
+.cube-home-improve-image {
+  width: 38.8%;
+  margin-left: 6%;
+  margin-top: 47px;
+}
+
+.cube-pluses-items-wrapper {
+  max-width: 890px;
+  height: 220px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.cube-pluses-item {
+  width: 24%;
+  max-width: 236px;
+  transform: scale(0.85);
+}
+
+.cube-pluses-item-image {
+  height: 148px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cube-pluses-item-text {
+  font-size: 23px;
+  text-align: center;
+  color: #545454;
+  line-height: 28px;
+  margin-top: -3px;
+  text-transform: capitalize;
+}
+
+.cube-home-battle-rubik-image {
+  position: absolute;
+  bottom: -58px;
+  right: 0;
+}
+
+.cube-home-media-wrapper .cube-product-content-section {
+  position: relative;
+  max-width: 1000px;
+}
+
+.home-page-family .cube-home-media-wrapper .cube-product-content-section {
+  max-width: 1220px;
+}
+
+.home-page-family .media-logos-wrapper {
+  display: flex;
+  width: 100%;
+  height: 124px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.cube-home-media-bottom-wrapper {
+  position: relative;
+  max-width: 1720px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.cube-home-video-wrapper {
+  position: relative;
+  text-align: center;
+}
+
+.header-right-wrapper {
+  display: none;
+}
+
+.header-right-wrapper {
+  position: absolute;
+  height: 41px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+.search-popup {
+  position: fixed;
+  background: white;
+  width: 100%;
+  height: 100%;
+  display: none;
+  overflow-y: auto;
+  z-index: 111111111111;
+  left: 0;
+}
+
+.cube-shop-page-packs-item .woocommerce ul.products li.product .button,
+.cube-shop-page-packs-item .woocommerce-page ul.products li.product .button {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  text-align: center;
+}
+
+.follow-us-column {
+  width: 226px;
+}
+
+.cube-home-first-slide-wrapper {
+  background-position: right top !important;
+}
+
+html {
+  font-size: 93.75%;
+}
+
+body {
+  margin: 0;
+  font-family: roboto;
+}
+
+body,
+h1,
+.entry-title a,
+.entry-content h1,
+h2,
+.entry-content h2,
+h3,
+.entry-content h3,
+h4,
+.entry-content h4,
+h5,
+.entry-content h5,
+h6,
+.entry-content h6 {
+  color: #3a3a3a;
+}
+
+.ast-container {
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 0px;
+}
+
+*,
+:after,
+:before {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans,
+    Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  box-sizing: inherit;
+  margin: 0;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+* {
+  font-family: roboto;
+}
+
+input,
+select {
+  line-height: 1;
+}
+
+#primary:after,
+#secondary:after,
+.ast-container:after,
+.ast-row:after,
+.clear:after,
+.sidebar-main:after,
+.site-content:after,
+.site-footer:after,
+.site-header:after,
+.site-main:after {
+  clear: both;
+}
+
+#primary:after,
+#primary:before,
+#secondary:after,
+#secondary:before,
+.ast-container:after,
+.ast-container:before,
+.ast-row:after,
+.ast-row:before,
+.clear:after,
+.clear:before,
+.sidebar-main:after,
+.sidebar-main:before,
+.site-content:after,
+.site-content:before,
+.site-footer:after,
+.site-footer:before,
+.site-header:after,
+.site-header:before,
+.site-main:after,
+.site-main:before {
+  content: "";
+  display: table;
+}
+
+body,
+button,
+input[type="button"],
+input[type="submit"],
+textarea {
+  line-height: 1.85714285714286;
+}
+
+.skip-link.screen-reader-text {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+  height: auto;
+  max-width: 100%;
+  border: 0;
+}
+
+a,
+a:focus,
+a:hover,
+a:visited {
+  text-decoration: none;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol,
+ul {
+  margin: 0 0 1.5em 3em;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="reset"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+select,
+textarea {
+  color: #666;
+  padding: 0.75em;
+  height: auto;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #eaeaea;
+  border-radius: 2px;
+  background: #fafafa;
+  box-shadow: none;
+  box-sizing: border-box;
+  transition: all 0.2s linear;
+}
+
+.woocommerce .products ul,
+.woocommerce ul.products {
+  margin: 0;
+  padding: 0;
+  list-style: none outside;
+  clear: both;
+}
+
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
+  position: relative;
+  margin: 0 20px 2.992em 0;
+  padding: 0;
+  margin-left: 0;
+  text-align: left;
+  margin-bottom: 2.5em;
+}
+
+.woocommerce ul.products li.product .woocommerce-loop-product__link,
+.woocommerce-page ul.products li.product .woocommerce-loop-product__link {
+  position: relative;
+  display: block;
+  height: 505px;
+}
+
+.cube-shop-page-packs-item .woocommerce ul.products li.product .button,
+.cube-shop-page-packs-item .woocommerce-page ul.products li.product .button {
+  display: block;
+  width: 100%;
+  height: 43px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  line-height: 43px;
+  border-radius: 2px;
+}
+
+.cube-shop-prod-item:hover .button {
+  visibility: visible;
+}
+
+.woocommerce ul.products li.product a img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 0 1em;
+  box-shadow: none;
+  display: none !important;
+}
+
+h1,
+.entry-content h1 {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans,
+    Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.entry-content h2,
+h2 {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans,
+    Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+.woocommerce ul.products li.product .price,
+.woocommerce-page ul.products li.product .price {
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+ins,
+mark {
+  text-decoration: none;
+}
+
+.astra-shop-summary-wrap .price del span,
+.astra-shop-summary-wrap .price del {
+  color: gray !important;
+}
+.cube-shop-page-cat-wrapper .price del span,
+.cube-shop-page-cat-wrapper .price del {
+  color: gray !important;
+}
+.ast-separate-container .ast-article-single {
+  border-bottom: 0;
+}
+
+.ast-separate-container .ast-article-post,
+.ast-separate-container .ast-article-single {
+  background-color: #fff;
+  margin: 0;
+  padding: 5.34em 6.67em;
+}
+
+h2,
+.entry-content h2 {
+  font-size: 25px;
+}
+
+.ast-separate-container .ast-article-post,
+.ast-separate-container .ast-article-single {
+  padding: 0;
+}
+
+a,
+.page-title {
+  color: #0274be;
+}
+
+.screen-reader-text {
+  display: none;
+}
+
+.astra-shop-summary-wrap a {
+  display: block;
+}
+
+.woocommerce ul.products li.product .woocommerce-loop-product__link {
+  z-index: 5;
+}
+
+#discount-popup-cover,
+#gift-popup-cover,
+#subscribe-popup-cover {
+  background: #0000009e;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 1000000000000000000000000000000000000000000000;
+  display: block;
+  cursor: pointer !important;
+}
+
+.menu-item .menu-item a {
+  display: block;
+  color: #fff !important;
+  font-size: 14px !important;
+  line-height: 40px;
+  text-transform: none !important;
+}
+
+.menu-item .menu-item {
+  position: relative;
+  float: none !important;
+  margin-left: 0 !important;
+  overflow: hidden;
+}
+
+.cube-header-cart-wrapper {
+  background: white;
+  display: none;
+  opacity: 1;
+  width: 450px;
+  float: right;
+  padding: 0 30px 0 30px;
+  height: 100%;
+  position: fixed;
+  right: 0;
+}
+
+.cube-header-cart-close {
+  cursor: pointer;
+  font-weight: 400;
+  font-family: Arial, sans-serif;
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  font-size: 26px;
+  top: 14px;
+  right: 20px;
+  margin-top: -1px;
+  color: grey;
+  border-radius: 1px;
+}
+
+.header-cart-items-wrapper {
+  height: calc(100% - 250px);
+  overflow-y: auto;
+}
+
+.xoo-cp-table-bottom {
+  padding: 0 !important;
+}
+
+table.xoo-cp-cart {
+  border: 0 solid #fff !important;
+}
+
+.cube-header-cart-wrapper .cube-popup-image-wrapper {
+  width: 150px;
+  border: solid 2px #dadada !important;
+  border-radius: 2px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.cube-header-cart-wrapper .cube-popup-item-info-wrapper {
+  display: inline-block;
+  width: 200px;
+  vertical-align: top;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.cube-header-cart-wrapper .cube-popup-item-info-name {
+  color: #2b2b2b !important;
+  font-size: 16px !important;
+  font-family: Roboto Condensed;
+  line-height: 22px;
+}
+
+.cube-popup-regular-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #7ed321;
+  font-family: Roboto Condensed;
+}
+
+.price-usd-lable-popup {
+  font-size: 14px !important;
+  color: #b8b8b8 !important;
+  margin-left: 7px;
+  font-weight: 400;
+  font-family: Roboto !important;
+}
+
+.cube-popup-price-item-wrapper {
+  margin-top: -5px;
+}
+
+.cube-popup-old-price {
+  font-size: 14px;
+  color: #000;
+  font-family: Roboto Condensed;
+  text-decoration: line-through;
+  line-height: 14px;
+}
+
+.cube-popup-quantity-wrapper {
+  margin-top: 60px;
+}
+
+.cube-header-cart-wrapper .cube-popup-quantity-lable {
+  line-height: 25px;
+}
+
+.cube-popup-quantity-lable {
+  line-height: 20px;
+  color: #a9a9a9;
+  font-family: Roboto;
+}
+
+.cube-header-cart-wrapper .cube-popup-quantity-box {
+  border: solid 0;
+}
+
+.header-cart-discount-notice {
+  position: absolute;
+  top: -17px;
+  left: 20px;
+  color: #1d9ddb;
+  font-size: 12px;
+}
+
+.header-cart-subtotal-wrapper {
+  text-align: left;
+  width: 90%;
+  margin: 20px;
+  font-size: 20px;
+  font-family: roboto;
+  padding-left: 173px;
+}
+
+.header-cart-subtotal-title {
+  font-weight: 700;
+  color: #000;
+}
+
+.cube-popup-checkout-buttons-wrapper {
+  background: #fff;
+}
+
+.cube-popup-checkout-button {
+  border-radius: 5px;
+  color: #fff;
+  background: #7ed321;
+  font-family: Roboto;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 0 0 0 5px;
+  height: 40px;
+  width: 48%;
+  border: solid 0;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.cube-header-cart-wrapper .cube-popup-checkout-button {
+  margin: 10px 0;
+  width: 100%;
+}
+
+.header-cart-subtotal-sum {
+  font-weight: 700;
+  color: #000;
+}
+
+.cube-view-cart-2 {
+  border-radius: 5px !important;
+  color: #1d9ddb !important;
+  border: solid 1px #1d9ddb !important;
+  background: #fff !important;
+  font-family: Roboto;
+  cursor: pointer;
+  float: left;
+  margin-top: 5px;
+  margin-left: 0;
+  text-align: center;
+  height: 35px;
+  line-height: 35px;
+  width: 100%;
+  padding-top: 0;
+  font-size: 17px;
+}
+
+.home-product-item-details-wrapper {
+  color: #000;
+  margin: 18px 0 0 0;
+  width: 100%;
+  height: 134px;
+  padding-left: 25px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  display: block;
+}
+
+.home-product-item-details-wrapper * {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans,
+    Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+}
+
+.home-product-item-details-wrapper ul li {
+  list-style-type: disc !important;
+  margin-left: 21px;
+}
+
+a.button:hover {
+  background: #0274be !important;
+}
+
+.wrong-email-cross {
+  display: inline-block;
+  width: 13px;
+  height: 14px;
+  margin-right: 4px;
+  background: url(https://getgocube.com/wp-content/themes/astra/assets/images/red-cross.png)
+    center 1px / cover no-repeat;
+}
+
+.footer_subscribed_result_v {
+  width: 20.5px;
+  height: 14px;
+  margin-top: 9px;
+  background: url(https://getgocube.com/wp-content/themes/astra/assets/images/footer-subscribe-v.png)
+    center top/100% no-repeat;
+}
+
+.cube-home-reviews-section-wrapper {
+  padding: 40px 0;
+}
+
+.home-page-family .cube-home-reviews-section-wrapper {
+  background: #eeeeee;
+}
+
+.cube-home-review {
+  position: relative;
+  display: flex;
+  width: calc(100% - 80px);
+  height: 480px;
+  background: white;
+  border-radius: 38px;
+  box-shadow: 0 0 60px #e6e6e6;
+  margin: 0 40px;
+  overflow: hidden;
+}
+
+.cube-home-review-image {
+  width: 50%;
+  height: 100%;
+}
+
+.cube-home-review-text-wrapper {
+  width: 50%;
+  height: 100%;
+  padding: 50px 80px;
+  padding-top: 30px;
+}
+
+.cube-home-review-text {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 65px);
+  background: url(https://getgocube.com/wp-content/themes/astra/assets/images/quotation-backgroud.jpg)
+    center center / 100% no-repeat;
+}
+
+.cube-home-review-text span {
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 20px;
+  font-size: 24px;
+  line-height: 40px;
+}
+
+.cube-home-review-stars {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cube-home-review-stars span {
+  width: 24px;
+  height: 23px;
+  background: #ffaf41;
+  clip-path: polygon(
+    50% 0,
+    65% 33%,
+    100% 38%,
+    75% 64%,
+    81% 100%,
+    50% 83%,
+    19% 100%,
+    25% 63%,
+    0 38%,
+    35% 33%
+  );
+  margin: 0 4px;
+}
+
+.cube-home-review-name {
+  font-size: 22px;
+  font-weight: 400;
+  color: #1d9ddb;
+  text-align: center;
+}
+
+.cube-home-reviews-title {
+  width: calc(100% - 60px);
+  font-size: 52px;
+  font-weight: 400;
+  color: #5192b2;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.cube-home-stand-stand-mobile(width) {
+  width: 480px;
+  height: 438px;
+}
+
+.wrapper-upper-footer-logo {
+  width: 57px;
+  height: 64px;
+}
+
+.testimonial-item-left {
+  transform: translateX(-160%);
+  transition: 1s;
+}
+
+.testimonial-item-left-without {
+  transform: translateX(-160%);
+}
+
+.testimonial-item-center {
+  transform: translateX(0);
+  transition: 1s;
+}
+
+.testimonial-item-right {
+  transform: translateX(160%);
+  transition: 1s;
+}
+
+.testimonial-item-right-without {
+  transform: translateX(120%);
+}
+
+.cube-home-reviews-wrapper {
+  height: 500px;
+}
+
+.cube-home-review {
+  position: absolute;
+}
+
+.reviews-arrow {
+  position: absolute;
+  top: 38%;
+  font-size: 40px;
+  z-index: 15;
+}
+
+.reviews-arrow-left {
+  left: 150px;
+  width: 85px;
+}
+
+.reviews-arrow-right {
+  right: 150px;
+  width: 85px;
+}
+
+table.xoo-cp-cart td,
+table.xoo-cp-cart th {
+  vertical-align: middle;
+  text-align: center;
+}
+.xoo-cp-cart td {
+  border: 0 solid #fff !important;
+}
+.cube-popup-image-td {
+  width: 185px;
+  padding: 20px 0 15px 7px !important;
+}
+
+#add-to-cart-popup-wrapper .xoo-cp-pqty {
+  display: none;
+}
+
+.payment-icon-paypal img {
+  border-radius: 3px;
+}
+
+.payment-image-wrapper {
+  top: 70px;
+  text-align: left;
+  position: relative;
+  margin-left: 5px;
+}
+.payment-icon img {
+  height: auto;
+  width: auto;
+}
+.payment-icons-wrapper {
+  width: 250px;
+}
+.payment-icon {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 38px;
+  height: auto;
+  width: auto;
+  margin-right: 5px;
+}
+
+.payment-icon-american-express {
+  margin-left: -1px;
+}
+.payment-icon-american-express img {
+  max-height: 25px;
+  margin-top: -2px;
+}
+
+body.page-with-timer .cube-header-wrapper {
+  top: 60px;
+}
+
+.our-products-title {
+  display: none !important;
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.home-page-family .our-products-title {
+  display: block !important;
+}
+
+.xoo-cp-modal,
+.xoo-cp-modal-cart {
+  display: none;
+}
+
+.home-page-transition-points-between-sliders {
+  height: 12px;
+}
+
+.home-page-transition-points-between-sliders .dot {
+  vertical-align: top;
+}
+
+.cube-header-cart-wrapper .xoo-cp-empty-cart-notice {
+  margin-top: 80px;
+  display: block;
+  text-align: center;
+  font-size: 21px;
+}
+
+@media all and (max-width: 2560px) {
+  .cube-home-the-new-wrapper {
+    height: 818px;
+  }
+
+  .cube-product-content-section.the-new {
+    max-width: 2068px;
+  }
+
+  .cube-home-the-new-info-wrapper {
+    width: 36%;
+  }
+}
+
+@media all and (max-width: 1745px) {
+  .reviews-arrow-right {
+    right: 35px;
+  }
+
+  .reviews-arrow-left {
+    left: 35px;
+  }
+}
+
+@media only screen and (max-width: 1650px) {
+  .cube-home-learn-wrapper {
+    background: url(https://getgocube.com/wp-content/themes/astra/assets/images/cube-learn-hands.jpg)
+      left top / 30% no-repeat;
+  }
+}
+
+@media all and (max-width: 1600px) {
+  .cube-home-first-slide-wrapper {
+    height: 891px;
+  }
+
+  .cube-home-firstslide-text {
+    left: -62px;
+  }
+
+  .cube-home-firstslide-title {
+    left: -62px;
+    top: 73px;
+  }
+
+  table.xoo-cp-cart {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 1440px) {
+  .media-logos-wrapper {
+    display: flex;
+    padding: 0 3%;
+  }
+
+  .cube-home-battle-phone {
+    width: 60%;
+  }
+
+  .cube-home-stand-wrapper {
+    height: 510px;
+  }
+
+  .cube-home-stand-stand {
+    width: 60%;
+    left: 0;
+    top: 0px;
+  }
+
+  .cube-home-stand-title {
+    margin-top: 75px;
+    margin-left: 57%;
+  }
+
+  .cube-home-stand-text {
+    margin-left: 57%;
+  }
+
+  .cube-home-stand-stand-mobile(width) {
+    width: 60%;
+    height: unset;
+  }
+
+  .reviews-arrow-right {
+    right: 0px;
+  }
+
+  .reviews-arrow-left {
+    left: 0px;
+  }
+
+  .our-products-title {
+    font-size: 33px;
+  }
+
+  .cube-home-the-new-wrapper {
+    height: 460px;
+  }
+
+  .cube-home-the-new-button {
+    width: 331px;
+    height: 56px;
+    line-height: 61px;
+    font-size: 26px;
+    margin-top: 87px;
+  }
+
+  .cube-home-the-new-text {
+    font-size: 21.8px;
+    line-height: 29px;
+    margin-top: 29px;
+    max-width: 408px;
+    padding-left: 5px;
+  }
+
+  .cube-home-the-new-title {
+    font-size: 48px;
+    line-height: 22px;
+  }
+
+  .cube-product-content-section.the-new {
+    max-width: 1104px;
+  }
+
+  .cube-home-the-new-info-wrapper {
+    margin-top: 116px;
+    width: 36%;
+  }
+
+  .woocommerce ul.products li.product .woocommerce-loop-product__link,
+  .woocommerce-page ul.products li.product .woocommerce-loop-product__link {
+    height: 343px;
+  }
+
+  .cube-shop-page-packs-item {
+    height: 390px;
+  }
+}
+
+@media only screen and (max-width: 1370px) {
+  .home-slide-buttons-wrapper {
+    left: 49px;
+  }
+
+  .cube-home-battle-phone {
+    z-index: 10;
+    position: absolute;
+  }
+
+  .cube-home-battle-phone {
+    width: 700px;
+  }
+
+  .cube-home-battle-phone {
+    position: relative;
+    margin: 35px auto;
+  }
+
+  .cube-home-learn-wrapper {
+    background: url(https://getgocube.com/wp-content/themes/astra/assets/images/cube-learn-hands.jpg)
+      left top / 30% no-repeat;
+  }
+
+  .cube-home-play-bottom-phone {
+    width: 570px;
+    height: 308px;
+    bottom: 0;
+    right: 9px;
+  }
+
+  .post-type-archive-product
+    .woocommerce.columns-1
+    ul.products
+    li.product
+    .button {
+    background: #0274be;
+  }
+
+  .astra-shop-summary-wrap .button {
+    visibility: visible;
+  }
+
+  .cube-home-first-slide-wrapper {
+    /* background: url(https://getgocube.com/wp-content/themes/astra/assets/images/first-slide-back-whole.jpg) center top / 120% no-repeat;*/
+    height: 944px;
+  }
+
+  .cube-home-battle-phone {
+    width: 700px;
+  }
+
+  .cube-home-battle-phone {
+    position: relative;
+    margin: 35px auto;
+  }
+}
+
+@media (max-width: 1280px) and (min-height: 680px) {
+  .zendesk-fixed-button {
+    display: none;
+  }
+
+  .zenddesk-fixed-button {
+    width: 48px;
+    height: 48px;
+    padding: 0px;
+    margin: 10px 20px;
+    position: fixed;
+    bottom: 0px;
+    overflow: visible;
+    opacity: 1;
+    border: 0px;
+    z-index: 999998;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition-property: opacity, top, bottom;
+    right: 0px;
+  }
+
+  .zendesk-help-icon {
+    width: 20px;
+    height: 20px;
+    margin-top: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .cube-home-learn-info-wrapper {
+    margin: 295px 0 0 150px;
+  }
+}
+
+@media only screen and (max-width: 1180px) {
+  .cube-header-content {
+    width: 100%;
+  }
+
+  .cube-cart-contents {
+    right: 15px;
+  }
+
+  .cube-header-logo {
+    margin: 7px 0 0 15px;
+  }
+
+  .cube-home-battle-phone {
+    width: 700px;
+  }
+
+  .cube-home-stand-title {
+    margin-top: 72px;
+  }
+
+  .cube-home-learn-wrapper {
+    background: url(https://getgocube.com/wp-content/themes/astra/assets/images/cube-learn-hands.jpg)
+      left top / 30% no-repeat;
+  }
+
+  .cube-home-learn-phone {
+    right: 50px;
+  }
+
+  .header-right-wrapper {
+    right: 15px;
+  }
+}
+
+@media only screen and (max-width: 1060px) {
+  .cube-shop-prod-item .button {
+    visibility: visible;
+  }
+
+  .astra-shop-summary-wrap .button {
+    visibility: visible;
+  }
+
+  .cube-home-first-slide-wrapper {
+    height: 890px;
+  }
+
+  .cube-home-firstslide-title {
+    top: 47px;
+  }
+
+  .cube-home-firstslide-text {
+    top: 257px;
+    font-size: 29px;
+  }
+
+  .home-slide-buttons-wrapper {
+    top: 441px;
+  }
+
+  .cube-home-firstslide-title {
+    left: -89px;
+  }
+
+  .cube-home-firstslide-text {
+    left: -89px;
+  }
+
+  .home-slide-buttons-wrapper {
+    left: 24px;
+  }
+
+  .cube-header-menu-wrapper {
+    width: 72%;
+  }
+
+  .cube-header-logo {
+    margin: 7px 0 0 40px;
+  }
+
+  .cube-cart-contents {
+    right: 50px;
+  }
+
+  .cube-home-stand-stand {
+    width: 50%;
+    left: 0px;
+    top: 59px;
+  }
+
+  .cube-home-stand-title {
+    margin-left: 48%;
+  }
+
+  .cube-home-stand-text {
+    margin-left: 48.4%;
+  }
+
+  .cube-home-play-info-wrapper {
+    margin-left: 28%;
+  }
+
+  .cube-home-battle-phone {
+    width: 600px;
+    height: 400px;
+    margin: 35px auto;
+    position: relative;
+  }
+
+  .cube-home-battle-wrapper {
+    background: url(https://getgocube.com/wp-content/themes/astra/assets/images/cube-battle-cube-top.jpg)
+      left top / 21% no-repeat #dfdfdf;
+    height: 730px;
+  }
+
+  .cube-home-play-cube {
+    width: 220px;
+    height: 220px;
+    left: 25px;
+  }
+
+  .cube-home-learn-info-wrapper {
+    margin: 180px 0 0 304px;
+  }
+
+  .cube-home-learn-wrapper {
+    height: 535px;
+  }
+
+  .cube-home-learn-phone {
+    position: absolute;
+    top: 240px;
+    right: 50px;
+    width: 187px;
+    background: url(https://getgocube.com/wp-content/themes/astra/assets/images/cube-learn-phone.jpg)
+      center top / 100% no-repeat;
+  }
+
+  .cube-home-learn-wrapper {
+    background: url(https://getgocube.com/wp-content/themes/astra/assets/images/cube-learn-hands.jpg)
+      left top / 30% no-repeat;
+  }
+
+  .cube-home-battle-rubik-image {
+    position: absolute;
+    width: 250px;
+    bottom: -42px;
+    right: 0;
+  }
+
+  .cube-home-play-wrapper {
+    height: 670px;
+  }
+
+  .cube-find-text {
+    font-size: 24px;
+    margin-right: 19px;
+  }
+
+  .cube-find-amazon-logo {
+    width: 155px;
+    margin-right: 19px;
+    top: 7px;
+  }
+
+  .cube-find-apple-logo {
+    width: 211px;
+    top: 1px;
+  }
+
+  .cube-home-learn-title {
+    font-size: 45px;
+    line-height: 55px;
+  }
+
+  .cube-home-learn-subtitle {
+    font-size: 20px;
+  }
+
+  .cube-home-learn-text {
+    width: 263px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .cube-home-improve-image {
+    margin-top: 89px;
+  }
+
+  .cube-home-improve-info-wrapper {
+    max-width: 310px;
+    margin-left: 9%;
+  }
+
+  .cube-home-improve-title {
+    font-size: 46px;
+    line-height: 46px;
+  }
+
+  .cube-home-improve-sub-title,
+  .cube-home-improve-text {
+    font-size: 21px;
+    line-height: 26px;
+  }
+
+  .cube-home-play-bottom-phone {
+    width: 497px;
+    height: 275px;
+    bottom: 0px;
+    right: 7px;
+  }
+
+  .header-right-wrapper {
+    right: 40px;
+  }
+
+  .cube-home-reviews-title {
+    font-size: 45px;
+  }
+
+  .cube-home-reviews-title {
+    line-height: 60px;
+    margin-bottom: 20px;
+  }
+
+  .cube-home-review-text-wrapper {
+    padding: 30px 45px;
+    padding-top: 20px;
+  }
+
+  .cube-home-review-text span {
+    font-size: 22px;
+    line-height: 37px;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .payment-icon-discover img {
+    height: auto !important;
+  }
+
+  .payment-icon {
+    max-width: calc(20% - 9px);
+  }
+
+  .payment-icons-wrapper {
+    width: auto;
+  }
+
+  .wrapper-upper-footer-text-box {
+    width: 34%;
+    margin-right: 4%;
+  }
+
+  .wrapper-upper-footer-text-box .wrapper-upper-footer-big-text {
+    width: 100%;
+    font-size: 24px;
+  }
+
+  .footer-menu {
+    width: 21%;
+    margin-left: 6%;
+  }
+
+  .footer-menu-number-two {
+    margin-left: 4%;
+  }
+
+  .home-page-family .cube-home-media-wrapper {
+    height: 155px;
+    padding-top: 30px;
+  }
+
+  .home-page-family .media-logos-wrapper {
+    height: 92px;
+  }
+
+  .home-page-family .media-strip-image-wrapper {
+    height: 65px;
+  }
+
+  .media-strip-image-wsj-family img {
+    width: 78px;
+  }
+
+  .media-strip-image-popsugar-family img {
+    width: 240px;
+  }
+
+  .media-strip-image-forbes-family img {
+    width: 131px;
+  }
+
+  .media-strip-image-wired-family img {
+    width: 156px;
+  }
+
+  .media-strip-image span {
+    font-size: 15px;
+  }
+
+  .sale-badge-opener {
+    margin-top: 14px;
+  }
+
+  .cube-home-the-new-wrapper {
+    height: 327px;
+  }
+
+  .cube-home-the-new-button {
+    width: 228px;
+    height: 40px;
+    line-height: 45px;
+    font-size: 18px;
+    margin-top: 58px;
+  }
+
+  .cube-home-the-new-text {
+    font-size: 15.5px;
+    line-height: 23px;
+    margin-top: 29px;
+    max-width: 300px;
+  }
+
+  .cube-home-the-new-title {
+    font-size: 33px;
+    line-height: 3px;
+  }
+
+  .cube-product-content-section.the-new {
+    max-width: 813px;
+  }
+
+  .cube-home-the-new-info-wrapper {
+    margin-top: 89px;
+    float: right;
+    width: 35%;
+  }
+
+  .woocommerce ul.products li.product .woocommerce-loop-product__link,
+  .woocommerce-page ul.products li.product .woocommerce-loop-product__link {
+    height: 262px;
+  }
+
+  .cube-shop-page-packs-item {
+    height: 310px;
+    width: calc(26% - 28px);
+  }
+}
+
+@media (max-width: 915px) {
+  .cube-home-first-slide-wrapper {
+    background-position: top center !important;
+  }
+
+  .payment-icons-wrapper {
+    width: auto;
+  }
+
+  .payment-icon-discover img {
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .cube-shop-prod-img-3 .price {
+    margin-top: 0px !important;
+  }
+
+  .astra-shop-summary-wrap .button {
+    visibility: visible;
+  }
+
+  .home-middle-shop-container .home-product-block {
+    margin-bottom: 20px !important;
+    margin-top: 141px;
+    height: 368px;
+  }
+
+  .cube-home-media-wrapper {
+    height: 151px;
+    background: #232323;
+    padding-top: 19px;
+  }
+
+  .cube-home-first-slide-wrapper {
+    height: auto !important;
+  }
+
+  .dont-show-tablet {
+    display: none !important;
+  }
+
+  .home-product-block .cube-shop-page-packs-item {
+    margin-bottom: 0;
+    height: 265px;
+  }
+
+  .wrapper-upper-footer-text-box {
+    width: calc(98.8% - 62px);
+    margin-right: 0;
+  }
+
+  .wrapper-upper-footer-logo {
+    margin-top: 9px;
+  }
+
+  .wrapper-footer-subscribe-group {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+  }
+
+  .first-slide-button-overlay-watch-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+  }
+
+  .first-slide-button-overlay-buynow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+  }
+
+  .home-page-family .first-slide-button-overlay-buynow {
+    width: 100%;
+    height: 10.5%;
+    top: inherit !important;
+    bottom: 0;
+  }
+
+  .home-page-family .first-slide-button-overlay-watch-video {
+    width: 43.5%;
+    height: 3.5%;
+    top: 52.5% !important;
+    left: 4.4%;
+  }
+
+  .cube-home-first-slide-mobile-content {
+    position: relative;
+  }
+
+  .cube-home-stand-wrapper {
+    height: 370px;
+  }
+
+  .cube-pluses-items-wrapper {
+    max-width: 660px;
+  }
+
+  .cube-pluses-item {
+    transform: scale(0.7);
+  }
+
+  .post-type-archive-product .site-content h2,
+  .page-id-106902 .site-content h2 {
+    font-size: 14px !important;
+  }
+
+  .post-type-archive-product .price,
+  .page-id-106902 .price {
+    top: 33px;
+    font-size: 18px !important;
+  }
+
+  .post-type-archive-product .price del,
+  .page-id-106902 .price del {
+    top: 22px !important;
+    font-size: 14px;
+  }
+
+  .home-product-block .cube-shop-page-packs-item .astra-shop-thumbnail-wrap {
+    height: 400px;
+  }
+
+  .home-product-block .cube-shop-page-packs-item {
+    height: 436px;
+  }
+
+  .cube-shop-page-packs-item .woocommerce ul.products li.product .button,
+  .cube-shop-page-packs-item .woocommerce-page ul.products li.product .button {
+    font-size: 15px;
+  }
+
+  .home-product-block {
+    margin-bottom: 0;
+  }
+
+  .cube-home-learn-info-wrapper {
+    margin-left: 270px;
+  }
+
+  .footer-menu {
+    font-size: 15px;
+  }
+
+  .cube-home-stand-title {
+    margin-top: 27px;
+  }
+
+  .home-product-item-details-wrapper {
+    height: 107px;
+    padding-left: 15px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .page-id-106902 .site-content h2,
+  .post-type-archive-product .site-content h2 {
+    font-size: 14px !important;
+  }
+
+  .woocommerce ul.products li.product .woocommerce-loop-product__link,
+  .woocommerce-page ul.products li.product .woocommerce-loop-product__link {
+    height: 265px;
+  }
+
+  .home-page-family .cube-home-media-wrapper {
+    background: black;
+  }
+
+  .home-page-family .content-home-find-wrapper {
+    height: auto;
+    padding: 30px 0;
+  }
+
+  .home-page-family .cube-find-wrapper {
+    display: block;
+    text-align: center;
+  }
+
+  .home-page-family .cube-find-text {
+    display: block;
+    width: 100%;
+  }
+
+  .home-page-family .cube-find-amazon-logo {
+    width: auto;
+    margin: 15px 0;
+    top: 11px;
+  }
+
+  .home-page-family .cube-find-apple-logo {
+    width: auto;
+    margin: 15px 0;
+  }
+
+  .zendesk-fixed-button {
+    display: none;
+  }
+
+  .zenddesk-fixed-button {
+    width: 48px;
+    height: 48px;
+    padding: 0px;
+    margin: 10px 20px;
+    position: fixed;
+    bottom: 0px;
+    overflow: visible;
+    opacity: 1;
+    border: 0px;
+    z-index: 999998;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition-property: opacity, top, bottom;
+    right: 0px;
+  }
+
+  .zendesk-help-icon {
+    width: 20px;
+    height: 20px;
+    margin-top: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+}
+
+.wp-video-popup-video,
+.ryv-popup-video {
+  height: 50% !important;
+  width: 90% !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .payment-icons-wrapper {
+    width: auto;
+  }
+
+  .cube-home-firstslide-wrapper {
+    margin: -15px 0 0 -18px;
+  }
+
+  .cube-home-firstslide-title {
+    left: 63px;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 45px;
+    top: 70px;
+  }
+
+  .sale-badge-opener {
+    left: 48px;
+  }
+
+  .cube-home-firstslide-text {
+    top: 266px;
+    left: 63px;
+    width: 443px;
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  .cube-home-first-slide-wrapper {
+    height: auto !important;
+  }
+
+  .cube-home-first-slide-wrapper {
+    /* background: url(https://getgocube.com/wp-content/themes/astra/assets/images/first-slide-back-whole.jpg) center top / 120% no-repeat;
+	  */
+    height: 506px;
+  }
+
+  .cube-home-media-wrapper {
+    position: relative;
+    top: 0px;
+  }
+
+  .scroll-down-button-wrapper {
+    bottom: -42px !important;
+  }
+
+  .cube-home-media-wrapper {
+    height: auto;
+    padding-top: 31px;
+    padding-bottom: 42px;
+  }
+
+  .cube-home-stand-stand {
+    top: 85px;
+  }
+
+  .cube-home-stand-wrapper {
+    height: 380px;
+  }
+
+  .cube-home-battle-content {
+    height: 710px;
+  }
+
+  .cube-home-learn-wrapper {
+    height: 435px;
+  }
+
+  .cube-home-learn-phone {
+    top: 140px;
+    right: 30px;
+  }
+
+  .cube-home-learn-info-wrapper {
+    margin: 172px 0 0 210px;
+  }
+
+  .cube-home-first-slide-wrapper {
+    overflow: visible;
+  }
+
+  .cube-product-content-section {
+    position: relative;
+  }
+
+  .cube-shop-prod-item .button {
+    visibility: visible;
+  }
+
+  .cube-home-learn-text {
+    width: 324px;
+  }
+
+  .cube-home-improve-wrapper {
+    height: 605px;
+  }
+
+  .cube-home-improve-image {
+    margin-top: 124px;
+  }
+
+  .home-product-block .cube-shop-page-packs-item {
+    height: 265px;
+  }
+
+  .home-product-block .cube-shop-page-packs-item .astra-shop-thumbnail-wrap {
+    height: 375px;
+  }
+
+  .wrapper-bottom-footer-logo {
+    width: 120px;
+  }
+
+  .follow-us-column,
+  .footer-menu,
+  .footer-menu-number-two {
+    width: calc(30% - 40px);
+    margin-left: 3.3%;
+  }
+
+  .home-slide-buttons-wrapper {
+    left: 41px;
+  }
+
+  .wrapper-bottom-footer .cube-product-content-section {
+    padding: 42px 14px 44px 14px;
+  }
+
+  .wrapper-footer-subscribe-group {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+  }
+
+  .wrapper-upper-footer-input-box {
+    width: 100%;
+    float: none;
+  }
+
+  .footer_subscribed_result {
+    width: 100%;
+    float: left;
+    margin-left: 2px;
+    font-size: 18px;
+  }
+
+  .cube-home-reviews-title {
+    margin-bottom: 100px;
+  }
+
+  .cube-home-review {
+    display: block;
+    height: 560px;
+    padding-top: 130px;
+    overflow: inherit;
+  }
+
+  .cube-home-review-image {
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    top: -70px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 100%;
+  }
+
+  .cube-home-review-text-wrapper {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: 0;
+  }
+
+  .cube-home-review-text {
+    height: calc(100% - 125px);
+    background: url(https://getgocube.com/wp-content/themes/astra/assets/images/quotation-backgroud-mobile.jpg)
+      center center / calc(100% - 30px) no-repeat;
+    margin-bottom: 40px;
+  }
+
+  .cube-home-review-text span {
+    font-size: 24px;
+    line-height: 38px;
+  }
+
+  .cube-home-review-stars span {
+    width: 34px;
+    height: 33px;
+  }
+
+  .woocommerce ul.products li.product .woocommerce-loop-product__link,
+  .woocommerce-page ul.products li.product .woocommerce-loop-product__link {
+    height: 219px;
+  }
+
+  .home-page-family .cube-home-media-wrapper {
+    height: 118px;
+    padding-top: 25px;
+  }
+
+  .home-page-family .media-logos-wrapper {
+    height: 68px;
+  }
+
+  .home-page-family .media-strip-image-wrapper {
+    height: 48px;
+  }
+
+  .media-strip-image-wsj-family img {
+    width: 58px;
+  }
+
+  .media-strip-image-popsugar-family img {
+    width: 180px;
+  }
+
+  .media-strip-image-forbes-family img {
+    width: 98px;
+  }
+
+  .media-strip-image-wired-family img {
+    width: 117px;
+  }
+
+  .media-strip-image span {
+    font-size: 11px;
+  }
+
+  .media-strip-image-verge {
+    padding-top: 4%;
+  }
+}
+
+@media (max-width: 730px) {
+  .cube-home-learn-info-wrapper {
+    margin-left: 165px;
+  }
+}
+
+@media (max-width: 690px) {
+  .cube-home-learn-info-wrapper {
+    width: 495px;
+    margin: 0 auto;
+    margin-top: 172px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 625px) {
+  .home-product-block .cube-shop-page-packs-item .astra-shop-thumbnail-wrap {
+    height: 329px;
+  }
+
+  .home-product-block .cube-shop-page-packs-item {
+    height: 375px;
+  }
+
+  .home-product-item-details-wrapper {
+    height: 92px;
+    padding-left: 15px;
+    font-size: 13px;
+    line-height: 17px;
+  }
+
+  .cube-home-review-name {
+    font-size: 37px;
+  }
+}
+
+@media all and (max-width: 624px) {
+  .cube-shop-page-cat-wrapper {
+    width: 100%;
+    text-align: center;
+  }
+
+  .cube-shop-page-packs-item .astra-shop-thumbnail-wrap,
+  .cube-shop-page-big-access-item .astra-shop-thumbnail-wrap,
+  .cube-shop-page-small-access-item .astra-shop-thumbnail-wrap {
+    width: 250px;
+    height: 250px;
+  }
+
+  .cube-shop-page-packs-item {
+    width: 250px;
+    height: 298px;
+    margin: 10px auto 0 !important;
+    /* background: none !important; */
+  }
+
+  .post-type-archive-product .astra-shop-thumbnail-wrap img,
+  .page-id-106902 .astra-shop-thumbnail-wrap img {
+    opacity: 0;
+  }
+
+  .home-product-block .cube-shop-page-packs-item {
+    height: 421px;
+  }
+}
+
+@media only screen and (min-width: 481px) {
+  .dont-show-desktop {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .ast-container {
+    margin-top: 110px !important;
+  }
+
+  .payment-icon img {
+    width: 40px;
+    height: 25px;
+  }
+
+  .payment-icon-american-express {
+    margin-left: 0px;
+  }
+
+  .wp-video-popup-video,
+  .ryv-popup-video {
+    height: 30% !important;
+  }
+
+  #cube-header-menu {
+    max-width: 300px;
+    margin: 0 auto !important;
+  }
+
+  #cube-header-menu li,
+  .blog #cube-header-menu li,
+  .single-post #cube-header-menu li {
+    text-decoration: none;
+    margin-left: 0;
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  #cube-header-menu li a,
+  .blog #cube-header-menu li a,
+  .single-post #cube-header-menu li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: Roboto;
+    font-size: 25px;
+  }
+
+  .mobile-sub-menu-button {
+    width: 21px;
+    height: 30px;
+    background: url(https://getgocube.com/wp-content/themes/astra/assets/images/menu-arrow-white.png)
+      center right/21px no-repeat;
+    right: 0;
+  }
+
+  .menu-item .sub-menu {
+    position: relative;
+    width: 100%;
+    margin-left: 0 !important;
+    padding: 0 !important;
+    padding-left: 30px !important;
+  }
+
+  #cube-header-menu li {
+    text-align: left !important;
+  }
+
+  #cube-header-menu li a {
+    position: relative;
+  }
+
+  #menu-item-1469 a,
+  #menu-item-2270 a {
+    display: inline;
+    padding-right: 28px;
+  }
+
+  .first-slide-button-overlay-watch-video {
+    height: 26px;
+  }
+
+  .first-slide-button-overlay-buynow {
+    position: absolute;
+    height: 53px;
+  }
+
+  .folowus-footer-title {
+    margin-top: 20px;
+  }
+
+  .home-middle-shop-container .home-product-block {
+    margin-bottom: 20px !important;
+    margin-top: 0px;
+  }
+
+  .cube-home-stand-title {
+    font-size: 52px;
+  }
+
+  .landing-description-section {
+    position: relative;
+    margin-top: 15px;
+  }
+
+  .cube-home-media-wrapper {
+    background: #232323;
+    padding: 19px 0;
+  }
+
+  #transparent-cover {
+    background: url("https://getgocube.com/wp-content/themes/astra/assets/images/loader_cube.gif")
+      center center / 20% no-repeat !important;
+  }
+
+  #transparent-cover-no-white {
+    background: url("https://getgocube.com/wp-content/themes/astra/assets/images/loader_no_white.gif")
+      center center / 80px no-repeat;
+  }
+
+  .cube-header-logo {
+    margin: 9px 0 0 15px;
+  }
+
+  .cube-header-wrapper {
+    height: 60px;
+  }
+
+  .cube-header-logo {
+    width: 51px;
+  }
+
+  .cube-cart-contents {
+    top: 0px;
+    width: 25px;
+  }
+
+  .header-menu-mobile-button {
+    margin: 15px 27px;
+    width: 25px;
+  }
+
+  .cube-home-improve-content {
+    overflow: visible;
+  }
+
+  .cube-home-play-info-wrapper {
+    visibility: visible;
+  }
+
+  .dont-show-mobile {
+    display: none !important;
+  }
+
+  .cube-home-firstslide-content {
+    overflow: hidden;
+  }
+
+  .post-type-archive-product .site-content h2,
+  .page-id-106902 .site-content h2 {
+    font-size: 18px !important;
+  }
+
+  .wrapper-footer-subscribe-group {
+    width: 100%;
+  }
+
+  .header-menu-mobile-button {
+    display: block;
+  }
+
+  .cube-cart-contents {
+    right: 100px;
+  }
+
+  .cube-header-menu-wrapper,
+  .blog .cube-header-menu-wrapper,
+  .single-post .cube-header-menu-wrapper {
+    width: 100%;
+    margin-top: 10px;
+    background: black;
+    z-index: 10000000000000;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    padding-bottom: 30px;
+    display: none;
+  }
+
+  .cube-home-play-text {
+    max-width: 318px;
+    font-size: 17px;
+    line-height: 22px;
+    margin: 0 auto;
+  }
+
+  .cube-home-play-text br {
+    display: none;
+  }
+
+  .cube-home-battle-text {
+    font-size: 17px;
+    line-height: 26px;
+    margin-top: -12px;
+  }
+
+  .cube-home-first-slide-wrapper {
+    height: auto;
+  }
+
+  .cube-home-learn-info-wrapper {
+    margin-left: 37.5%;
+    margin-top: 77px;
+    margin-bottom: 29px;
+  }
+
+  .cube-home-learn-text {
+    width: 210px;
+  }
+
+  .cube-home-learn-subtitle {
+    font-size: 17px;
+    line-height: 18px;
+    padding-left: 2px;
+  }
+
+  .cube-home-learn-text {
+    width: 100%;
+    max-width: 204px;
+    font-size: 17px;
+    padding-left: 2px;
+    line-height: 23px;
+    margin-top: 2px;
+  }
+
+  .cube-home-learn-wrapper {
+    height: auto;
+    background: none;
+    position: relative;
+  }
+
+  .cube-home-learn-hands {
+    position: absolute;
+    width: 38%;
+    right: -8%;
+    top: 0;
+    transform: scaleX(-1);
+  }
+
+  .cube-home-learn-phone {
+    bottom: 0;
+    left: -16px;
+    top: inherit;
+    right: 28px;
+    width: 36.9%;
+    height: auto;
+  }
+
+  .cube-home-battle-wrapper {
+    background: url(https://getgocube.com/wp-content/themes/astra/assets/images/cube-battle-cube-top.png)
+      left top / 38% no-repeat #dfdfdf;
+  }
+
+  .cube-home-battle-phone {
+    width: 83.5%;
+    margin: 24px auto 0;
+    height: 200px;
+    position: relative;
+  }
+
+  .cube-home-play-cube {
+    width: 120px;
+    height: 180px;
+    top: -30px;
+    left: 0px;
+  }
+
+  .cube-home-battle-wrapper {
+    height: 555px;
+  }
+
+  .cube-home-play-bottom-phone {
+    width: 291px;
+    bottom: -185px;
+    right: -41px;
+  }
+
+  .cube-home-play-info-wrapper {
+    text-align: center;
+    margin: 0;
+    margin-top: 78px;
+  }
+
+  .cube-home-play-title {
+    font-size: 40px;
+    color: white;
+  }
+
+  .cube-home-stand-title {
+    max-width: 300px;
+    font-size: 38px !important;
+    line-height: 46px;
+    margin: 0;
+    margin-left: 4.9%;
+    margin-top: 54px;
+  }
+
+  .cube-home-stand-text {
+    position: relative;
+    margin: 0;
+    text-align: left;
+    font-size: 18px;
+    line-height: 23px;
+    padding-left: 4.9%;
+    padding-right: 2%;
+    margin-top: 15px;
+  }
+
+  .cube-home-stand-text br {
+    display: none;
+  }
+
+  .cube-home-stand-stand {
+    width: 100%;
+    height: 450px;
+    top: 295px;
+  }
+
+  .cube-home-stand-wrapper {
+    height: auto;
+  }
+
+  .cube-shop-page-cat-wrapper {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .cube-shop-page-packs-item .astra-shop-thumbnail-wrap,
+  .cube-shop-page-big-access-item .astra-shop-thumbnail-wrap,
+  .cube-shop-page-small-access-item .astra-shop-thumbnail-wrap {
+    width: 250px;
+    height: 250px;
+  }
+
+  .cube-shop-page-packs-item {
+    width: 250px;
+    height: 298px;
+    margin: 10px auto 0 !important;
+  }
+
+  .post-type-archive-product .astra-shop-thumbnail-wrap img,
+  .page-id-106902 .astra-shop-thumbnail-wrap img {
+    opacity: 0;
+  }
+
+  .show-mobile {
+    display: block !important;
+  }
+
+  .show-mobile.inline-block {
+    display: inline-block !important;
+  }
+
+  .cube-home-improve-wrapper {
+    height: auto;
+  }
+
+  .cube-home-improve-info-wrapper {
+    width: 53%;
+    margin-left: 4.3%;
+    margin-top: 69px;
+    margin-bottom: 61px;
+  }
+
+  .cube-home-improve-title {
+    font-size: 39px;
+    margin-bottom: -3px;
+  }
+
+  .cube-home-improve-sub-title,
+  .cube-home-improve-text {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 23px;
+    margin-top: 0;
+    padding-left: 1px;
+  }
+
+  .cube-home-improve-image {
+    position: absolute;
+    width: 42.5%;
+    margin-left: 0;
+    margin-top: 2px;
+    right: 0;
+    top: 0;
+  }
+
+  .cube-home-battle-info-wrapper {
+    margin-top: 101px;
+  }
+
+  .cube-home-battle-title {
+    font-size: 40px;
+  }
+
+  .cube-home-battle-content {
+    height: 511px;
+  }
+
+  .cube-home-battle-rubik-image {
+    position: absolute;
+    width: 144px;
+    bottom: 34px;
+    right: 0;
+  }
+
+  .cube-home-play-wrapper {
+    height: 305px;
+  }
+
+  .cube-home-stand-info-wrapper {
+    height: auto;
+  }
+
+  .cube-home-stand-stand-mobile {
+    margin-top: -7px;
+  }
+
+  .show-mobile-flex {
+    display: flex !important;
+  }
+
+  .cube-pluses-items-wrapper {
+    height: 156px;
+    max-width: 357px;
+    margin-top: 17px;
+    margin-bottom: -6px;
+  }
+
+  .cube-pluses-item {
+    width: 50%;
+    transform: none;
+  }
+
+  .cube-pluses-item-image {
+    height: 105px;
+  }
+
+  .cube-pluses-item-image img {
+    transform: scale(0.8);
+  }
+
+  .cube-pluses-item-text {
+    max-width: 114px;
+    font-size: 17px;
+    line-height: 18px;
+    margin: 0 auto;
+    margin-top: -4px;
+    font-weight: 500;
+  }
+
+  .pluses-items-wrapper-bottom {
+    margin-bottom: 58px;
+  }
+
+  .content-home-find-wrapper {
+    height: 100px;
+  }
+
+  .cube-find-wrapper {
+    height: 50px;
+  }
+
+  .cube-find-text {
+    font-size: 14px;
+    margin-right: 0;
+    text-align: center;
+    padding-top: 6px;
+  }
+
+  .home-page-family .content-home-find-wrapper {
+    padding: 10px 0;
+  }
+
+  .cube-find-amazon-logo,
+  .home-page-family .cube-find-amazon-logo {
+    width: 30%;
+    margin: 0;
+    margin-right: 2%;
+    top: 7px;
+  }
+
+  .cube-find-apple-logo,
+  .home-page-family .cube-find-apple-logo {
+    width: 170px;
+    top: 1px;
+    margin: 0;
+  }
+
+  #webWidget {
+    /* top: 95px !important; */
+  }
+
+  .header-right-wrapper {
+    right: 15px;
+  }
+
+  .wrapper-bottom-footer {
+    padding-bottom: 120px;
+  }
+
+  .home-middle-shop-container .home-product-block {
+    height: auto;
+  }
+
+  .home-product-block {
+    margin-bottom: 20px;
+  }
+
+  .home-product-block .cube-shop-page-packs-item .astra-shop-thumbnail-wrap {
+    height: 380px;
+  }
+
+  .cube-shop-prod-img-3 .price {
+    margin-top: 22px !important;
+  }
+
+  .footer-menu {
+    width: 49%;
+    margin-left: 0;
+  }
+
+  .ast-container {
+    width: calc(100% - 30px) !important;
+    margin-top: 110px !important;
+  }
+
+  .home-product-block {
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+
+  .cube-shop-prod-img-3 .price {
+    margin-top: 15px !important;
+  }
+
+  .home-product-block .cube-shop-page-packs-item .astra-shop-thumbnail-wrap {
+    height: 405px;
+    width: 249px;
+  }
+
+  .footer-background-cube {
+    background: url(https://getgocube.com/wp-content/themes/astra/assets/images/cube-footer-big.png)
+      center top/ cover no-repeat;
+  }
+
+  .wrapper-upper-footer .cube-product-content-section {
+    padding: 40px 0;
+  }
+
+  .wrapper-upper-footer-logo {
+    margin-right: 0.5%;
+  }
+
+  .wrapper-upper-footer-text-box {
+    position: relative;
+    width: calc(99.5% - 60px);
+    margin-right: -1px;
+    right: -7px;
+  }
+
+  .wrapper-upper-footer-small-text {
+    margin-left: 2px;
+    font-size: 16px;
+    margin-top: 0;
+  }
+
+  .wrapper-upper-footer-input-box {
+    width: 100%;
+  }
+
+  .footer-background-cube {
+    left: 0;
+  }
+
+  .wrapper-bottom-footer .cube-product-content-section {
+    display: block;
+    padding: 0;
+    padding: 40px 15px;
+  }
+
+  .wrapper-bottom-footer-logo {
+    width: 120px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+  .footer-menu-number-two {
+    margin-left: 0;
+    text-align: right;
+    float: right;
+  }
+
+  .footer-button-box-2 {
+    margin: 0;
+    position: absolute;
+    width: 222px;
+  }
+
+  .cube-home-learn-title {
+    font-size: 40px !important;
+  }
+
+  .cube-home-stand-title {
+    font-size: 52px;
+  }
+
+  .cube-home-reviews-title {
+    margin-bottom: 70px;
+    font-size: 36px;
+    line-height: 45px;
+  }
+
+  .cube-home-reviews-wrapper {
+    margin-bottom: 30px;
+  }
+
+  .cube-home-review {
+    width: calc(100% - 50px);
+    height: 415px;
+    max-width: 480px;
+    padding-top: 95px;
+    margin: 0 25px;
+  }
+
+  .cube-home-review-image {
+    width: 135px;
+    height: 135px;
+    top: -50px;
+  }
+
+  .cube-home-review-text-wrapper {
+    padding: 0 35px;
+  }
+
+  .cube-home-review-text {
+    height: calc(100% - 100px);
+    margin-bottom: 10px;
+  }
+
+  .cube-home-review-text span {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+  }
+
+  .cube-home-review-stars span {
+    width: 25px;
+    height: 24px;
+    margin: 0 2px;
+  }
+
+  .cube-home-review-name {
+    font-size: 27px;
+  }
+
+  .footer-button-icon {
+    width: 33px;
+    height: 32px;
+  }
+
+  .menu-item .sub-menu {
+    position: relative;
+    width: 100%;
+    margin-left: 0 !important;
+    padding: 0 !important;
+    padding-left: 30px !important;
+  }
+
+  .menu-item .menu-item a {
+    font-size: 21px !important;
+  }
+
+  .cube-shop-prod-img-3 .home-product-item-details-wrapper {
+    margin: 42px 0 0 0;
+  }
+
+  .page-id-106902 .site-content h2,
+  .post-type-archive-product .site-content h2 {
+    font-size: 18px !important;
+  }
+
+  .cube-shop-prod-img-3 .price {
+    margin-top: 22px !important;
+  }
+
+  .footer-button-icon img {
+    width: 32px;
+    height: 31px;
+  }
+
+  .cube-find-amazon-logo img(width) {
+    width: 40%;
+    height: unset;
+  }
+
+  .cube-header-logo {
+    width: 51px;
+    height: 57px;
+  }
+
+  .reviews-arrow-right {
+    right: 1px;
+    width: 64px;
+    margin-top: 110px;
+  }
+
+  .reviews-arrow-left {
+    left: 1px;
+    width: 64px;
+    margin-top: 110px;
+  }
+
+  .cube-home-reviews-wrapper {
+    height: 440px;
+  }
+
+  .cube-header-cart-wrapper .cube-popup-image-wrapper {
+    width: 100px;
+  }
+
+  .cube-header-cart-wrapper .cube-popup-item-info-wrapper {
+    width: calc(100% - 110px);
+    padding-left: 10px;
+  }
+
+  .cube-header-cart-wrapper {
+    width: 90%;
+  }
+
+  .cube-header-cart-close {
+    height: 20px;
+    width: 20px;
+    top: 14px;
+    right: 11px;
+    margin-top: -14px;
+  }
+
+  .header-cart-subtotal-wrapper {
+    padding-left: 142px;
+  }
+
+  .cube-popup-quantity-wrapper {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-left: 7px;
+  }
+
+  .show-desktop {
+    display: none !important;
+  }
+
+  .woocommerce ul.products li.product .woocommerce-loop-product__link,
+  .woocommerce-page ul.products li.product .woocommerce-loop-product__link {
+    height: 279px;
+  }
+
+  .zendesk-fixed-button {
+    display: none;
+  }
+
+  .zenddesk-fixed-button {
+    width: 48px;
+    height: 48px;
+    padding: 0px;
+    margin: 10px 20px;
+    position: fixed;
+    bottom: 0px;
+    overflow: visible;
+    opacity: 1;
+    border: 0px;
+    z-index: 999998;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition-property: opacity, top, bottom;
+    right: 0px;
+  }
+
+  .zendesk-help-icon {
+    width: 20px;
+    height: 20px;
+    margin-top: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  .cube-header-wrapper {
+    height: 60px;
+  }
+
+  .home-page-family .cube-home-media-wrapper {
+    height: 112px;
+    padding-top: 20px;
+  }
+
+  .home-page-family .media-logos-wrapper {
+    height: 72px;
+  }
+
+  .home-page-family .media-strip-image-wrapper {
+    height: 38px;
+  }
+
+  .media-strip-image-popsugar-family img {
+    width: 144px;
+  }
+
+  .media-strip-image-forbes-family img {
+    width: 78px;
+  }
+
+  .media-strip-image-wired-family img {
+    width: 93px;
+  }
+
+  .media-strip-image span {
+    font-size: 10px;
+  }
+
+  .our-products-title {
+    font-size: 23px;
+    margin-bottom: 0;
+  }
+
+  .media-strip-image-verge {
+    padding-top: 3%;
+  }
+
+  .cube-home-the-new-wrapper {
+    height: 508px;
+    text-align: center;
+  }
+
+  .cube-home-the-new-button {
+    width: 165px;
+    height: 42px;
+    line-height: 45px;
+    font-size: 15px;
+    margin-top: 33px;
+    margin-left: unset;
+    border-radius: 19px;
+  }
+
+  .cube-home-the-new-text {
+    font-size: 19.5px;
+    line-height: 23px;
+    margin-top: 23px;
+    max-width: 355px;
+  }
+
+  .cube-home-the-new-title {
+    font-size: 44px;
+    margin-left: unset;
+    line-height: 22px;
+  }
+
+  .cube-home-the-new-info-wrapper {
+    margin-top: 57px;
+    margin-left: unset;
+    text-align: center;
+    width: 80%;
+    float: unset;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .cube-home-stand-stand {
+    width: 100%;
+    height: 450px;
+    left: -9px;
+    top: 270px;
+  }
+
+  .cube-popup-image-wrapper {
+    width: 95px;
+  }
+
+  .header-cart-subtotal-wrapper {
+    padding-left: 120px;
+  }
+
+  .cube-home-the-new-button {
+    width: 165px;
+    height: 48px;
+    line-height: 50px;
+    font-size: 15px;
+    margin-top: 28px;
+    border-radius: 22px;
+  }
+
+  .cube-home-the-new-text {
+    font-size: 19.5px;
+    line-height: 23px;
+    margin-top: 30px;
+    max-width: 378px;
+  }
+
+  .cube-home-the-new-title {
+    font-size: 44px;
+    line-height: 15px;
+  }
+
+  .cube-product-content-section.the-new {
+    max-width: 813px;
+  }
+
+  .cube-home-the-new-wrapper {
+    height: 508px;
+  }
+
+  .cube-home-the-new-info-wrapper {
+    margin-top: 57px;
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 375px) {
+  .wrapper-upper-footer-big-text {
+    font-size: 22px !important;
+  }
+
+  .cube-home-stand-stand {
+    width: 520px;
+    height: 450px;
+    left: -80px;
+    top: 237px;
+  }
+
+  .cube-home-battle-text {
+    padding: 0 14px;
+  }
+
+  .cube-home-battle-text br {
+    display: none;
+  }
+
+  .cube-home-improve-image {
+    margin-top: 27px;
+  }
+
+  .cube-home-learn-info-wrapper {
+    margin-left: 35.5%;
+  }
+
+  .cube-home-learn-hands {
+    width: 35.5%;
+  }
+
+  .cube-home-play-bottom-phone {
+    width: 255px;
+  }
+
+  .cube-home-stand-text {
+    width: 100%;
+  }
+
+  .reviews-arrow-right {
+    width: 55px;
+  }
+
+  .reviews-arrow-left {
+    width: 55px;
+  }
+
+  .cube-header-cart-wrapper {
+    padding: 0 15px;
+  }
+
+  .header-cart-subtotal-wrapper {
+    padding-left: 44px;
+  }
+
+  .cube-find-apple-logo {
+    width: 170px;
+  }
+
+  .cube-header-wrapper {
+    top: 40px;
+  }
+
+  .home-page-family .cube-home-media-wrapper {
+    height: 106px;
+    padding-top: 20px;
+  }
+
+  .home-page-family .media-logos-wrapper {
+    height: 66px;
+  }
+
+  .home-page-family .media-strip-image-wrapper {
+    height: 34px;
+  }
+
+  .media-strip-image-popsugar-family img {
+    width: 129px;
+  }
+
+  .media-strip-image-forbes-family img {
+    width: 70px;
+  }
+
+  .media-strip-image-wired-family img {
+    width: 83px;
+  }
+
+  .media-strip-image span {
+    font-size: 9px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .wrapper-upper-footer-text-box .wrapper-upper-footer-big-text {
+    font-size: 21px;
+  }
+
+  .cube-home-reviews-title {
+    width: calc(100% - 60px);
+    font-size: 33px;
+  }
+
+  .cube-home-review-text span {
+    padding: 0;
+  }
+
+  .cube-home-review-text span {
+    font-size: 17px;
+    line-height: 25px;
+  }
+
+  .cube-home-review-text span {
+    padding: 0;
+  }
+
+  .cube-home-review-text span {
+    font-size: 17px;
+    line-height: 25px;
+  }
+
+  .ast-container {
+    margin-top: 100px !important;
+  }
+}
+
+@media (max-width: 351px) {
+  .footer-menu-number-two.tree {
+    float: none !important;
+    text-align: left;
+    margin-top: 28px;
+  }
+
+  .payment-image-wrapper {
+    height: 150px;
+  }
+
+  .wrapper-bottom-footer {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 345px) {
+  .cube-home-stand-stand {
+    width: 477px;
+    height: 450px;
+    left: -74px;
+    top: 237px;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .wrapper-upper-footer-text-box .wrapper-upper-footer-big-text {
+    font-size: 21px;
+  }
+
+  .cube-home-stand-title {
+    font-size: 48px;
+  }
+
+  .cube-home-improve-image {
+    width: 42%;
+    margin-top: 44px;
+  }
+
+  .cube-home-improve-sub-title,
+  .cube-home-improve-text {
+    font-size: 15px;
+  }
+
+  .header-cart-subtotal-wrapper {
+    padding-left: 0;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .wrapper-upper-footer-big-text {
+    font-size: 18px !important;
+    margin-top: 10px;
+    margin-bottom: -12px;
+  }
+
+  .wrapper-upper-footer-input input {
+    padding-right: 17px;
+    padding-left: 17px;
+  }
+
+  .cube-home-the-new-button {
+    width: 109px;
+    height: 29px;
+    line-height: 29px;
+    font-size: 12px;
+    margin-top: 7px;
+    border-radius: 14px;
+  }
+
+  .cube-home-the-new-text {
+    font-size: 14.5px;
+    line-height: 23px;
+    margin-top: 17px;
+    max-width: unset;
+    text-align: center;
+  }
+
+  .cube-home-the-new-title {
+    font-size: 29px;
+    line-height: 15px;
+  }
+
+  .cube-home-the-new-info-wrapper {
+    margin-top: 37px;
+  }
+
+  .cube-product-content-section.the-new {
+    max-width: 813px;
+  }
+
+  .cube-home-the-new-wrapper {
+    height: 338px;
+  }
+}
+
+@media only screen and (min-width: 860px) {
+  .show-tablet {
+    display: none !important;
+  }
+}
+
+.media-strip-image-fast img(width) {
+  width: 95px;
+}
+
+.media-strip-image-wall img(width) {
+  width: 135px;
+}
+
+.media-strip-image-atlas img(width) {
+  width: 155px;
+}
+
+.media-strip-image-wired img(width) {
+  width: 164px;
+}
+
+.cube-pluses-item-image img(width) {
+  width: 70px;
+}
+
+.media-strip-image-verge img(width) {
+  width: 144px;
+}
+
+.cube-pluses-item-image img(width) {
+  width: 70px;
+}
+
+.cube-find-amazon-logo img(width) {
+  width: 210px;
+}
+
+@media only screen and (max-width: 1060px) {
+  .cube-find-amazon-logo img(width) {
+    width: 155px;
+    height: 49px;
+  }
+}
+
+.cube-find-apple-logo img(width) {
+  width: 318px;
+  height: 80px;
+}
+
+@media only screen and (max-width: 1060px) {
+  .cube-find-amazon-logo img(width) {
+    width: 211px;
+    height: 53px;
+  }
+
+  .cube-home-stand-stand-mobile {
+    width: 50%;
+    height: unset;
+  }
+}
+
+@media (max-width: 480px) {
+  .cube-find-amazon-logo img(width) {
+    width: 30%;
+    height: unset;
+  }
+
+  .cube-home-stand-stand-mobile {
+    width: 100%;
+    height: unset;
+  }
+}
+
+.cube-pluses-item-image img(width) {
+  width: 100px;
+  height: 77px;
+}
+
+.cube-pluses-item-image img(width) {
+  width: 100px;
+  height: 77px;
+}
+
+.cube-pluses-item-image img(width) {
+  width: 101px;
+  height: 81px;
+}
+
+.cube-pluses-item-image img(width) {
+  width: 101px;
+  height: 81px;
+}
+
+.header-menu-mobile-button img(width) {
+  width: 25px;
+  height: 24px;
+}
+
+.cube-header-logo(width) {
+  width: 71px;
+  height: 57px;
+}
+
+@media (max-width: 1366px) and (max-height: 1024px) {
+  .cube-shop-prod-item .button {
+    visibility: visible;
+    background: #0274be !important;
+  }
+}
+
+@media (max-width: 1280px) {
+  .cube-shop-prod-item .button {
+    visibility: visible;
+  }
+}
+
+/* family-slider */
+
+.landing-family-slider {
+  background: #eeeeee;
+  padding: 50px 0;
+}
+
+.landing-family-slider .cube-product-content-section {
+  width: calc(100% - 60px);
+}
+
+.family-slider-content-wrapper {
+  position: relative;
+  width: calc(100% - 484px);
+  height: 480px;
+}
+
+.family-slider-text-wrapper {
+  width: calc(100% - 30px);
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 8%;
+}
+
+.family-slider-text-wrapper .title {
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.family-slider-text-wrapper .text {
+  position: relative;
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.family-slider-text-wrapper .text span {
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.family-slider-text-wrapper .text span.active {
+  position: relative;
+  opacity: 1;
+}
+
+.family-slider-nav {
+  position: absolute;
+  width: 100%;
+  height: 12px;
+  text-align: center;
+  bottom: 8%;
+  left: 0;
+}
+
+.family-slider-nav.tablet {
+  display: none;
+}
+
+.family-slider-nav div {
+  width: 12px;
+  height: 12px;
+  background: #85c5e4;
+  border-radius: 100%;
+  margin: 0 18px;
+}
+
+.family-slider-nav div.active {
+  background: #1d9ddb;
+}
+
+.family-slider-image-wrapper {
+  position: relative;
+  width: 480px;
+  height: 480px;
+}
+
+.family-slider-image-wrapper img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  transition: opacity 1s;
+  opacity: 0;
+}
+
+.family-slider-image-wrapper img.active {
+  opacity: 1;
+}
+
+.family-slider-image-wrapper.tablet {
+  display: none;
+}
+
+@media (max-width: 1440px) {
+  .family-slider-text-wrapper .title {
+    font-size: 33px;
+    margin-bottom: 20px;
+  }
+
+  .family-slider-text-wrapper .text {
+    font-size: 33px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .family-slider-image-wrapper {
+    width: 380px;
+    height: 380px;
+  }
+
+  .family-slider-content-wrapper {
+    width: calc(100% - 384px);
+    height: 380px;
+  }
+
+  .family-slider-text-wrapper .title {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .family-slider-text-wrapper .text {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 860px) {
+  .landing-family-slider {
+    padding: 30px 0;
+  }
+
+  .landing-family-slider .cube-product-content-section {
+    width: 100%;
+  }
+
+  .family-slider-content-wrapper {
+    width: 100%;
+    height: auto;
+  }
+
+  .family-slider-text-wrapper {
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .family-slider-image-wrapper {
+    display: none;
+    width: 100%;
+    padding-top: 75%;
+    margin-bottom: 28px;
+  }
+
+  .family-slider-image-wrapper.tablet {
+    display: block;
+  }
+
+  .family-slider-nav {
+    position: inherit;
+    display: none;
+    margin-bottom: 15px;
+  }
+
+  .family-slider-nav.tablet {
+    display: block;
+  }
+
+  .family-slider-text-wrapper .title {
+    padding: 0 15px;
+  }
+
+  .family-slider-text-wrapper .text {
+    width: calc(100% - 30px);
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-family-slider {
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
+
+  .family-slider-text-wrapper .title {
+    font-size: 23px;
+    background: white;
+    margin: 0;
+    padding: 15px;
+  }
+
+  .family-slider-text-wrapper .text {
+    height: 108px;
+    font-size: 22px;
+  }
+
+  .family-slider-nav {
+    height: 10px;
+  }
+
+  .family-slider-nav div {
+    width: 10px;
+    height: 10px;
+    margin: 0 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  .family-slider-text-wrapper .text {
+    height: 84px;
+    font-size: 18px;
+  }
+}
+
+/* family-slider */
+
+/* homepage-products */
+
+.cube-shop-page-packs-item {
+  width: calc(25% - 12px);
+  height: 400px;
+  background-position: center 90px !important;
+  background-size: calc(100% - 30px) !important;
+  border: solid 2px #e2e2e2;
+  margin-bottom: 16px !important;
+  margin-right: 12px;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.cube-shop-page-packs-item:nth-child(5) {
+  margin-right: unset;
+}
+
+.cube-shop-page-packs-item.cube-shop-prod-img-3 {
+  background-position: center 0px !important;
+  background-size: 100% !important;
+}
+
+.cube-shop-page-packs-item .columns-1 {
+  height: 100%;
+}
+
+.cube-shop-page-packs-item .product {
+  height: 100%;
+  margin-bottom: 0 !important;
+}
+
+.woocommerce-LoopProduct-link {
+  height: calc(100% - 42px) !important;
+}
+
+@media (max-width: 860px) {
+  .home-middle-shop-container .home-product-block {
+    height: auto;
+  }
+
+  .cube-shop-page-packs-item {
+    display: block;
+    width: calc(100% - 30px);
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .cube-shop-page-packs-item:nth-child(5) {
+    margin-right: auto;
+  }
+}
+
+/* homepage-products */
+
+/* discription */
+
+.discription-title {
+  font-size: 38px;
+  text-transform: uppercase;
+  margin-bottom: 11px;
+  font-weight: 500;
+}
+
+.discription-text {
+  position: relative;
+  width: 600px;
+  font-size: 26px;
+  line-height: 1.3;
+  font-weight: 400;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 20px;
+}
+
+.discription-text img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.discription-image {
+  position: relative;
+  width: calc(100% - 625px);
+  max-width: 750px;
+  float: right;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 1024px) {
+  .landing-description-section {
+    height: 600px;
+  }
+
+  .discription-title {
+    font-size: 34px;
+  }
+
+  .discription-text {
+    width: 470px;
+    font-size: 23px;
+  }
+
+  .discription-text img {
+    width: 220px;
+    margin-top: 40px;
+  }
+
+  .discription-image {
+    width: calc(100% - 495px);
+  }
+}
+
+@media (max-width: 860px) {
+  .landing-description-section .cube-product-content-section {
+    width: calc(100% - 30px);
+  }
+
+  .landing-description-section {
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .discription-image {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    transform: unset;
+    top: 0;
+    float: unset;
+    margin: 0 auto;
+  }
+
+  .discription-title {
+    font-size: 24px;
+  }
+
+  .discription-text {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    transform: unset;
+    top: 0;
+    text-align: center;
+    font-size: 18px;
+    margin: 0 auto;
+  }
+}
+
+/* discription */

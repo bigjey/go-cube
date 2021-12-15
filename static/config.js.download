@@ -1,0 +1,5 @@
+
+window[window["TiktokAnalyticsObject"]].instance("C49P6CPRG9N9M1BOBJMG").setAdvancedMatchingAvailableProperties({"email":true,"phone_number":true});
+window[window["TiktokAnalyticsObject"]].instance("C49P6CPRG9N9M1BOBJMG").setPixelInfo && window[window["TiktokAnalyticsObject"]].instance("C49P6CPRG9N9M1BOBJMG").setPixelInfo({status: 0, name: "Gocube", advertiserID: "6995072000595116033", setupMode: 1, partner: "", is_onsite: false});
+window[window["TiktokAnalyticsObject"]].setPCMDomain && window[window["TiktokAnalyticsObject"]].setPCMDomain("getgocube.com");
+window[window["TiktokAnalyticsObject"]].setPCMConfig && window[window["TiktokAnalyticsObject"]].setPCMConfig([]);

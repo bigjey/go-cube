@@ -1,0 +1,86 @@
+var GlobalSlideIndexFamily = 1;
+var GlobalNumOfSlidersFamily = 3;
+function firstSliderShowFamily(){
+	//console.log("start firstSliderShowFamily");
+	document.getElementById('family-slider-content-wrapper').style.display = 'block';
+	document.getElementById('slider-img-1').classList.add('active');
+	document.getElementById('slider-img-mobile-1').classList.add('active');
+	document.getElementById('slider-desc-1').classList.add('active'); 	
+	document.getElementsByClassName("family-dot-1")[0].classList.add('active');//dot
+	document.getElementsByClassName("family-dot-1")[1].classList.add('active');
+
+}
+
+function sliderStartFamily(){
+	//console.log("start interval");
+    sliderTimerFamily = setInterval(()=>{
+	
+      ShowThisSliderFamily(chackIndexFamily(GlobalSlideIndexFamily+1));
+     
+    }, 6000)
+  }
+  
+function NextIndexFamily(index){
+    
+      if(index == GlobalNumOfSlidersFamily){
+        index = 1;
+      }else{
+        index + 1;
+      }
+    return index;
+  }
+  
+function PreviousIndexFamily(index){ 
+      if(index == 1){
+        index = GlobalNumOfSlidersFamily;
+    }else{                                                            
+      index = index - 1; 
+    }
+    return index;
+  }
+
+function chackIndexFamily(index){
+    if(index > GlobalNumOfSlidersFamily){
+        index = 1;
+    }
+    if(index<1){
+        index = GlobalNumOfSlidersFamily;
+    }
+    return index;
+  }
+
+
+  
+function ShowThisSliderFamily(sliderId){
+	//console.log("start ShowThisSliderFamily",sliderId); 
+	clearInterval(sliderTimerFamily); 
+
+		for(var i = 1; i < GlobalNumOfSlidersFamily + 1; i ++){ 
+			document.getElementById('slider-img-' + chackIndexFamily(i)).classList.remove("active");
+			document.getElementById('slider-img-mobile-' + chackIndexFamily(i)).classList.remove("active");
+			document.getElementById('slider-desc-' + chackIndexFamily(i)).classList.remove("active");
+		}		 //new
+			//console.log("start ShowThisSliderFamily chackIndexFamily(sliderId)",chackIndexFamily(sliderId));
+		 document.getElementById('slider-img-' + chackIndexFamily(sliderId)).classList.add('active');
+		 document.getElementById('slider-img-mobile-' + chackIndexFamily(sliderId)).classList.add('active');
+		 document.getElementById('slider-desc-' + chackIndexFamily(sliderId)).classList.add('active');		 //new
+		 
+		 RemoveFromAllFamily('family-dot','active');//dot
+		 //console.log("chackIndexFamily(sliderId  dot)",chackIndexFamily(sliderId));
+		 document.getElementsByClassName("family-dot-" + chackIndexFamily(sliderId))[0].classList.add('active');//dot
+		 document.getElementsByClassName("family-dot-" + chackIndexFamily(sliderId))[1].classList.add('active');//dot
+		 GlobalSlideIndexFamily = sliderId;
+		 sliderStartFamily();
+		return;
+	
+	
+}
+
+function RemoveFromAllFamily(className , removeName){
+	
+	var testarray = document.getElementsByClassName(className);
+	for(var i = 0; i < testarray.length; i++)
+	{
+		testarray[i].classList.remove("active");
+	}
+}

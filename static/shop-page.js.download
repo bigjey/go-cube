@@ -1,0 +1,5 @@
+jQuery(document).ready(function()
+	{	
+		 jQuery(".add_to_cart_button").text("ADD TO CART");
+		
+	});

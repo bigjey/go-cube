@@ -1,0 +1,1670 @@
+var BuyButtonPauseTime = 5000;
+var isBuyButtonPause = false;
+jQuery(document).ready( function(event) { 
+   setPriceTopPositionRecommProd();
+   setPriceTopPositionAccessPageProd();
+   window.addEventListener('resize', function () {
+	   setPriceTopPositionRecommProd();
+	   setPriceTopPositionAccessPageProd()
+   })
+	//alert("width now " + window.innerWidth + "px");
+	setSpecificPageUrl();
+	jQuery("body").css("visibility","visible");
+	
+	
+}); 
+
+function setSpecificPageUrl(){
+			if(isSpecificPage){document.getElementsByTagName('body')[0].className += ' specific-homepage'};				
+			let specific_page = const_specific_page;
+			
+			specific_page = localStorage.getItem('specific_page') != null ? localStorage.getItem('specific_page') : '';
+			console.log('specific_page',specific_page);
+			console.log('localStorage specific_page ',localStorage.getItem('specific_page'));
+			let newHomeLink = "/";
+			if(specific_page != '' && specific_page != undefined && specific_page != null){
+				newHomeLink += specific_page + "/";
+			}	
+			/* if(window.localStorage.getItem("UTM")=="true"){   
+				console.log("href = '/?utm_source=Facebook'");
+				newHomeLink +=  '?utm_source=' + window.localStorage.getItem("UTMtype");
+				
+			} */
+			setTimeout(function(){document.getElementById('header-logo').href = newHomeLink;},1);
+}
+
+
+function setPriceTopPositionRecommProd(){
+	let recommProds = document.getElementsByClassName("recomm-product-wrapper");
+	for(let recormProd of recommProds){
+		let recProdTitle = jQuery(recormProd).find("h2");
+		let titleHeight = jQuery(recProdTitle).height();
+		if(window.innerWidth < 860){
+				if(titleHeight > 25){
+					jQuery(recormProd).find(".price").first().css("top","46px");
+				}else{
+					jQuery(recormProd).find(".price").first().css("top","28px");
+				}
+		}else{
+			jQuery(recormProd).find(".price").prop( "style", null );
+		}
+	
+		console.log("recProdTitle",jQuery(recProdTitle).height());
+		
+	}
+}
+
+function setPriceTopPositionAccessPageProd(){
+	let recommProds = document.getElementsByClassName("access-page-product-wrapper");
+	for(let recormProd of recommProds){
+		let recProdTitle = jQuery(recormProd).find("h2");
+		let titleHeight = jQuery(recProdTitle).height();
+		 if(window.innerWidth < 860){
+				if(titleHeight > 25){
+					if(window.innerWidth < 480){
+						jQuery(recormProd).find(".price").first().css("top","56px");
+					}else{
+						jQuery(recormProd).find(".price").first().css("top","46px");
+					}
+					
+				}else{
+					if(window.innerWidth < 480){
+						jQuery(recormProd).find(".price").first().css("top","32px");
+					}else{
+						jQuery(recormProd).find(".price").first().css("top","28px");
+					}
+					
+				}
+		}else{
+			jQuery(recormProd).find(".price").prop( "style", null );
+		} /**/
+	
+		console.log("recProdTitle",jQuery(recProdTitle).height());
+		
+	}
+}
+ jQuery(document).on('click', '.super-test', function(event) { 
+   
+	
+	 var coupon_code = jQuery(".cube-cart-coupon-input").val();
+	 jQuery('#coupon_code').val(coupon_code);
+     jQuery(".cube-coupon-button-hidden").click();  
+}); 
+ // cart coupon function ///////////////////////////////////////////////////////////////////////////
+ //  cart gift redeem function ///////////////////////////////////////////////////////////////////////////
+ /* jQuery(document).on('click', '#menu-item-2270', function(event) { 
+   
+	 event.preventDefault();
+	 
+	 
+    
+}); 
+
+  jQuery(document).on('click', '#menu-item-1469', function(event) { 
+   
+	 event.preventDefault();
+	 
+	 
+    
+});  */
+jQuery("#menu-item-2270 a").first().attr("href","javascript:void(0)");
+jQuery("#menu-item-1469 a").first().attr("href","javascript:void(0)");
+jQuery("#menu-item-1469").first().attr("onmouseover","openShopSubMenu()");
+jQuery("#menu-item-1469").first().attr("onmouseout","closeShopSubMenu()");
+
+jQuery("#menu-item-1469 a").first().html(`<span onclick='goToPage("/shop")'>Shop</span>
+					<div id='sub-menu-button' 					
+					onclick='toggleShopSubMenu()' class='mobile-sub-menu-button'></div>`);
+ var isShopSubMenuOpen = false;
+ function toggleShopSubMenu(){
+	 if(isShopSubMenuOpen){
+		 jQuery('#menu-item-1469 .sub-menu').css("display","none");
+		 jQuery('#sub-menu-button').removeClass("active");
+		 isShopSubMenuOpen = false;
+	 }else{
+		 jQuery('#menu-item-1469 .sub-menu').css("display","block");
+		 jQuery('#sub-menu-button').addClass("active");	
+		 isShopSubMenuOpen = true;
+	 }
+	 
+ }
+ function closeShopSubMenu(){
+		 jQuery('#menu-item-1469 .sub-menu').css("display","none");
+		 jQuery('#sub-menu-button').removeClass("active");
+		 isShopSubMenuOpen = false;
+ }
+ function openShopSubMenu(){
+		jQuery('#menu-item-1469 .sub-menu').css("display","block");
+		jQuery('#sub-menu-button').addClass("active");	
+		isShopSubMenuOpen = true;
+ }
+ jQuery("#menu-item-2270 a").first().html(`<span onclick='goToPage("/shop")'>Shop</span>
+					<div id='mobile-sub-menu-button' 					
+					onclick='toggleMobileShopSubMenu()' class='mobile-sub-menu-button'></div>`);
+ var isMobileShopSubMenuOpen = false;
+ function toggleMobileShopSubMenu(){
+	 if(isMobileShopSubMenuOpen){
+		 jQuery('#menu-item-2270 .sub-menu').css("display","none");
+		 jQuery('#mobile-sub-menu-button').removeClass("active");
+		 isMobileShopSubMenuOpen = false;
+	 }else{
+		 jQuery('#menu-item-2270 .sub-menu').css("display","block");
+		 jQuery('#mobile-sub-menu-button').addClass("active");	
+		 isMobileShopSubMenuOpen = true;
+	 }
+	 
+ }
+ function goToPage(url){
+	 location.href = url;
+ }
+ // cart gift redeem function ///////////////////////////////////////////////////////////////////////////
+ //  cart gift redeem function ///////////////////////////////////////////////////////////////////////////
+ jQuery(document).on('click', '#redeem_button', function(event) { 
+   
+	
+	 var redeem_code = jQuery("#redeem_input").val();
+	 jQuery('#pwgc-redeem-gift-card-number').val(redeem_code);
+     jQuery("#pwgc-apply-gift-card").click();  
+}); 
+ // cart gift redeem function ///////////////////////////////////////////////////////////////////////////
+ //  cart gift redeem function ///////////////////////////////////////////////////////////////////////////
+ jQuery(document).on('click', '#redeem_button_checkout', function(event) { 
+   
+	
+	 var redeem_code = jQuery("#redeem_input").val();
+	 jQuery('#pwgc-redeem-gift-card-number').val(redeem_code);
+     jQuery("#pwgc-redeem-button").click();  
+}); 
+ // cart gift redeem function ///////////////////////////////////////////////////////////////////////////
+ // product page click on add button (update quantity input) ///////////////////////////////////////////////////////////////////////////
+jQuery(document).on('click', '#cube-add-button', function(event) { 
+     event.preventDefault(); 
+	if(!isBuyButtonPause){
+		var quantity = jQuery(".cube-quantity-input").val();
+		jQuery('.qty').val(quantity);
+		//jQuery(".single_add_to_cart_button").click(); 
+		DisableProductPageBuyButtonWaiting();
+	}
+	
+	
+});
+
+
+
+
+jQuery(document).on('click', '#cube-add-button-2', function(event) { 
+  event.preventDefault(); 
+	
+	if(!isBuyButtonPause){
+		jQuery(".single_add_to_cart_button").click(); 
+		DisableProductPageBuyButtonWaiting();
+	}
+	
+	
+});
+
+
+ // product page click on add button (update quantity input) ///////////////////////////////////////////////////////////////////////////
+ // product photo navigation tablet phone / desktop ///////////////////////////////////////////////////////////////////////////
+jQuery(function() {
+
+	var squareImg = jQuery(".square");
+	var squareImgWidth = squareImg.width();
+	jQuery(squareImg).css("height",squareImgWidth);
+	if(screen.width > 860){
+		/* var $current = jQuery('.flex-control-nav');
+		var $previous = jQuery('.flex-viewport');    
+		$current.insertBefore($previous); */
+		setDesktopGallery();
+	}
+  
+  
+	window.addEventListener('resize', function () {  
+	 console.log("there is resize event");
+		if(screen.width > 860){
+			/* var $current = jQuery('.flex-control-nav');
+			var $previous = jQuery('.flex-viewport');    
+			$current.insertBefore($previous); */
+			setDesktopGallery();
+		}else{
+			setMobileGallery();
+		}
+	});
+  });
+  
+  
+  function setMobileGallery(){
+	  var $current = jQuery('.flex-control-nav');
+		var $previous = jQuery('.flex-viewport');    
+		$previous.insertBefore($current);
+  }
+  function setDesktopGallery(){
+	  var $current = jQuery('.flex-control-nav');
+		var $previous = jQuery('.flex-viewport');    
+		$current.insertBefore($previous);
+  }
+// product photo navigation tablet phone / desktop /////////////////////////////////////////////////////////////////////////// 
+// toggle header cart ///////////////////////////////////////////////////////////////////////////
+jQuery(document).on('click', '.cube-cart-contents, .cube-header-cart-close', function(event){
+				event.preventDefault(); 			
+				jQuery(".header-cart-background").toggle();
+				jQuery(".cube-header-cart-wrapper").slideToggle("slow");
+			});	
+jQuery(document).on('click', '.header-menu-mobile-button, .mobile-menu-close-button', function(event){
+				event.preventDefault(); 	
+				
+				jQuery(".cube-header-menu-wrapper").slideToggle("slow");
+			});		
+	jQuery('.animated-link').click(function(){
+    jQuery('html, body').animate({
+        scrollTop: jQuery( jQuery(this).attr('href') ).offset().top - 100
+    }, 500);
+    return false;
+});	
+// toggle header cart /////////////////////////////////////////////////////////////////////////// 
+// loader ///////////////////////////////////////////////////////////////////////////
+ //jQuery(window).on('load', function(){
+jQuery(document).ready(function(){
+    jQuery('#cover').fadeOut(1000);
+}) 
+// loader ///////////////////////////////////////////////////////////////////////////
+
+function isPostCodeErrorExisting(){
+	console.log("error text",jQuery(".woocommerce-error").html());
+	const errorText = jQuery(".woocommerce-error").html();
+	if(errorText.includes("is not a valid postcode")){
+		return true;
+	}else{
+		return false;
+	};
+		
+}
+function getMostHighInvalidELTopValue(){
+	let topValues = [];
+	const pEls = document.getElementsByTagName("p");
+	for(let index in pEls){
+		if(pEls[index].className != undefined){
+			if(pEls[index].className.includes("woocommerce-invalid")){
+				if(pEls[index].offsetTop != 0){
+					topValues.push(pEls[index].offsetTop);
+					if(pEls[index].className.includes("validate-email")){
+						jQuery("#subscribe-email-id").addClass("cube-not-valid-email-input");
+						jQuery("#custom-email-wrapper").addClass("woocommerce-invalid");
+						topValues.push(document.getElementById("subscribe-email-id").offsetTop);
+					}
+				}else{					 					 
+					if(pEls[index].className.includes("validate-email")){
+						jQuery("#subscribe-email-id").addClass("cube-not-valid-email-input");
+						jQuery("#custom-email-wrapper").addClass("woocommerce-invalid");
+						topValues.push(document.getElementById("subscribe-email-id").offsetTop);
+					}
+					if(pEls[index].className.includes("checkout-terms-wrapper")){
+						const termsOffset = parseInt(jQuery("#place_order").offset().top) - 200;
+						topValues.push(termsOffset);
+						console.log("offset terms case",termsOffset);
+					}
+					console.log("offset 0",pEls[index]);
+				}
+					
+			}
+		}
+		
+	}
+	if(isPostCodeErrorExisting()){
+		topValues.push(parseInt(jQuery("#billing_postcode").offset().top) - 200);
+		jQuery("#billing_postcode_field").addClass("woocommerce-invalid");
+		jQuery("#billing_postcode_field").removeClass("woocommerce-validated");
+		jQuery("#billing_postcode_field .required-field-notice").html("*This is not a valid postcode");
+	}
+	topValues.sort(function(a, b) {
+	  return a - b;
+	});
+	console.log("topValues",topValues);
+	return topValues[0];
+	
+}
+jQuery( function( $ ) {
+  $.scroll_to_notices = function( scrollElement ) {
+    // Your changes ...
+    if ( scrollElement.length ) {
+		
+			const theMostTopValue = getMostHighInvalidELTopValue();
+      $( 'html, body' ).animate( { scrollTop:  theMostTopValue   }, 1000 );
+	  
+    }
+  };
+});
+ jQuery(document).ready(function(){
+		
+		jQuery("#billing_state").parents("p").addClass("cube-input-changed");
+		
+		jQuery("#billing_state").parents("p").append( "<span class='required-field-notice'>*Required field</span>" );
+		jQuery("#billing_state").change(function() {			
+				if(jQuery("#billing_state").val() != ""){
+					jQuery(this).parents("p").addClass("cube-input-changed");
+				}else{
+					jQuery(this).parents("p").removeClass("cube-input-changed");
+				}
+		});
+	// billing billing_state ////////////////////////////////////////////////////////////////////////////////
+	// checkout make address checkbox unchecked ////////////////////////////////////////////////////////////////////////////////
+	jQuery("#ship-to-different-address-checkbox").prop('checked', false);
+	
+	// checkout make address checkbox unchecked ////////////////////////////////////////////////////////////////////////////////
+		// billing_country ////////////////////////////////////////////////////////////////////////////////
+			
+			
+			jQuery("#billing_country").parents("p").addClass("cube-input-changed");
+
+		jQuery("#billing_country").parents("p").append( "<span class='required-field-notice'>*Required field</span>" );
+		jQuery("#billing_country").change(function() {			
+				if(jQuery("#billing_country").val() != ""){
+					jQuery(this).parents("p").addClass("cube-input-changed");
+				}else{
+					jQuery(this).parents("p").removeClass("cube-input-changed");
+				}
+		});
+	// billing_country ////////////////////////////////////////////////////////////////////////////////	
+	// billing postcode ////////////////////////////////////////////////////////////////////////////////	
+		if(jQuery("#billing_postcode").val() != ""){
+				
+			jQuery("#billing_postcode").parents("p").addClass("cube-input-changed");
+		}
+		jQuery("#billing_postcode").parents("p").append( "<span class='required-field-notice'>*Required field</span>" );
+		jQuery("#billing_postcode").change(function() {			
+				if(jQuery("#billing_postcode").val() != ""){
+					jQuery(this).parents("p").addClass("cube-input-changed");
+				}else{
+					jQuery(this).parents("p").removeClass("cube-input-changed");
+				}
+		});
+	// billing postcode ////////////////////////////////////////////////////////////////////////////////
+	
+	// billing_city ////////////////////////////////////////////////////////////////////////////////	
+		if(jQuery("#billing_city").val() != ""){
+				
+			jQuery("#billing_city").parents("p").addClass("cube-input-changed");
+			
+		}
+		jQuery("#billing_city").parents("p").append( "<span class='required-field-notice'>*Required field</span>" );
+		jQuery("#billing_city").change(function() {			
+				if(jQuery("#billing_city").val() != ""){
+					jQuery(this).parents("p").addClass("cube-input-changed");
+				}else{
+					jQuery(this).parents("p").removeClass("cube-input-changed");
+				}
+		});
+	// billing_city ////////////////////////////////////////////////////////////////////////////////	
+	// billing_address_1 ////////////////////////////////////////////////////////////////////////////////	
+		if(jQuery("#billing_address_1").val() != ""){
+				
+			jQuery("#billing_address_1").parents("p").addClass("cube-input-changed");
+		}
+		jQuery("#billing_address_1").parents("p").append( "<span class='required-field-notice'>*Required field</span>" );
+		jQuery("#billing_address_1").change(function() {			
+				if(jQuery("#billing_address_1").val() != ""){
+					jQuery(this).parents("p").addClass("cube-input-changed");
+				}else{
+					jQuery(this).parents("p").removeClass("cube-input-changed");
+				}
+		});
+	// billing_address_1 ////////////////////////////////////////////////////////////////////////////////
+// billing_address_1 ////////////////////////////////////////////////////////////////////////////////	
+		if(jQuery("#billing_phone").val() != ""){
+				
+			jQuery("#billing_phone").parents("p").addClass("cube-input-changed");
+		}
+		jQuery("#billing_phone").parents("p").append( "<span class='required-field-notice'>*Required field</span>" );
+		jQuery("#billing_phone").change(function() {			
+				if(jQuery("#billing_phone").val() != ""){
+					jQuery(this).parents("p").addClass("cube-input-changed");
+				}else{
+					jQuery(this).parents("p").removeClass("cube-input-changed");
+				}
+		});
+	// billing_address_1 ////////////////////////////////////////////////////////////////////////////////		
+	// billing postcode ////////////////////////////////////////////////////////////////////////////////	
+		if(jQuery("#billing_address_2").val() != ""){
+				
+			jQuery("#billing_address_2").parents("p").addClass("cube-input-changed");
+		}
+		jQuery("#billing_address_2").parents("p").append( "<span class='required-field-notice'>*Required field</span>" );
+		jQuery("#billing_address_2").change(function() {			
+				if(jQuery("#billing_address_2").val() != ""){
+					jQuery(this).parents("p").addClass("cube-input-changed");
+				}else{
+					jQuery(this).parents("p").removeClass("cube-input-changed");
+				}
+		});
+	// billing postcode ////////////////////////////////////////////////////////////////////////////////	
+	// billing_first_name ////////////////////////////////////////////////////////////////////////////////	
+		if(jQuery("#billing_first_name").val() != ""){
+				
+			jQuery("#billing_first_name").parents("p").addClass("cube-input-changed");
+		}
+		jQuery("#billing_first_name").parents("p").append( "<span class='required-field-notice'>*Required field</span>" );
+		jQuery("#billing_first_name").change(function() {			
+				if(jQuery("#billing_first_name").val() != ""){
+					jQuery(this).parents("p").addClass("cube-input-changed");
+				}else{
+					jQuery(this).parents("p").removeClass("cube-input-changed");
+				}
+		});
+	// billing_first_name ////////////////////////////////////////////////////////////////////////////////	
+	// billing_last_name ////////////////////////////////////////////////////////////////////////////////	
+		if(jQuery("#billing_last_name").val() != ""){
+				
+			jQuery("#billing_last_name").parents("p").addClass("cube-input-changed");
+		}
+		jQuery("#billing_last_name").parents("p").append( "<span class='required-field-notice'>*Required field</span>" );
+		jQuery("#billing_last_name").change(function() {			
+				if(jQuery("#billing_last_name").val() != ""){
+					jQuery(this).parents("p").addClass("cube-input-changed");
+				}else{
+					jQuery(this).parents("p").removeClass("cube-input-changed");
+				}
+		});
+	// billing_last_name billing_email////////////////////////////////////////////////////////////////////////////////
+// billing_email ////////////////////////////////////////////////////////////////////////////////	
+		if(jQuery("#billing_email").val() != ""){
+				
+			jQuery("#billing_email").parents("p").addClass("cube-input-changed");
+		}
+		jQuery("#billing_email").parents("p").append( "<span class='required-field-notice'>*Required field</span>" );
+		jQuery("#billing_email").change(function() {			
+				if(jQuery("#billing_email").val() != ""){
+					jQuery(this).parents("p").addClass("cube-input-changed");
+				}else{
+					jQuery(this).parents("p").removeClass("cube-input-changed");
+				}
+		});
+	// billing_email billing_email////////////////////////////////////////////////////////////////////////////////		
+	}); 
+	
+	
+	// checkout mailchimp listen for checkout email checkbox subscribe user////////////////////////////////////////////////////////////////////////////////	
+// footer mailchimp listen for checkout email checkbox subscribe user////////////////////////////////////////////////////////////////////////////////		
+	/* 	jQuery("#subscribe-email-checkbox-footer").click(function() {
+			
+		var data = {
+			action: 'sub_mailchimp',
+			email: jQuery("#subscribe-email-id-footer").val(),
+			subscribed: 'subscribed'
+		};
+		
+		
+		
+		jQuery.post( "/wp-admin/admin-ajax.php", data, function(response) {
+				if(response == "subscribed") jQuery(".footer_subscribed_result").html('<div class="inline-element footer_subscribed_result_v"></div><div class="inline-element footer_subscribed_result_text">Subscribed! Thank You!</div>');
+		});
+		
+	}); */	
+			function FooterSubscribeMailChimp(){
+		var FooterEmail = jQuery("#subscribe-email-id-footer").val();
+		var data = {			
+			list: 'subscribe',
+			subs_email: FooterEmail,
+			value: 'yes'
+		};
+		console.log("trying to subscribe 1", validateEmail(FooterEmail));
+		if(validateEmail(FooterEmail)){
+			jQuery(".footer_subscribed_result").html('<div class="inline-element footer_subscribed_result_v"></div><div class="inline-element footer_subscribed_result_text">Subscribed! Thank You!</div>');
+					
+	 
+			jQuery.post( "/omni/service.php", data, function(response) {
+				var clearResponse = response.replace(/\\/g, "");
+				
+				
+			
+				
+				console.log("subscribe response d", clearResponse);
+				parsedResponse = JSON.parse(clearResponse);
+				console.log("response JSON", parsedResponse);
+				if(parsedResponse){
+					jQuery(".footer_subscribed_result").html('<div class="inline-element footer_subscribed_result_v"></div><div class="inline-element footer_subscribed_result_text">Subscribed! Thank You!</div>');
+					EmitSusbsNewsletterEventGA();
+				}
+	 
+		});
+		}else{ // not valid mail
+			jQuery(".footer_subscribed_result").html('<div style="color:white;padding-top:2px"class="inline-element footer_subscribed_result_text"><span class="wrong-email-cross"></span>Wrong Email Format!</div>');
+					
+		}
+	}
+	jQuery(document).keydown(function(e) {
+			if(e.which == 13) FooterSubscribeMailChimp();
+	});	
+	// footer mailchimp listen for checkout email checkbox subscribe user////////////////////////////////////////////////////////////////////////////////			
+	// validate email billing_email////////////////////////////////////////////////////////////////////////////////	
+	
+	
+	
+		jQuery("#subscribe-email-id").change(function(){
+			if(!validateEmail(jQuery("#subscribe-email-id").val())){
+				jQuery("#subscribe-email-id").addClass("cube-not-valid-email-input");
+			}else{
+				jQuery("#subscribe-email-id").removeClass("cube-not-valid-email-input");
+				jQuery("#custom-email-wrapper").removeClass("woocommerce-invalid");
+			}
+			
+		});
+		
+		function validateEmail($email) {
+			  var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+			  if(emailReg.test( $email )&&$email!=""){
+				  return true;
+			  }
+			  return false;
+		}
+    
+		var email_value = jQuery("#billing_email").val();
+		
+		jQuery("#subscribe-email-id").val(email_value);
+		
+		jQuery("#subscribe-email-id").keyup(function() {			
+			var email_value = jQuery("#subscribe-email-id").val();		
+			jQuery("#billing_email").val(email_value);
+		});
+		
+// validate email billing_email////////////////////////////////////////////////////////////////////////////////
+// validate email billing_email////////////////////////////////////////////////////////////////////////////////
+
+// validate email billing_email////////////////////////////////////////////////////////////////////////////////
+	 // vimeo iframe height calculation /////////////////////////////////////////////////////////////////////////// 
+			var NewHeight = screen.width / 1.8;
+			jQuery("#vimeo-iframe").height(NewHeight);
+		
+	 // vimeo iframe height calculation ///////////////////////////////////////////////////////////////////////////
+	  // gallery video 1 calculation /////////////////////////////////////////////////////////////////////////// 
+			var WidthVideo_1 = window.innerWidth / 8;
+			var MarginVideo_1 = -window.innerWidth / 192;
+			jQuery("#firstvideo").width(WidthVideo_1);
+			jQuery("#firstvideo").css("margin-top", MarginVideo_1);
+			
+	 // gallery video 1 calculation ///////////////////////////////////////////////////////////////////////////
+	  // gallery video 2 calculation /////////////////////////////////////////////////////////////////////////// 
+			var WidthVideo_2 = window.innerWidth / 3.84;
+			//var MarginVideo_1 = -window.innerWidth / 192;
+			jQuery("#secondvideo").width(WidthVideo_2);
+			//jQuery("#firstvideo").css("margin-top", MarginVideo_1);
+			
+	 // gallery video 2 calculation ///////////////////////////////////////////////////////////////////////////
+	 // gallery video 3 calculation /////////////////////////////////////////////////////////////////////////// 
+			var WidthVideo_3 = window.innerWidth / 3.42;
+			//var MarginVideo_1 = -window.innerWidth / 192;
+			jQuery("#thirdvideo").width(WidthVideo_3);
+			//jQuery("#firstvideo").css("margin-top", MarginVideo_1);
+			
+	 // gallery video 3 calculation ///////////////////////////////////////////////////////////////////////////
+	// gallery row height calcultation /////////////////////////////////////////////////////////////////////////// 
+			
+			var height = window.innerWidth/1.5834;			
+			jQuery('.gallery-row-wrapper-1').height(height);
+			
+			var height2 = window.innerWidth/1.3603;			
+			jQuery('.gallery-row-wrapper-2').height(height2);
+			
+			var height3 = window.innerWidth/2.4633;
+			jQuery('.gallery-row-wrapper-3').height(height3);
+
+// gallery row height calcultation /////////////////////////////////////////////////////////////////////////// 
+window.addEventListener('resize', function () {  
+
+	 // gallery video 1 calculation /////////////////////////////////////////////////////////////////////////// 
+			var WidthVideo_1 = window.innerWidth / 8;
+			var MarginVideo_1 = -window.innerWidth / 192;
+			jQuery("#firstvideo").width(WidthVideo_1);
+			jQuery("#firstvideo").css("margin-top", MarginVideo_1);
+			
+	 // gallery video 1 calculation ///////////////////////////////////////////////////////////////////////////
+	  // gallery video 2 calculation /////////////////////////////////////////////////////////////////////////// 
+			var WidthVideo_2 = window.innerWidth / 3.84;
+			//var MarginVideo_1 = -window.innerWidth / 192;
+			jQuery("#secondvideo").width(WidthVideo_2);
+			//jQuery("#firstvideo").css("margin-top", MarginVideo_1);
+			
+	 // gallery video 2 calculation ///////////////////////////////////////////////////////////////////////////
+	 // gallery video 3 calculation /////////////////////////////////////////////////////////////////////////// 
+			var WidthVideo_3 = window.innerWidth / 3.42;
+			//var MarginVideo_1 = -window.innerWidth / 192;
+			jQuery("#thirdvideo").width(WidthVideo_3);
+			//jQuery("#firstvideo").css("margin-top", MarginVideo_1);
+			
+	 // gallery video 3 calculation ///////////////////////////////////////////////////////////////////////////
+			var height = window.innerWidth/1.5834;
+			jQuery('.gallery-row-wrapper-1').height(height);
+			
+			var height2 = window.innerWidth/1.3603;			
+			jQuery('.gallery-row-wrapper-2').height(height2);
+			
+			var height3 = window.innerWidth/2.4633;
+			jQuery('.gallery-row-wrapper-3').height(height3);
+
+});
+// gallery row height calcultation /////////////////////////////////////////////////////////////////////////// 
+/////////// animation home first slide phone  ////////////////////////////////////////////
+/* jQuery(document).ready(function(){
+	
+	  jQuery( ".cube-home-firstslide-phone-image" ).animate({
+	   right: "0px"
+	  }, 1500 );
+	
+}); asseen-image-1 */
+
+
+jQuery(document).ready(function(){
+	setTimeout(function () {jQuery( ".cube-home-firstslide-phone-image, .cube-home-firstslide-cube-image" ).addClass("fade-in visibility-true")}, 1000);
+	
+});
+/////////// animation home first slide phone  ////////////////////////////////////////////
+/////////// animation home improve phone  ////////////////////////////////////////////
+var $window = jQuery(window);
+var $elem = jQuery(".cube-home-improve-phone")
+
+function isScrolledIntoView($elem, $window) {
+    var docViewTop = $window.scrollTop();
+    var docViewBottom = docViewTop + $window.height();
+
+	if($elem.length > 0){
+    var elemTop = $elem.offset().top;} 
+    var elemBottom = elemTop + $elem.height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+
+/////////// animation as seen on tv  ////////////////////////////////////////////
+var $asseen = jQuery(".media-strip-super-wrapper");
+jQuery(document).on("scroll", function () {
+    if (isScrolledIntoView($asseen, $window)) {
+		jQuery("#fixedbutton-wrapper").css("display","block");
+		//setTimeout(function () {jQuery( "#asseen-image-1" ).addClass("flip-in-ver-right visibility-true")}, 300);
+console.log("scrolled it");		
+    }
+});
+jQuery(document).on("scroll", function () {
+    if (isScrolledIntoView($asseen, $window)) {
+		//setTimeout(function () {jQuery( "#asseen-image-2" ).addClass("flip-in-ver-right visibility-true")}, 500);    
+    }
+});
+jQuery(document).on("scroll", function () {
+    if (isScrolledIntoView($asseen, $window)) {
+		//setTimeout(function () {jQuery( "#asseen-image-3" ).addClass("flip-in-ver-right visibility-true")}, 700);    
+    }
+});
+jQuery(document).on("scroll", function () {
+    if (isScrolledIntoView($asseen, $window)) {
+		//setTimeout(function () {jQuery( "#asseen-image-4" ).addClass("flip-in-ver-right visibility-true")}, 900);    
+    }
+});
+jQuery(document).on("scroll", function () {
+    if (isScrolledIntoView($asseen, $window)) {
+		//setTimeout(function () {jQuery( "#asseen-image-5" ).addClass("flip-in-ver-right visibility-true")}, 1100);    
+    }
+});
+/////////// animation as seen on tv  ////////////////////////////////////////////
+/////////// animation Learn  ////////////////////////////////////////////
+var $learn = jQuery(".cube-home-learn-content");
+jQuery(document).on("scroll", function () {
+    if (isScrolledIntoView($learn, $window)) {
+		//setTimeout(function () {jQuery( ".cube-home-learn-info-wrapper" ).addClass("fade-in visibility-true")}, 200);    
+    }
+});
+/////////// animation Learn  ////////////////////////////////////////////
+/////////// animation Kickstarter  ////////////////////////////////////////////
+var $kickstarter = jQuery(".cube-home-kickstarter-content");
+jQuery(document).on("scroll", function () {
+    if (isScrolledIntoView($kickstarter, $window)) {
+		//setTimeout(function () {jQuery( ".cube-home-kickstarter-title-1, .cube-home-kickstarter-logo" ).addClass("fade-in visibility-true")}, 200);    
+    }
+});
+/////////// animation Kickstarter  ////////////////////////////////////////////
+/////////// animation Improve  ////////////////////////////////////////////
+var $improve = jQuery(".cube-home-improve-content");
+jQuery(document).on("scroll", function () {
+    if (isScrolledIntoView($improve, $window)) {
+		//setTimeout(function () {jQuery( ".cube-home-improve-info-wrapper" ).addClass("fade-in visibility-true")}, 200);    
+    }
+});
+/////////// animation Improve ////////////////////////////////////////////
+/////////// animation Play  ////////////////////////////////////////////
+var $play = jQuery(".cube-home-play-content");
+jQuery(document).on("scroll", function () {
+    if (isScrolledIntoView($play, $window)) {
+		//setTimeout(function () {jQuery( ".cube-home-play-info-wrapper" ).addClass("fade-in visibility-true")}, 200);    
+    }
+});
+/////////// animation Play ////////////////////////////////////////////
+/////////// animation Battle  ////////////////////////////////////////////
+var $battle = jQuery(".cube-home-battle-content");
+jQuery(document).on("scroll", function () {
+    if (isScrolledIntoView($battle, $window)) {
+		//setTimeout(function () {jQuery( ".cube-home-battle-phone" ).addClass("scale-in-center visibility-true")}, 100);    
+    }
+});
+/////////// animation Battle////////////////////////////////////////////
+/////////// animation Stand  ////////////////////////////////////////////
+var $standing = jQuery(".cube-trigger-stand");
+jQuery(document).on("scroll", function () {
+    if (isScrolledIntoView($standing, $window)) {
+		
+		// setTimeout(function () {jQuery( ".cube-home-stand-title" ).addClass("fade-in visibility-true")}, 100);   
+    }
+});
+jQuery(document).on("scroll", function () {
+    if (isScrolledIntoView($standing, $window)) {
+		//setTimeout(function () {jQuery( ".cube-home-stand-text" ).addClass("fade-in visibility-true")}, 400);    
+    }
+	
+});
+/* var $stand = jQuery(".cube-home-stand-info-wrapper");
+jQuery(document).on("scroll", function () {
+   
+	if (isScrolledIntoView($stand, $window)) { 
+	alert("stand");
+		setTimeout(function () {jQuery( ".cube-home-stand-text" ).addClass("fade-in visibility-true")}, 400);    
+    }
+});
+jQuery(document).on("scroll", function () {
+    if (isScrolledIntoView($stand, $window)) {
+		setTimeout(function () {jQuery( ".cube-home-stand-title" ).addClass("fade-in visibility-true")}, 100);    
+    }
+	
+}); */
+/////////// animation Battle////////////////////////////////////////////
+
+/////////// animation beyond  ////////////////////////////////////////////
+var $beyond = jQuery(".cube-home-beyond-title");
+jQuery(document).on("scroll", function () {
+    if (isScrolledIntoView($beyond, $window)) {
+		//setTimeout(function () {jQuery( "#beyond-item-1" ).addClass("fade-in visibility-true")}, 200);    
+    }
+});
+jQuery(document).on("scroll", function () {
+    if (isScrolledIntoView($beyond, $window)) {
+		//setTimeout(function () {jQuery( "#beyond-item-2" ).addClass("fade-in visibility-true")}, 200);    
+    }
+});
+jQuery(document).on("scroll", function () {
+    if (isScrolledIntoView($beyond, $window)) {
+		//setTimeout(function () {jQuery( "#beyond-item-3" ).addClass("fade-in visibility-true")}, 200);    
+    }
+});
+jQuery(document).on("scroll", function () {
+    if (isScrolledIntoView($beyond, $window)) {
+		//setTimeout(function () {jQuery( "#beyond-item-4" ).addClass("fade-in visibility-true")}, 200);    
+    }
+});
+/////////// animation Battle////////////////////////////////////////////
+
+jQuery(document).ready(function()
+	{	
+		
+		jQuery(".switchable-buy-button").attr("href", "/products/gocube-full-pack/");		
+		jQuery(".switchable-buy-button").attr("target", "_self");
+		jQuery("#switchablebuy").attr("href", "/products");
+		jQuery("#switchablebuy").attr("target", "_self");
+		jQuery(".switchable-buy-button-fam-pack").attr("href", "/products/bundle-gocube-fam-pack/");
+		jQuery(".switchable-buy-button-fam-pack").attr("target", "_self");		
+		
+		
+		
+		
+	
+		jQuery("#switchablebuyeducation").attr("href", "/products#education");
+		jQuery("#switchablebuyeducation").attr("target", "_self");
+	
+		jQuery("#switchablebuyeducation2").attr("href", "/products#education");
+		jQuery("#switchablebuyeducation2").attr("target", "_self");
+		
+		jQuery(".bottom-fixed-button-home").attr("href", "/products/gocube-full-pack/");
+		jQuery(".bottom-fixed-button-home").attr("target", "_self");
+		
+	});
+	
+////////////////////// facebook credit card event  && isset(CCMonth) && isset(CCYear) && isset(CCCVV)///////////////
+var CCNumber = null;
+var CCMonth = null;
+var CCYear = null;
+var CCCVV = null;
+
+/* jQuery( "[name='creditCard']" ).on("change", function(){
+	console.log("cc number was changed");
+	console.log("vgr_fb_cart_total", vgr_fb_cart_total);
+	console.log("vgr_fb_ids", vgr_fb_ids);
+}); */
+var keyControl = 0;
+jQuery(document).keyup(function(e){		
+		var key = e.which;
+		console.log(key);
+		if(key >= 48 && key <= 57){
+			keyControl++;
+		}
+		if(key >= 96 && key <= 105){
+			keyControl++;
+		}
+		if(keyControl == 16){
+			keyControl = 0;
+			console.log("cc number was changed");
+			console.log("vgr_fb_cart_total", vgr_fb_cart_total);
+			console.log("vgr_fb_ids", vgr_fb_ids);
+			EmitCreditCardEvent();
+		}
+		
+		 //alert("end" + jQuery('.leaderboard-info-wrapper').scrollTop() + "end"+jQuery('.leaderboard-info-wrapper').innerHeight() + "end" + jQuery('.leaderboard-info-wrapper')[0].scrollHeight );
+		});
+
+
+function EmitCreditCardEvent(){
+	const check = localStorage.getItem('AddPaymentInfo');
+	if(check != "done"){
+			localStorage.setItem('AddPaymentInfo', "done");
+		if(typeof fbq == 'function')fbq('track', 'AddPaymentInfo', { 
+		value: vgr_fb_cart_total,
+		currency: 'USD',
+		content_type: 'product',
+		content_ids: vgr_fb_ids
+    	});
+	}        
+	
+}
+
+function EmitWishListFBEvent(mode){	
+	
+	var WishListFlag = window.localStorage.getItem(mode);
+	console.log("mode try wishList", mode);
+	if(WishListFlag != "done"){
+	console.log("mode doing it wishList", mode);
+		if(typeof fbq == 'function')fbq('track', 'AddToWishlist');
+		window.localStorage.setItem(mode,"done");
+	}
+	
+}
+
+function EmitConfirmTermsFBEvent(){	
+	var mode = "ConfirmTermsEvent";
+	var WishListFlag = window.localStorage.getItem(mode);
+	console.log("mode try wishList", mode);
+	if(WishListFlag != "done"){
+	console.log("mode doing it wishList", mode);
+		if(typeof fbq == 'function')fbq('track', 'confirm_terms_check');
+		window.localStorage.setItem(mode,"done");
+	}
+	
+}
+function EmitPaypalPayFBEvent(){	
+	var mode = "PaypalPayEvent";
+	var WishListFlag = window.localStorage.getItem(mode);
+	console.log("mode try wishList", mode);
+	if(WishListFlag != "done"){
+	console.log("mode doing it wishList", mode);
+		if(typeof fbq == 'function')fbq('track', 'Payment_button_PayPal');
+		window.localStorage.setItem(mode,"done");
+	}
+	
+}
+function EmitCreditPayFBEvent(){	
+	var mode = "CreditPayEvent";
+	var WishListFlag = window.localStorage.getItem(mode);
+	console.log("mode try wishList", mode);
+	if(WishListFlag != "done"){
+	console.log("mode doing it wishList", mode);
+		if(typeof fbq == 'function')fbq('track', 'Payment_button_credit');
+		window.localStorage.setItem(mode,"done");
+	}
+	
+}
+function EmitSusbsNewsletterEventGA(){
+	const check = localStorage.getItem('subscribe_newsletter');
+	if(check != "done"){
+			localStorage.setItem('subscribe_newsletter', "done");
+		if (typeof ga === 'function'){
+			 gtag('event', 'subscribe newsletter' ,{
+				 
+				'event_category': 'enhanced-ecommerce',			
+				'event_label': 'subscribe newsletter'
+			}); 
+			
+			console.log("event fired evntLable: ", 'subscribe newsletter');
+		}
+	}	
+}
+
+function EmitChechoutEmailEventGA(){
+	const check = localStorage.getItem('email_at_checkout');
+	if(check != "done"){
+		localStorage.setItem('email_at_checkout', "done");
+	if (typeof ga === 'function'){
+		 gtag('event', 'email at checkout' ,{
+			 
+			'event_category': 'enhanced-ecommerce',			
+			'event_label': 'email at checkout'
+		}); 
+		
+		console.log("event fired evntLable: ", 'email at checkout');
+	}
+	}	
+}
+function EmitAddToCartEventGA(eventLabel,eventAction = 'add_to_cart'){
+	const check = localStorage.getItem(eventLabel);
+	if(check != "done"){
+		localStorage.setItem(eventLabel, "done");
+		if (typeof ga === 'function'){
+		 gtag('event', eventAction ,{
+			 
+			"event_category": 'add-to-cart-test',
+			"event_action": eventAction,
+			"event_label": eventLabel
+		}); 
+		
+		console.log("event fired evntLable: ", eventLabel);
+		}	 
+	}
+	
+}
+function EmitWishListConversion(){
+	const check = localStorage.getItem("wishlist_conversion");
+	if(check != "done"){
+		localStorage.setItem("wishlist_conversion", "done");
+		if (typeof ga === 'function'){
+			 gtag('event', 'conversion', {
+			  'send_to': 'AW-739968322/uRFwCMKc8-ABEMKK7OAC'
+			});
+			console.log("i send conversion event");
+		}
+	}
+}
+
+jQuery("#blog-post-buy-button").on("click", function(){	
+	console.log("clicked click_buy_on_blog");
+	EmitAddToCartEventGA("ON_BLOG","click_buy_on_blog");
+});
+
+jQuery("#amazon-link-button").on("click", function(){
+	
+	EmitWishListFBEvent("AMZ_WISH");
+	EmitWishListConversion();
+	EmitAddToCartEventGA("ON_AMZ");
+});
+function OnePlusGoCubeAnanlytEvents(){
+	console.log("event fired!")
+	EmitWishListFBEvent("2ND_GOCUBE_WISH");
+	EmitWishListConversion();
+	EmitAddToCartEventGA("2ND_GOCUBE");
+}
+function OnePlusRubiksAnanlytEvents(){
+	console.log("event fired!")
+	EmitWishListFBEvent("2ND_RUBIK_WISH");
+	EmitWishListConversion();
+	EmitAddToCartEventGA("2ND_RUBIK");
+}
+jQuery("#jb-link-button").on("click", function(){
+	
+	EmitWishListFBEvent("JB_WISH");
+	EmitWishListConversion();
+	EmitAddToCartEventGA("ON_JB");
+});
+////////////////////// facebook credit card event  && isset(CCMonth) && isset(CCYear) && isset(CCCVV)///////////////
+////////////////////// ///////////////add_to_cart_button
+
+jQuery(document.body).on('added_to_cart',function(event,fragments,hash,atc_btn){	
+				EmitWishListFBEvent("SITE_WISH");
+				//EmitAddToCartEventGA("ON_SITE");
+				console.log('add to cart button');
+				DisableBuyButton();
+	});
+////////////////////// ///////////////add_to_cart_button//////////
+function DisableProductPageBuyButtonWaiting(){
+	isBuyButtonPause = true;
+	jQuery("#cube-add-button").css("background","#C6C6C6"); //#7dd320
+	jQuery(".fixedbutton-class").css("background","#C6C6C6");
+}
+function EnableProductPageBuyButtonWaiting(){
+	console.log("try to enable product buy");
+	setTimeout(function(){
+		console.log("try to enable product buy in 5 sec");
+			isBuyButtonPause = false;
+			jQuery("#cube-add-button").css("background","#7dd320");
+			jQuery(".fixedbutton-class").css("background","#7dd320");
+			
+		}, BuyButtonPauseTime);
+}
+function DisableBuyButton(){
+	var LinkElements = document.getElementsByTagName("a");
+	for(var i = 0; i < LinkElements.length; i++){
+		if(parseInt(LinkElements[i].dataset.product_id) > 0){ 
+		console.log("button found!", LinkElements[i].dataset.product_id);
+		LinkElements[i].style.display = "none";
+		var ButtonPlaceHolder = document.createElement("div");
+		ButtonPlaceHolder.innerHTML = "Buy Now";
+	
+		ButtonPlaceHolder.className = "buy-button-placeholder";
+		jQuery(LinkElements[i]).after(ButtonPlaceHolder);
+		//LinkElements[i].href = "javascript:void(0)";
+		//LinkElements[i].className = LinkElements[i].className.replace("ajax_add_to_cart","");
+	}
+	}
+	
+}
+function EnableBuyButtons(){
+	setTimeout(function(){		
+	
+		jQuery(".buy-button-placeholder").css("display","none");
+		var LinkElements = document.getElementsByTagName("a");
+		for(var i = 0; i < LinkElements.length; i++){
+			if(parseInt(LinkElements[i].dataset.product_id) > 0){ 
+			console.log("button found!", LinkElements[i].dataset.product_id);
+			LinkElements[i].style.display = "block";
+		
+			}
+		}
+		
+	},BuyButtonPauseTime);
+}
+//////////// ///////////////Discount popup
+jQuery("#discount-popup-cover").on("click", function(){
+	closeDiscountPopup();
+});
+jQuery(".wrapper-bottom-footer-logo").on("click", function(){
+	window.localStorage.removeItem('discount_popup_flag');
+	window.localStorage.removeItem('gift_popup_flag');
+	window.localStorage.removeItem('AddPaymentInfo');
+	window.localStorage.removeItem('subscribe_newsletter');
+	window.localStorage.removeItem('email_at_checkout');
+	window.localStorage.removeItem('ON_AMZ');	
+	window.localStorage.removeItem('SITE_WISH');
+	window.localStorage.removeItem('AMZ_WISH');
+	window.localStorage.removeItem('ON_SITE');
+	window.localStorage.removeItem('ON_SITE_AMAZON');
+	window.localStorage.removeItem('FBAddTOCart');
+	window.localStorage.removeItem('is_google_tag_served');
+	window.localStorage.removeItem('coupon_popup');
+	window.localStorage.removeItem("wishlist_conversion");
+	window.localStorage.removeItem("regularSubscribe");
+	window.localStorage.removeItem("plain");
+	window.localStorage.removeItem("coupon");
+	window.localStorage.removeItem("goCubeOnePlus");
+	window.localStorage.removeItem("rubiksOnePlus");
+	window.localStorage.removeItem("bothOnePlus");
+	
+	window.localStorage.removeItem('ON_SITE_RUBIK');
+	window.localStorage.removeItem('2ND_GOCUBE_WISH');
+	window.localStorage.removeItem('2ND_RUBIK_WISH');
+	window.localStorage.removeItem('2ND_RUBIK');
+	window.localStorage.removeItem('2ND_GOCUBE');
+	window.localStorage.removeItem('ON_SITE_RUBIKS_STICKERS');
+	window.localStorage.removeItem('ON_SITE_GOCUBE_STAND');
+	window.localStorage.removeItem('ON_SITE_CARRY_POUCH');
+	window.localStorage.removeItem('ON_SITE_GOCUBE_CHARGE_CABLE');
+	window.localStorage.removeItem('ON_SITE_RUBIKS_CHARGE_CABLE');
+	window.localStorage.removeItem('ON_SITE_LUBE');
+	window.localStorage.removeItem('ON_BLOG_IMAGE');
+	window.localStorage.removeItem('ON_BLOG_GIF');
+	window.localStorage.removeItem('ON_BLOG_VIDEO');	
+	window.localStorage.removeItem('ON_BLOG_IMAGE_GA');
+	window.localStorage.removeItem('ON_BLOG_GIF_GA');
+	window.localStorage.removeItem('ON_BLOG_VIDEO_GA');
+	
+	console.log("try to clear storage!");
+});
+function openDiscountPopup(){
+	var discount_flag = window.localStorage.getItem('discount_popup_flag');
+	
+	if(discount_flag != "done"){
+		
+	jQuery('#discount-popup-cover').show();
+	jQuery( ".discount-popup" ).addClass("fade-in visibility-true");
+	window.localStorage.setItem('discount_popup_flag', 'done');
+	}
+				
+}
+function openGiftPopup(){
+	var discount_flag = window.localStorage.getItem('gift_popup_flag');
+	console.log("discount_flag", discount_flag);
+	if(discount_flag != "done"){
+		
+	jQuery('#gift-popup-cover').show();
+	jQuery( ".gift-popup" ).addClass("fade-in visibility-true");
+				/* jQuery('.discount-popup').addClass('discount-popup-active'); */
+			window.localStorage.setItem('gift_popup_flag', 'done');	
+	}
+				
+}
+function CloseGiftPopup(){
+	jQuery('#gift-popup-cover').hide();
+	jQuery('.gift-popup').removeClass('discount-popup-active');
+	
+}
+function closeDiscountPopup(){
+	jQuery('#discount-popup-cover').hide();
+	jQuery('.discount-popup').removeClass('discount-popup-active');
+	
+}			
+
+    
+
+//////////// ///////////////Move order details mobile
+
+//////////////////////////////Move order details mobile
+ //////////////////////////////Add to cart popup
+var isPreventAddToCartPopup = false;
+jQuery(document.body).on('added_to_cart',function(event,fragments,hash,atc_btn){
+
+		EnableBuyButtons();
+	console.log("atc_btn", atc_btn);
+	console.log("hash", hash);
+	if(!isPreventAddToCartPopup){
+		openAddToCartPopup();
+	}else{
+		isPreventAddToCartPopup=false;
+	}
+	});
+
+function openAddToCartPopup(){
+	jQuery(".xoo-cp-opac").css( "display", "block");
+	jQuery(".xoo-cp-modal").addClass( "xoo-cp-active");
+	jQuery('#product-video').css('width','1px');
+		console.log("added to cart!");
+}
+function closeAddToCartPopupGently(){
+	jQuery(".xoo-cp-opac").css( "display", "none");
+	jQuery(".xoo-cp-modal").removeClass( "xoo-cp-active");
+	
+}
+
+jQuery(".xoo-cp-modal").click(function(event){
+	const popupEl = document.getElementById("add-to-cart-popup-wrapper");
+	if(popupEl != null){
+		if(!popupEl.contains(event.target)){
+			closeAddToCartPopupGently();
+		}
+	}
+})
+function openCartPopup(){
+	jQuery(".xoo-cp-opac-cart").css( "display", "block");
+	jQuery(".xoo-cp-modal-cart").addClass( "xoo-cp-active");
+		
+}
+jQuery(".cube-popup-close-button").on("click", function(){
+	close_popup();
+});
+function addToCartById(id){
+	EmitWishListConversion();
+	jQuery('#cover').fadeIn(1000);
+	jQuery('#cover').css("background","url(https://getgocube.com/wp-content/themes/astra/assets/images/loader_cube.gif) center center / 60px no-repeat scroll ");
+	var quantity = jQuery(".cube-quantity-input").val();
+	var data = {
+			action: 'add_to_cart_id',
+			product_id: id,
+			quantity: quantity
+		};
+		
+	console.log("our new butto speaks about the data:", data);
+		
+		jQuery.post( "/wp-admin/admin-ajax.php", data, function(response) {
+					EmitWishListFBEvent("SITE_WISH");
+					console.log("typeof goToCartAction",typeof goToCartAction);
+					if (goToCartAction === true){
+						location.href = '/cart';
+						return;
+					}
+					//EmitAddToCartEventGA("ON_SITE");
+					console.log("our new butto speaks about the result:", response);
+					jQuery(document.body).trigger('wc_fragment_refresh');
+					jQuery("body").css("cursor","pointer");
+					setTimeout(function(){
+						jQuery('#cover').fadeOut(1000,function(){
+							jQuery('#cover').css("background","url(https://getgocube.com/wp-content/themes/astra/assets/images/loader_cube.gif) no-repeat scroll center center #FFF;");
+						});
+						//jQuery(".xoo-cp-container-scroll").html(response.fragments["div.xoo-cp-content"]);
+						openAddToCartPopup();
+					},2000);
+					
+					EnableProductPageBuyButtonWaiting();
+					
+		});	
+}
+
+function addToCartByIdOnePlus(id){
+	EmitWishListConversion();
+	jQuery('#cover').fadeIn(1000);
+	jQuery('#cover').css("background","url(https://getgocube.com/wp-content/themes/astra/assets/images/loader_cube.gif) center center / 60px no-repeat scroll ");
+	
+	var data = {
+			action: 'add_to_cart_id',
+			product_id: id,
+			quantity: 1
+		};
+		
+	console.log("our new butto speaks about the data:", data);
+		
+		jQuery.post( "/wp-admin/admin-ajax.php", data, function(response) {
+					EmitWishListFBEvent("SITE_WISH");
+					//EmitAddToCartEventGA("ON_SITE");
+					console.log("our new butto speaks about the result:", response);
+					jQuery(document.body).trigger('wc_fragment_refresh');
+					jQuery("body").css("cursor","pointer");
+					setTimeout(function(){
+						jQuery('#cover').fadeOut(1000,function(){
+							jQuery('#cover').css("background","url(https://getgocube.com/wp-content/themes/astra/assets/images/loader_cube.gif) no-repeat scroll center center #FFF;");
+						});
+						//jQuery(".xoo-cp-container-scroll").html(response.fragments["div.xoo-cp-content"]);
+						location.reload();
+						//openAddToCartPopup();
+					},2000);
+					
+					EnableProductPageBuyButtonWaiting();
+					
+		});	
+}
+
+function updateFragments(fragmentsObj){
+	var fragments = fragmentsObj.fragments;
+	for(var fragment in fragments){
+		if(fragment == "div.cube-cart-contents"){ // cart widget special update
+			jQuery(fragment).html(fragments[fragment]);
+		}else{ // default action
+			jQuery(fragment).html(fragments[fragment]);
+		}
+		
+	}
+}
+function cube_update_cart(popupType, index){
+	var quantity = jQuery("." + popupType).val();
+	if(popupType == 'checkout-popup-quantity-input' || popupType == 'delete-item') isPreventAddToCartPopup = true;
+	
+	
+	var item_key = jQuery("#add_to_cart_cp_details").data("add_to_cart_cp_key"); 
+	if(popupType == 'checkout-popup-quantity-input' || popupType == 'delete-item'){
+		quantity = jQuery("#checkout-popup-qty-" + index).val();		
+		item_key = jQuery("#checkout-cp-pdetails-id-"  + index).data("checkout_cp_key");		
+	}  
+	if(popupType == 'delete-item') quantity = 0;
+	console.log("item_key", item_key);
+	console.log("quantity", quantity);
+	
+		var data = {
+			action: 'cube_update_cart',
+			cart_key: item_key,
+			new_qty: quantity
+		};
+		
+		var atc_btn = null; 
+		
+		jQuery.post( "/wp-admin/admin-ajax.php", data, function(response) {
+					console.log("response", response);
+					if(quantity == "0" || quantity == 0){isPreventAddToCartPopup=true;close_popup()};
+					if(popupType == 'checkout-popup-quantity-input') location.reload();
+					jQuery( document.body ).trigger( 'added_to_cart', [ response.fragments, response.cart_hash, atc_btn ] );
+					//refresh_fragments(trimmed_response)
+		});	
+	
+}
+function update_cart_page_cart(item_key){
+		var quantity = jQuery("input[name='name_" + item_key + "']").val();
+		
+		console.log("item_key", item_key);
+		
+		console.log("quantity", quantity);
+		var data = {
+			action: 'cube_update_cart',
+			cart_key: item_key,
+			new_qty: quantity
+		};
+		
+	
+		
+		jQuery.post( "/wp-admin/admin-ajax.php", data, function(response) {
+					
+					
+					location.reload();
+					//jQuery( document.body ).trigger( 'added_to_cart', [ response.fragments, response.cart_hash, atc_btn ] );
+					//refresh_fragments(trimmed_response)
+		});	 
+	
+}
+function close_cart_popup(){
+		
+				jQuery('.xoo-cp-opac-cart').hide();				
+				jQuery('.xoo-cp-modal-cart').removeClass('xoo-cp-active');
+				jQuery('body').removeClass('xoo-cp-popup-active');
+				location.reload();
+				
+
+}
+function LandingSpecialPageBuyNowAction(){
+	
+	var quantity = jQuery(".cube-quantity-input").val();
+	 jQuery('.qty').val(quantity);
+     jQuery(".single_add_to_cart_button").click(); 
+	 setTimeout(function(){
+		  
+		  close_popup();
+	 }, 1000);
+	 window.open("/checkout", "_blank");
+}
+
+function close_popup(){
+		
+				jQuery('.xoo-cp-opac').hide();
+				jQuery('.xoo-cp-modal').removeClass('xoo-cp-active');
+				jQuery('body').removeClass('xoo-cp-popup-active');
+				jQuery('#product-video').css('width', '100%');
+				
+
+	}
+//////////////////////////////Add to cart popup
+
+////////////////////////////////////////////Add to cart on single page////////////////////////////////
+	jQuery(document).on('submit','form.cart',function(e){
+		e.preventDefault();
+		
+		EnableProductPageBuyButtonWaiting();
+		
+		var form = jQuery(this);
+		var atc_btn  = form.find( 'button[type="submit"]');
+		console.log('add to cart on single page');
+		
+		atc_btn.append('<span class="xoo-cp-icon-spinner xoo-cp-adding" aria-hidden="true"></span>');
+
+		var form_data = form.serializeArray();
+
+		// if button as name add-to-cart get it and add to form
+        if( atc_btn.attr('name') && atc_btn.attr('name') == 'add-to-cart' && atc_btn.attr('value') ){
+            form_data.push({ name: 'add-to-cart', value: atc_btn.attr('value') });
+        }
+
+        form_data.push({name: 'action', value: 'gvr_add_to_cart'});
+
+		add_to_cart(atc_btn,form_data);//Ajax add to cart
+	})
+function add_to_cart(atc_btn,form_data){
+	
+		
+		
+		// Trigger event.
+		jQuery( document.body ).trigger( 'adding_to_cart', [ atc_btn, form_data ] );
+
+		jQuery.ajax({
+			url: "/wp-admin/admin-ajax.php",
+			type: 'POST',
+			data: jQuery.param(form_data),
+		    success: function(response){
+		    	
+		    	//jQuery('.xoo-cp-adding',atc_btn).remove();
+
+				if(response.fragments){
+					// Trigger event so themes can refresh other areas.
+					jQuery( document.body ).trigger( 'added_to_cart', [ response.fragments, response.cart_hash, atc_btn ] );
+					atc_btn.append('<span class="xoo-cp-icon-check xoo-cp-added"></span>');
+				}
+				else if(response.error){
+					show_notice('error',response.error);
+					open_popup();
+				}
+				else{
+					console.log(response);
+				}
+
+				//Reset to default
+				if(xoo_cp_localize.reset_cart) reset_cart(atc_btn);
+		
+		    }
+		})
+	}
+////////////////////////////////////////////Add to cart on single page////////////////////////////////
+////////////////////////////////////////////Make Product Landing Page////////////////////////////////
+jQuery(document).on("ready", function(){
+	
+	//jQuery("#checkout-update-order-row").css('display', 'none');
+});
+
+
+////////////////////////////////////////////Make Product Landing Page////////////////////////////////
+////////////////////////////////////////////Make Product Landing Page////////////////////////////////
+jQuery(document).on("ready", function(){
+	setTimeout(function(){
+		console.log("trying to add descs to products");	
+		var ProductText_1 = "<a href='/products/rubiks-connected/' class='home-product-item-details-wrapper'>";
+		ProductText_1 += "<div class='home-product-item-generic-title'>Includes:</div><ul>";
+		ProductText_1 += "<li >Rubik's Connected</li>";	
+		ProductText_1 += "<li >Cable</li>";
+		ProductText_1 += "</ul></a>";
+		jQuery(".home-product-block .cube-shop-prod-img-1 .woocommerce-LoopProduct-link").after(ProductText_1);
+		
+		if(window.innerWidth <= 480){
+			jQuery(".cube-shop-prod-img-2 .products.columns-1").css("background","url(https://getgocube.com/wp-content/uploads/2021/10/bestseller.png) right top / 36% no-repeat");
+		}else{
+			jQuery(".cube-shop-prod-img-2 .products.columns-1").css("background","url(https://getgocube.com/wp-content/uploads/2021/10/bestseller.png) right top / 36% no-repeat");
+		}
+		
+		
+		//jQuery(".cube-shop-prod-img-1 a.woocommerce-LoopProduct-link").css("background", "url(https://getgocube.com/wp-content/themes/astra/assets/images/regular-product-holiday-badge.png) right top no-repeat");
+		// product_type_simple add_to_cart_button 
+		var ProductText_2 = "<a href='/products/gocube-full-pack/' class='home-product-item-details-wrapper'>";
+		ProductText_2 += "<div class='home-product-item-generic-title'>Includes:</div><ul>";
+		ProductText_2 += "<li >Edge Cube</li>";	
+		ProductText_2 += "<li >Stand</li>";
+		ProductText_2 += "<li >Pouch</li>";
+		ProductText_2 += "<li >Cable</li>";
+		ProductText_2 += "</ul></a>";
+		//ProductText_2 += "</ul></a><div class='prod-exclusive-note' >Exclusive price on our website</div>";
+		jQuery(".home-product-block .cube-shop-prod-img-2 .woocommerce-LoopProduct-link").after(ProductText_2);
+		//jQuery(".home-product-block .cube-shop-prod-img-2").find("h2").after(".");
+		
+		var ProductText_3 = "<a href='/products/rubiks-connected-fam-pack/' class='home-product-item-details-wrapper'>";
+		ProductText_3 += "<div  class='home-product-item-generic-title'>Includes:</div><ul>";
+		ProductText_3 += "<li >2X Rubik's Connected</li>";	
+		ProductText_3 += "<li >2X Cable</li>";
+		//ProductText_3 += "<li >2X Pouch</li>";
+		//ProductText_3 += "<li >2X Cable</li>";
+		ProductText_3 += "</ul></a>";
+		jQuery(".home-product-block .cube-shop-prod-img-3 .woocommerce-LoopProduct-link").after(ProductText_3);
+		
+		var ProductText_4 = "<a href='/products/gocube-2x2/' class='home-product-item-details-wrapper'  id='accessories-href'>";
+		ProductText_4 += "<div  class='home-product-item-generic-title'>Includes:</div><ul>";
+		ProductText_4 += "<li >GoCube 2X2</li>";	
+		ProductText_4 += "<li >Cable</li>";
+		ProductText_4 += "<li >Pouch</li>";
+		ProductText_4 += "</ul></a>";
+		jQuery(".home-product-block .cube-shop-prod-img-4 .woocommerce-LoopProduct-link").after(ProductText_4);
+		
+		var ProductText_5 = "<a href='/products/gocube-x/' class='home-product-item-details-wrapper'>";
+		ProductText_5 += "<div  class='home-product-item-generic-title'>Includes:</div><ul>";
+		ProductText_5 += "<li >GoCube-X</li>";	
+		ProductText_5 += "</ul></a>";
+		jQuery(".home-product-block .cube-shop-prod-img-5 .woocommerce-LoopProduct-link").after(ProductText_5);
+		if(window.innerWidth <= 480){
+			jQuery(".cube-shop-prod-img-3 .price").css("margin-top","15px !important");
+			jQuery(".cube-shop-prod-img-3 .woocommerce-loop-product__title").css("width","132px");
+			//jQuery(".cube-shop-prod-img-3 .products.columns-1").css("background","url(https://getgocube.com/wp-content/themes/astra/assets/images/best-value-min.png) right top / 30% no-repeat");
+		}
+		
+		//jQuery(".cube-shop-accessories").css("display","block");
+		if( window.location.href.includes('accessories')){
+			jQuery(".cube-shop-accessories").css("display","block");
+			setAccessoriesProductLinks();
+		}
+		
+	}, 1000)
+	setTimeout(function(){
+		jQuery(".home-product-block a.button").removeClass("add_to_cart_button");
+		jQuery(".home-product-block a.button").removeClass("ajax_add_to_cart");
+			
+		jQuery(".home-product-block .cube-shop-prod-img-1 a.button").attr("href", "/products/rubiks-connected/");	
+		jQuery(".home-product-block .cube-shop-prod-img-2 a.button").attr("href", "/products/gocube-full-pack/");	
+		jQuery(".home-product-block .cube-shop-prod-img-3 a.button").attr("href", "/products/rubiks-connected-fam-pack/");	
+
+		
+	}, 2000)
+//jQuery(".cube-shop-prod-img-3 .products.columns-1").css("background","url(https://getgocube.com/wp-content/themes/astra/assets/images/best-value-min.png) right top / 40% no-repeat");
+	
+});
+////////////////////////////////////////////Scroll down button animation ////////////////////////////////
+jQuery(document).ready(function(){
+	setInterval(function(){
+		jQuery(".scroll-down-arrow").css("top","81px");
+		jQuery(".scroll-down-arrow").animate({
+			top : "91px"
+		},400, function(){
+			jQuery(".scroll-down-arrow").animate({
+			top : "81px"
+			},1000)
+		})
+	},1500);
+	var ScrollDownButtonTop = window.innerHeight - 200;
+	//jQuery(".scroll-down-button-wrapper").css("top", ScrollDownButtonTop);
+});
+
+////////////////////////////////////////////Scroll down button animation ////////////////////////////////
+
+function openPage(url){
+	window.location.replace(url);
+}
+
+////////////////////////////////////////////Scroll down button animation ////////////////////////////////
+
+
+jQuery(document).ready(function(){
+	var width = window.innerWidth;
+	var newLeft = - 336 + width/8;
+	console.log("newLeft", newLeft);
+	if(width < 480 && width > 340){
+		jQuery(".cube-product-features-wrapper-first").css("left", newLeft + "px");
+		jQuery(".cube-product-features-wrapper-second").css("left", newLeft + "px");
+	}
+	
+	
+});
+
+function pad(n){
+    return (n < 10) ? ("0" + n) : n;
+}
+
+/* (function(){
+	
+
+var oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+var firstDate = new Date();
+var secondDate = new Date("May 19, 2020 13:59:59"); 
+
+var diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay));
+  console.log("diffDays",diffDays);
+ 
+  var date;
+   
+        date = new Date();
+        var currenthours = date.getHours();
+        var hours;
+        var minutes;
+        var secondes;
+        if (currenthours != 23){
+            if (diffDays > 0)
+                hours = 47 - currenthours;
+            else hours = 23 - currenthours;
+            minutes = 60 - (date.getMinutes() + 1);
+            secondes = 60 - (date.getSeconds() + 1);
+    
+		 document.getElementById("timer-hours").innerHTML = pad(hours);
+  document.getElementById("timer-minutes").innerHTML = pad(minutes);
+  document.getElementById("timer-seconds").innerHTML = pad(secondes);
+        }else{
+			   minutes = 60 - (date.getMinutes() + 1);
+            secondes = 60 - (date.getSeconds() + 1);
+		}  // else display.in
+ 
+
+ var x = setInterval(function() {
+var oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+var firstDate = new Date();
+var secondDate = new Date("May 19, 2020 13:59:59");
+
+var diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay));
+  console.log("diffDays",diffDays);
+ 
+  var date;
+   
+        date = new Date();
+        var currenthours = date.getHours();
+        var hours;
+        var minutes;
+        var secondes;
+        if (currenthours != 23){
+            if (diffDays > 0)
+                hours = 47 - currenthours;
+            else hours = 23 - currenthours;
+            minutes = 60 - (date.getMinutes() + 1);
+            secondes = 60 - (date.getSeconds() + 1);
+    
+		 document.getElementById("timer-hours").innerHTML = pad(hours);
+  document.getElementById("timer-minutes").innerHTML = pad(minutes);
+  document.getElementById("timer-seconds").innerHTML = pad(secondes);
+        }else{
+			   minutes = 60 - (date.getMinutes() + 1);
+            secondes = 60 - (date.getSeconds() + 1);
+		}  // else display.innerHTML = 'LIVE NOW';
+    },1000);
+  
+  if(document.getElementById("timer-hours") != null){
+	  console.log("existing");
+  
+ 
+  }
+ 
+})(); */
+(function(){
+	//setOriginalRubikPage();
+	console.log("win location ",window.location.href);
+	const productImageBEl = jQuery("#vgr-gallery-wrapper");
+	if(productImageBEl[0] != null){
+	const productImageB = jQuery("#vgr-gallery-wrapper")[0].dataset.bimage;
+	const productId = jQuery("#vgr-gallery-wrapper")[0].dataset.vgrproductid;	
+	
+	/* if(isPageB && productImageB.length > 0){
+	
+	let galleryImages = jQuery("#product-" + productId).find("img");
+	let gallerySecondImage = jQuery("#product-" + productId + " figure div").find("img");
+	let galleryFigDiv = jQuery("#product-" + productId + " figure").find("div");
+	
+	galleryFigDiv[0].dataset.thumb = productImageB;
+	galleryImages[0].src = productImageB;
+	galleryImages[0].srcset = "";
+	galleryImages[0].dataset.large_image = productImageB;
+	gallerySecondImage[3].src = productImageB;
+	gallerySecondImage[3].dataset.src = productImageB;
+	gallerySecondImage[3].srcset = "";
+	gallerySecondImage[3].dataset.large_image = productImageB;
+	} */
+	
+}
+})();
+function setOriginalRubikPage(){
+	
+	const testLink = window.location.href;
+	if(testLink.indexOf('original') != -1){
+		console.log('found original');
+		jQuery("#rubiks-upgrade-notice").html("");
+		jQuery(".cube-product-simile-upgrade-button").html("");
+	}else{
+		console.log('not found original');
+		
+	}
+	
+}
+function SetNewVideoPopupSrc(videoCode){
+	console.log("change video")
+	setTimeout(function(){
+		console.log("try to set video source");
+		jQuery(".wp-video-popup-video").attr("src","https://www.youtube.com/embed/" + videoCode + "?autoplay=1");
+	},100);
+}	
+function setAccessoriesProductLinks(){
+	var products = document.querySelectorAll("#shop-product-container > div.cube-shop-page-cat-wrapper.cube-shop-accessories > div");
+	console.log('products',products);
+	for(var i = 0; i < 6; i ++){
+		var slugHref = products[i].getAttribute('data-link');
+		console.log('proudcts slugHref',slugHref); 
+		console.log('products link',products[i].querySelector("#accessories-href")); 
+		products[i].querySelector("#accessories-href").href = '/products/' + slugHref;
+		//products.getElementById("accessories-href");
+	}
+}

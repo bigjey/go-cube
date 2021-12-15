@@ -1,0 +1,1031 @@
+var GlobalSlideIndex = 0;
+var GlobalNumOfSliders = 6;
+var sliderTimerReviews;
+
+var $findOn = jQuery(".main-banner-media-strip");
+var $window = jQuery(window);
+jQuery(document).ready(function(){
+	//FixHomeHeroOniOS();
+	//checkUTM();
+	localStorage.setItem("utm","");
+	console.log("localStorage of utm is ", localStorage.getItem("utm"));
+	setSpecificPageUrl();
+	showTimer();
+	jQuery("#fixedbutton-wrapper").css("display","none");
+	jQuery(".zenddesk-fixed-button").css("display","none");
+	jQuery(document).on("scroll", function () {
+		
+		console.log("scrolled it annoyingly works");		
+		if (isScrolledIntoView2($findOn, $window)) {
+			console.log("scrolled it");			
+			jQuery("#fixedbutton-wrapper").css("display","block");
+			jQuery(".zenddesk-fixed-button").css("display","block");
+			//setTimeout(function () {jQuery( "#asseen-image-1" ).addClass("flip-in-ver-right visibility-true")}, 300);
+				
+		}
+	});
+});
+
+
+function FixHomeHeroOniOS(){
+	console.log("iOS()",iOS());
+	if(iOS()){
+		jQuery("#content").css("margin-top","113px");
+	}
+}
+
+function iOS() {
+  return [
+    'iPad Simulator',
+    'iPhone Simulator',
+    'iPod Simulator',
+    'iPad',
+    'iPhone',
+    'iPod'
+  ].includes(navigator.platform)
+  // iPad on iOS 13 detection
+  || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+}
+
+
+function checkUTM(){
+	
+	if (window.location.href.includes('utm_source=Facebook')||window.location.href.includes('utm_source=Google')||window.location.href.includes('utm_source=Tiktok')) {
+		var ThreeDays = 259200;
+		var today = new Date().getTime();
+		const timePass = today - window.localStorage.getItem("timeUTM");
+	  if(window.localStorage.getItem("timeUTM")!=null){
+	
+		if(timePass > ThreeDays){
+			window.localStorage.setItem("UTMTimerTotalSec",-1);
+			window.localStorage.setItem("timeUTM",today);
+		}	
+	  }else{
+		 window.localStorage.setItem("timeUTM",today);	 
+	  }
+	  window.localStorage.setItem("UTM","true");
+	  setCookie("UTM","true",800);
+	  if(window.location.href.includes('utm_source=Google')){
+		  window.localStorage.setItem("UTMtype","Google");
+	  }else if(window.location.href.includes('utm_source=Tiktok')){
+		  window.localStorage.setItem("UTMtype","Tiktok");
+	  }else{
+		  window.localStorage.setItem("UTMtype","Facebook");
+	  }
+    }/* else{
+	  window.localStorage.setItem("UTM","false");
+	} */
+	console.log("document",document.cookie);
+	console.log("UTM",window.localStorage.getItem("UTM"),"location",window.localStorage.getItem("timeUTM"));
+}
+
+function setSpecificPageUrl(){
+			if(isSpecificPage){document.getElementsByTagName('body')[0].className += ' specific-homepage'};				
+			let specific_page = const_specific_page;
+			
+			specific_page = localStorage.getItem('specific_page') != null ? localStorage.getItem('specific_page') : '';
+			console.log('specific_page',specific_page);
+			console.log('localStorage specific_page ',localStorage.getItem('specific_page'));
+			let newHomeLink = "/";
+			if(specific_page != '' && specific_page != undefined && specific_page != null){
+				newHomeLink += specific_page + "/";
+			}	
+		/* 	if(window.localStorage.getItem("UTM")=="true"){   
+				console.log("href = '/?utm_source=Facebook'");
+				newHomeLink +=  '?utm_source=' + window.localStorage.getItem("UTMtype");
+				
+			} */
+			setTimeout(function(){document.getElementById('header-logo').href = newHomeLink;},1);	
+}
+
+function isScrolledIntoView2($elem, $window) {
+    var docViewTop = $window.scrollTop();
+    var docViewBottom = docViewTop + $window.height();
+
+	if($elem.length > 0){
+    var elemTop = $elem.offset().top + 400;} 
+    var elemBottom = elemTop + $elem.height();
+	console.log("scrolled docViewTop",docViewTop);
+    return (docViewTop >= 500);
+}
+function subscribeOmni(){
+		var FooterEmail = document.getElementById("subscribe-email-id-footer").value;
+		console.log("FooterEmail",FooterEmail);
+		var data = {			
+			list: 'subscribe',
+			subs_email: FooterEmail,
+			value: 'yes'
+		};
+		console.log("trying to subscribe 1", validateEmail(FooterEmail));
+		if(validateEmail(FooterEmail)){
+				document.getElementsByClassName("footer_subscribed_result")[0].innerHTML = '<div class="inline-element footer_subscribed_result_v"></div><div class="inline-element footer_subscribed_result_text">Subscribed! Thank You!</div>';
+						
+				var SubscribeMailChimpfooter = new XMLHttpRequest();
+				SubscribeMailChimpfooter.onreadystatechange = function() {
+				  console.log('this.readyState',this.readyState);
+					 if (this.readyState == 4 && this.status == 200) {
+						console.log("amazon response", this);
+
+						 subsEmails = this.response; 
+						 console.log('productsObjectSlider',subsEmails); 
+						 clearResponse = subsEmails.replace(/\\/g, "");
+						
+					parsedResponse = JSON.parse(clearResponse);
+					console.log("response JSON", parsedResponse);
+					if(parsedResponse){
+						document.getElementsByClassName("footer_subscribed_result")[0].innerHTML = '<div class="inline-element footer_subscribed_result_v"></div><div class="inline-element footer_subscribed_result_text">Subscribed! Thank You!</div>';
+						EmitSusbsNewsletterEventGA();
+						 
+						 
+					}; 
+				  } 
+				//jQuery.post( "/omni/service.php", data, function(response) {
+					
+				SubscribeMailChimpfooter.open("GET","https://dev3.getgocube.com/omni/serviceget.php?list=subscribe&value=yes&subs_email="+ FooterEmail , true);
+				SubscribeMailChimpfooter.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				SubscribeMailChimpfooter.send();	
+					}
+		 
+			//});
+		}else{ // not valid mail
+			document.getElementsByClassName("footer_subscribed_result")[0].innerHTML = '<div style="color:white;padding-top:2px"class="inline-element footer_subscribed_result_text"><span class="wrong-email-cross"></span>Wrong Email Format!</div>';
+					
+		}
+}
+function validateEmail($email) {
+			  var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+			  if(emailReg.test( $email )&&$email!=""){
+				  return true;
+			  }
+			  return false;
+}
+function removeSpace(){
+	 document.querySelector('.home-middle-shop-container .home-product-block').style.marginTop = "0";
+}
+
+function firstSliderShow(){
+	document.getElementById("0").classList.remove("testimonial-item-left");
+	document.getElementById("0").classList.add('testimonial-item-center');
+}
+
+
+function showNextClick(){
+    clearInterval(sliderTimerReviews);
+    GlobalSlideIndex = NextIndex(GlobalSlideIndex);
+    showNextSlide();
+    sliderStart();
+     
+
+  }
+
+function showPreviousClick(){
+    clearInterval(sliderTimerReviews);
+    GlobalSlideIndex = PreviousIndex(GlobalSlideIndex);
+    showPreviousSlide();
+    sliderStart(); 
+  
+
+  }
+
+function sliderStart(){
+    sliderTimerReviews = setInterval(()=>{
+	
+      goToThisSlider(chackIndex(GlobalSlideIndex+1));
+     
+    }, 10000)
+  }
+  
+function NextIndex(index){
+    if(index > GlobalNumOfSliders-2){
+      if(index == GlobalNumOfSliders-1){
+        index = 0;
+      }else{
+        index = 1;
+      }
+    }else{
+      index = index + 1; 
+    }
+    return index;
+  }
+  
+function PreviousIndex(index){
+    if(index < 1){
+      if(index == 0){
+        index = GlobalNumOfSliders-1;
+      }else{
+        index = GlobalNumOfSliders-2;
+      }
+    }else{                                                            
+      index = index - 1; 
+    }
+    return index;
+  }
+
+function chackIndex(index){
+    if(index > GlobalNumOfSliders-1){
+      if(index == GlobalNumOfSliders){
+        index = 0;
+      }else{
+        index = 1;
+      }
+    }
+    if(index<0){
+      if(index==-1){
+        index = GlobalNumOfSliders-1;
+      }else{
+        index = GlobalNumOfSliders-2;
+      }
+    }
+    return index;
+  }
+
+
+  
+function goToThisSlider(sliderId){
+	console.log("GlobalSlideIndex 1 org",GlobalSlideIndex);
+	console.log("sliderId org",sliderId);
+	
+	clearInterval(sliderTimerReviews);
+	
+	 if(sliderId==0&&GlobalSlideIndex==GlobalNumOfSliders-1){
+		 
+		 document.getElementById(chackIndex(sliderId)).classList.remove("testimonial-item-left" , "testimonial-item-right" , "testimonial-item-left-without" , "testimonial-item-right-without");
+		 document.getElementById(chackIndex(sliderId)).classList.add('testimonial-item-left-without');
+		 
+		 setTimeout(function(){ 
+		 document.getElementById(chackIndex(GlobalSlideIndex)).classList.remove("testimonial-item-center");
+		 document.getElementById(chackIndex(GlobalSlideIndex)).classList.add('testimonial-item-right');
+		 document.getElementById(sliderId).classList.remove("testimonial-item-left" , "testimonial-item-right" , "testimonial-item-left-without" , "testimonial-item-right-without");
+		 document.getElementById(sliderId).classList.add('testimonial-item-center');
+		 RemoveFromAll('dot','active');
+		 document.getElementById("dot-" + chackIndex(sliderId)).classList.add('active');
+		 document.getElementById("top-dot-" + chackIndex(sliderId)).classList.add('active');
+		 document.getElementById(chackIndex(sliderId+1)).classList.remove("testimonial-item-left" , "testimonial-item-right" , "testimonial-item-left-without" , "testimonial-item-right-without");
+		 document.getElementById(chackIndex(sliderId+1)).classList.add('testimonial-item-left-without');
+		GlobalSlideIndex = sliderId;
+		sliderStart();
+		}, 300);
+		return;
+	 }
+	 
+	 if(sliderId==GlobalNumOfSliders-1&&GlobalSlideIndex==0){
+		 
+		 document.getElementById(chackIndex(sliderId)).classList.remove("testimonial-item-left" , "testimonial-item-right" , "testimonial-item-left-without" , "testimonial-item-right-without");
+		 document.getElementById(chackIndex(sliderId)).classList.add('testimonial-item-right-without');
+		 
+		 setTimeout(function(){ 
+		 document.getElementById(chackIndex(GlobalSlideIndex)).classList.remove("testimonial-item-center");
+		 document.getElementById(chackIndex(GlobalSlideIndex)).classList.add('testimonial-item-left');
+		 document.getElementById(chackIndex(sliderId)).classList.remove("testimonial-item-left" , "testimonial-item-right" , "testimonial-item-left-without" , "testimonial-item-right-without");
+		 document.getElementById(chackIndex(sliderId)).classList.add('testimonial-item-center');
+		 RemoveFromAll('dot','active');
+		 document.getElementById("dot-" + chackIndex(sliderId)).classList.add('active');
+		 document.getElementById("top-dot-" + chackIndex(sliderId)).classList.add('active');
+		 setTimeout(function(){
+		 document.getElementById(chackIndex(sliderId+1)).classList.remove("testimonial-item-left" , "testimonial-item-right" , "testimonial-item-left-without" , "testimonial-item-right-without");
+		 document.getElementById(chackIndex(sliderId+1)).classList.add('testimonial-item-left-without');
+				}, 1000);
+		GlobalSlideIndex = sliderId;
+		sliderStart();
+		}, 300);
+		return;
+	 }
+	
+	if(sliderId>GlobalSlideIndex){
+
+		 document.getElementById(chackIndex(sliderId)).classList.remove("testimonial-item-left" , "testimonial-item-right" , "testimonial-item-left-without" , "testimonial-item-right-without");
+		 document.getElementById(chackIndex(sliderId)).classList.add('testimonial-item-left-without');
+		 
+		 setTimeout(function(){ 
+		 document.getElementById(chackIndex(GlobalSlideIndex)).classList.remove("testimonial-item-center");
+		 document.getElementById(chackIndex(GlobalSlideIndex)).classList.add('testimonial-item-right');
+		 document.getElementById(chackIndex(sliderId)).classList.remove("testimonial-item-left" , "testimonial-item-right" , "testimonial-item-left-without" , "testimonial-item-right-without");
+		 document.getElementById(chackIndex(sliderId)).classList.add('testimonial-item-center');
+		 RemoveFromAll('dot','active');
+		 document.getElementById("dot-" + chackIndex(sliderId)).classList.add('active');
+		 document.getElementById("top-dot-" + chackIndex(sliderId)).classList.add('active');
+		 document.getElementById(chackIndex(sliderId+1)).classList.remove("testimonial-item-left" , "testimonial-item-right" , "testimonial-item-left-without" , "testimonial-item-right-without");
+		 document.getElementById(chackIndex(sliderId+1)).classList.add('testimonial-item-left-without');
+		 GlobalSlideIndex = sliderId;
+		 sliderStart();
+		                    }, 300);
+		return;
+	}
+	
+	if(sliderId<GlobalSlideIndex){
+
+		 document.getElementById(chackIndex(sliderId)).classList.remove("testimonial-item-left" , "testimonial-item-right" , "testimonial-item-left-without" , "testimonial-item-right-without");
+		 document.getElementById(chackIndex(sliderId)).classList.add('testimonial-item-right-without');
+		 
+		 setTimeout(function(){ 
+		 document.getElementById(chackIndex(GlobalSlideIndex)).classList.remove("testimonial-item-center");
+		 document.getElementById(chackIndex(GlobalSlideIndex)).classList.add('testimonial-item-left');
+		 document.getElementById(chackIndex(sliderId)).classList.remove("testimonial-item-left" , "testimonial-item-right" , "testimonial-item-left-without" , "testimonial-item-right-without");
+		 document.getElementById(chackIndex(sliderId)).classList.add('testimonial-item-center');
+		 RemoveFromAll('dot','active');
+		 document.getElementById("dot-" + chackIndex(sliderId)).classList.add('active');
+		 document.getElementById("top-dot-" + chackIndex(sliderId)).classList.add('active');
+		 setTimeout(function(){
+		 document.getElementById(chackIndex(sliderId+1)).classList.remove("testimonial-item-left" , "testimonial-item-right" , "testimonial-item-left-without" , "testimonial-item-right-without");
+		 document.getElementById(chackIndex(sliderId+1)).classList.add('testimonial-item-left-without');
+			}, 1000);
+		GlobalSlideIndex = sliderId;
+		sliderStart();
+		}, 300);
+		return;
+	}
+	
+	sliderStart();
+	
+}
+
+function ScrollToProduct(){
+	document.querySelector('html, body').style.scrollBehavior = "smooth";
+	document.querySelector('html, body').scrollTop = document.getElementsByClassName("media-strip-super-wrapper")[0].offsetTop;
+}
+
+
+
+function addDescProdHomePage(){
+	
+	let isAdd = true;	
+	if(isAdd){ isAdd = false;
+				setTimeout(function(){
+					
+						
+				var ProductText_1 = "<a href='/products/rubiks-connected/' class='home-product-item-details-wrapper'>";
+				ProductText_1 += "<div class='home-product-item-generic-title'>Includes:</div><ul>";
+				ProductText_1 += "<li >Rubik's Connected</li>";	
+				ProductText_1 += "<li >Cable</li>";
+				ProductText_1 += "</ul></a>";
+				
+				
+				
+				for(var i = 0; i < 8; i ++){
+					if(document.querySelectorAll(".cube-shop-prod-img-2 .products.columns-1")[i] !== undefined)
+					document.querySelectorAll(".cube-shop-prod-img-2 .products.columns-1")[i].style = "background: url(https://getgocube.com/wp-content/themes/astra/assets/images/best-seller-min.png) right top / 36% no-repeat";
+				}
+				setTimeout(function(){
+					document.querySelector(".home-product-block a.button").classList.remove("add_to_cart_button");
+					document.querySelector(".home-product-block a.button").classList.remove("ajax_add_to_cart");
+					
+				}, 2000)
+				
+			
+				var ProductText_2 = "<a href='/products/gocube-full-pack/' class='home-product-item-details-wrapper'>";
+				ProductText_2 += "<div class='home-product-item-generic-title'>Includes:</div><ul>";
+				ProductText_2 += "<li >Edge Cube</li>";	
+				ProductText_2 += "<li >Stand</li>";
+				ProductText_2 += "<li >Pouch</li>";
+				ProductText_2 += "<li >Cable</li>";
+				ProductText_2 += "</ul></a>";
+		
+				
+			
+				
+				
+				var ProductText_3 = "<a href='/products/rubiks-connected-fam-pack/' class='home-product-item-details-wrapper'>";
+				ProductText_3 += "<div  class='home-product-item-generic-title'>Includes:</div><ul>";
+				ProductText_3 += "<li >2X Rubik's Connected</li>";	
+				ProductText_3 += "<li >2X Cable</li>";
+			
+				ProductText_3 += "</ul></a>";
+				
+				var parser = new DOMParser();
+				for(var i = 0; i < 8; i ++){
+					if(document.querySelectorAll(".home-product-block .cube-shop-prod-img-1 .woocommerce-LoopProduct-link")[i] !== undefined&&document.querySelectorAll(".home-product-block .cube-shop-prod-img-2 .woocommerce-LoopProduct-link")[i] !== undefined&&document.querySelectorAll(".home-product-block .cube-shop-prod-img-3 .woocommerce-LoopProduct-link")[i] !== undefined	){
+					document.querySelectorAll(".home-product-block .cube-shop-prod-img-1 .woocommerce-LoopProduct-link")[i].after(parser.parseFromString(ProductText_1, 'text/html').body);
+					document.querySelectorAll(".home-product-block .cube-shop-prod-img-2 .woocommerce-LoopProduct-link")[i].after(parser.parseFromString(ProductText_2, 'text/html').body);
+					document.querySelectorAll(".home-product-block .cube-shop-prod-img-3 .woocommerce-LoopProduct-link")[i].after(parser.parseFromString(ProductText_3, 'text/html').body);
+					document.querySelectorAll(".home-product-block .cube-shop-prod-img-1 a.button")[i].setAttribute("href", "/products/rubiks-connected/");
+					document.querySelectorAll(".cube-shop-prod-img-1")[i].setAttribute("href", "/products/rubiks-connected/");
+					document.querySelectorAll(".home-product-block .cube-shop-prod-img-2 a.button")[i].setAttribute("href", "/products/gocube-full-pack/");
+					document.querySelectorAll(".cube-shop-prod-img-2")[i].setAttribute("href", "/products/gocube-full-pack/");			
+					document.querySelectorAll(".home-product-block .cube-shop-prod-img-3 a.button")[i].setAttribute("href", "/products/rubiks-connected-fam-pack/");						
+					document.querySelectorAll(".cube-shop-prod-img-3")[i].setAttribute("href", "/products/rubiks-connected-fam-pack/");
+					}
+				} 
+				if(window.innerWidth <= 480){
+					
+					document.querySelector(".cube-shop-prod-img-3 .price").style.marginTop = "15px !important";
+					document.querySelector(".cube-shop-prod-img-3 .woocommerce-loop-product__title").style.width = "132px";
+					
+				
+				}
+			
+				},100);
+	};
+	
+}
+
+function bodyOnload(){
+	document.getElementById("body").style.visibility = "visible";
+	//changeProductsUTM();
+	setMobileHeroSizes();
+	getCartCountFragment();
+	insertArrowToMobileButton();
+	insertArrowToDesktopButton();
+	OpenMobileMenu();
+	OpenMobileSubMenu();
+	StartButtonAnimation();
+	
+	let firstTime = true;
+	 window.onscroll = function (e) {
+		 
+				 if(firstTime){
+					 firstTime = false;
+						
+						getHomeProductsFrag();
+						removeSpace();
+						
+						loadSlider();
+						if(isSpecificPage && const_specific_page == 'family'){
+						loadSliderFamily();
+						}						
+						lazyLoadImages();
+
+						
+						
+						
+				 }
+			 };
+			 
+	window.addEventListener('resize', function(){
+			setMobileHeroSizes();
+			setHeroResolutions();
+	});
+}
+	 
+
+function loadProducts(){
+		let productsObject;	
+		var Html ='';
+		
+		var home_page_products = new XMLHttpRequest();
+			  home_page_products.onreadystatechange = function() {
+			 
+				 if (this.readyState == 4 && this.status == 200) {
+					var productNum = 3;
+					var background_position = '';
+					
+					 productsObject = JSON.parse(this.response); 
+					
+					
+					 for(var productItem in productsObject){
+							
+							 if(productNum == 1){
+								background_position = 'right';
+							 }else{
+								 if(productNum == 2){
+									background_position = 'center';
+								 }else{
+									background_position = '0px';
+								 }
+							 }
+								
+							 Html += `<div  class="inline-element cube-shop-prod-item cube-shop-page-packs-item cube-shop-prod-img-`+ productNum +` dont-show-mobile" style="background:url('`+ productsObject[productItem].image_url +`') `+ background_position +` / 100% no-repeat;"><div class="woocommerce columns-1 "><ul class="products columns-1"><li class="ast-article-single product type-product  post status-publish first instock product_cat-uncategorised has-post-thumbnail sale taxable shipping-taxable purchasable product-type-simple"><div class="astra-shop-thumbnail-wrap"><span class="onsale">Sale!</span><a href="https://dev3.getgocube.com/products/rubiks-connected-fam-pack/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="300" height="300" src="https://dev3.getgocube.com/wp-content/uploads/2020/11/rubiks-fam-pack-BOGO-main-product-image-LOGO-min-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"/></a></div><div class="astra-shop-summary-wrap"><span class="ast-woo-product-category">Uncategorised</span><a href="https://dev3.getgocube.com/products/rubiks-connected-fam-pack/" class="ast-loop-product__link"><h2 class="woocommerce-loop-product__title">`+ productsObject[productItem].title +`</h2></a><span class="price"><del><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>`+ productsObject[productItem].regular_price +`</span></del> <ins><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>`+ productsObject[productItem].sale_price +`</span></ins></span><a class="button" href="https://dev3.getgocube.com/products/rubiks-connected-fam-pack/">View product</a></div></li></ul></div></div>`;
+							 productNum --;
+					 }
+					 var productNum = 3;
+					 for(var productItem in productsObject){
+						
+						 if(productNum == 1){
+								background_position = 'right';
+							 }else{
+								 if(productNum == 2){
+									background_position = 'center';
+								 }else{
+									background_position = '0px';
+								 }
+							 }
+						 Html += '<div  class="inline-element cube-shop-prod-item cube-shop-page-packs-item cube-shop-prod-img-' + productNum + ' dont-show-desktop"	style="background:url(' + productsObject[productItem].image_url + ') 0px  / 104% no-repeat;"><div class="woocommerce columns-1 "><ul class="products columns-1"><li class="ast-article-single product type-product post-66025 status-publish first instock product_cat-uncategorised has-post-thumbnail sale taxable shipping-taxable purchasable product-type-simple"><div class="astra-shop-thumbnail-wrap"><span class="onsale">Sale!</span><a href="https://dev3.getgocube.com/products/rubiks-connected-fam-pack/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="300" height="300" src="' + productsObject[productItem].image_url + '" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""  sizes="(max-width: 300px) 100vw, 300px" /></a></div><div class="astra-shop-summary-wrap">			<span class="ast-woo-product-category">Uncategorised			</span> <a href="https://dev3.getgocube.com/products/rubiks-connected-fam-pack/" class="ast-loop-product__link"><h2 class="woocommerce-loop-product__title">' + productsObject[productItem].title + '</h2></a><span class="price"><del><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>' + productsObject[productItem].regular_price + '</span></del> <ins><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>' + productsObject[productItem].sale_price + '</span></ins></span><a class="button" href="https://dev3.getgocube.com/products/rubiks-connected-fam-pack/">View product</a></div></li></ul></div>		</div>';
+						 productNum --;
+					}
+					 
+					document.getElementById('home-product-placeholder-1').innerHTML = Html;
+					document.getElementById('home-product-placeholder-2').innerHTML = Html;
+					
+					
+					 
+					 
+			 }; 
+			  }
+			  home_page_products.open("POST", "/wp-admin/admin-ajax.php/?action=home_page_products", true);
+			  home_page_products.send();
+			  
+}
+function dynamicSort(property) {
+    var sortOrder = 1;
+    if(property[0] === "-") {
+        sortOrder = -1;
+        property = property.substr(1);
+    }
+    return function (a,b) {
+        /* next line works with strings and numbers, 
+         * and you may want to customize it to your needs
+         */
+        var result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
+        return result * sortOrder;
+    }
+}
+function loadSlider(){
+		let SliderObject;	
+		var HtmlSlider ='';
+		var device = '';
+		const windowWidth = document.documentElement.clientWidth;
+		if( windowWidth > 768 ){
+			device ='desktop';
+		}else{
+			device ='mobile';
+		}
+		var slider_home_page = new XMLHttpRequest();
+				
+			  slider_home_page.onreadystatechange = function() {
+			
+				 if (this.readyState == 4 && this.status == 200) {
+					
+
+					SliderObject = JSON.parse(this.response); 
+					console.log('SliderObject ',SliderObject );
+					if(const_specific_page == 'rubiks-connected'){SliderObject.sort(dynamicSort("rubiks_order"));}
+					
+					 for(var SliderIndex in SliderObject){
+					HtmlSlider += `<div class="cube-home-review testimonial-item-left" id="` + SliderIndex + `">
+							<div class="cube-home-review-image inline-block" style="background: url(`+ SliderObject[SliderIndex].image_url +`) center center / cover no-repeat;"></div>
+							<div class="cube-home-review-text-wrapper inline-block">
+								<div class="cube-home-review-text">
+									<span>` + SliderObject[SliderIndex].desc  + `</span>
+								</div>
+								<div class="cube-home-review-stars">
+									<span class="inline-block"></span>
+									<span class="inline-block"></span>
+									<span class="inline-block"></span>
+									<span class="inline-block"></span>`;
+									if(SliderObject[SliderIndex].stars < 5 ){
+										HtmlSlider += `<span class="inline-block" style="background: url(https://getgocube.com/wp-content/themes/astra/assets/images/star-background.jpg) top center / cover no-repeat;"></span>`;
+									}else{
+										HtmlSlider += `<span class="inline-block"></span>`;
+									}
+								HtmlSlider += `</div>
+								<div class="cube-home-review-name">` + SliderObject[SliderIndex].review_name + `</div>
+							</div>
+						</div>`;
+					 }
+					 if(isSpecificPage && const_specific_page == 'family'){
+						 console.log("-place-holder-top");
+						document.getElementById('review-slider-place-holder-top').innerHTML = HtmlSlider;
+					 }else{
+						  console.log("-place-holder-non");
+						document.getElementById('review-slider-place-holder').innerHTML = HtmlSlider; 
+					 }
+					 firstSliderShow();
+					 sliderStart();
+					 
+					 
+					
+					
+					 
+					 
+				}; 
+			  }
+			  slider_home_page.open("POST","/wp-admin/admin-ajax.php/?action=slider_home_page", true);
+			  slider_home_page.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			  slider_home_page.send("device="+device);
+
+}
+
+function loadSliderFamily(){
+	console.log("rimma check SliderObject family");
+		let SliderObject;	 
+		var HtmlSlider ='';
+		var device = '';
+		const windowWidth = document.documentElement.clientWidth;
+		if( windowWidth > 768 ){
+			device ='desktop';
+		}else{
+			device ='mobile';
+		}
+		var slider_home_page = new XMLHttpRequest();
+				
+			  slider_home_page.onreadystatechange = function() {
+			
+				 if (this.readyState == 4 && this.status == 200) {
+					
+
+					SliderObject = JSON.parse(this.response); 
+					console.log("SliderObject family",SliderObject);
+					
+					
+					 
+					HtmlSlider += `<div class="family-slider-item">
+		<div class="family-slider-content-wrapper inline-block">
+			<div class="family-slider-text-wrapper">
+				<div class="title">YOUR FAMILY NIGHT ROCK STAR</div>
+				<div class="family-slider-image-wrapper tablet">`;
+				for(var SliderIndex in SliderObject){
+					HtmlSlider += `<img id="slider-img-` + (parseInt(SliderIndex)  + 1) + `" src="` + SliderObject[SliderIndex].image_url  + `">`; 
+				}
+				HtmlSlider += `</div>
+				<div class="family-slider-nav tablet"> 
+					<div onclick="ShowThisSliderFamily(1)" class="family-dot-1 inline-block family-dot"></div>
+					<div onclick="ShowThisSliderFamily(2)" class="family-dot-2 inline-block family-dot"></div>
+					<div onclick="ShowThisSliderFamily(3)" class="family-dot-3 inline-block family-dot"></div>
+				</div><div class="text">`;
+				for(var SliderIndex in SliderObject){
+				HtmlSlider += `<span id="slider-desc-` + (parseInt(SliderIndex)  + 1) + `">` + SliderObject[SliderIndex].desc  + `</span>`;
+				}
+			HtmlSlider += `</div></div>
+			<div class="family-slider-nav">
+				<div onclick="ShowThisSliderFamily(1)" class="family-dot-1 inline-block family-dot"></div>
+				<div onclick="ShowThisSliderFamily(2)" class="family-dot-2 inline-block family-dot"></div> 
+				<div onclick="ShowThisSliderFamily(3)" class="family-dot-3 inline-block family-dot"></div>
+			</div>
+		</div><div class="family-slider-image-wrapper inline-block">`;
+		for(var SliderIndex in SliderObject){
+		HtmlSlider += `<img id="slider-img-mobile-` + (parseInt(SliderIndex)  + 1) + `" src="` + SliderObject[SliderIndex].image_url  + `">`;
+		}
+		HtmlSlider += `</div></div>`;  
+					  
+					 document.getElementById('family-slider-place-holder').innerHTML = HtmlSlider;
+					 firstSliderShowFamily();
+					 sliderStartFamily();
+					 console.log("under sliderStartFamily");
+					 
+					 
+				}; 
+			  }
+			  slider_home_page.open("POST","/wp-admin/admin-ajax.php/?action=slider_home_page_family", true);
+			  slider_home_page.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			  slider_home_page.send("device="+device); 
+
+} 
+
+function RemoveFromAll(className , removeName){
+	
+	var testarray = document.getElementsByClassName(className);
+	for(var i = 0; i < testarray.length; i++)
+	{
+		testarray[i].classList.remove("active");
+	}
+}
+ 
+function getHomeHtml(){
+		let productsObject;	
+		var Html ='';		
+		var get_home_html_request = new XMLHttpRequest();
+			  get_home_html_request.onreadystatechange = function() {
+			
+				if (this.readyState == 4 && this.status == 200) {
+									
+					document.getElementById('products-place-holder').innerHTML = this.response;
+					removeSpace();
+					loadProducts();
+					loadSlider();
+					if(isSpecificPage && const_specific_page == 'family'){
+					loadSliderFamily();	
+					}					
+					lazyLoadImages();		
+				}; 
+			  }
+			  get_home_html_request.open("GET", "/wp-admin/admin-ajax.php/?action=get_html_content", true);
+			  get_home_html_request.send();
+			  
+}
+
+
+
+
+function setMobileHeroSizes(){
+	  
+	 
+	  document.querySelector(".version-a").style.display = 'block';
+	  var MobileHeaderHeight = window.innerWidth * 1.44
+		var MobileByNowTop = window.innerWidth * 1.17;
+			var MobileWatchVideoTop = window.innerWidth * 1.32;
+			document.getElementsByClassName('cube-home-first-slide-mobile-content')[0].style.height = MobileHeaderHeight + "px";
+			document.getElementsByClassName('first-slide-button-overlay-buynow')[0].style.top = MobileByNowTop + "px";
+			document.getElementsByClassName('first-slide-button-overlay-watch-video')[0].style.top = MobileWatchVideoTop + "px";
+			console.log("set hero");
+			//document.getElementsByClassName('ast-container')[0].setProperty('margin-top', '112px', 'important');
+				
+		
+	
+	
+	 
+	
+	if(window.innerWidth <= 480){
+		if(document.getElementsByClassName("col-1")[0] != undefined) document.getElementsByClassName("col-1")[0].style.width = "100%";
+		
+	}
+}
+
+
+
+function getHomeProductsFrag(){
+	
+		let frag;
+		var getFrag = new XMLHttpRequest();	
+	  getFrag.onreadystatechange = function() {
+	 
+		 if (this.readyState == 4 && this.status == 200) {
+			
+			frag = this.response; 
+			parsedResponse = JSON.parse(frag);
+			
+		
+			insertProductToHome(parsedResponse.fragments['div.home-page-products']);
+			addBestseller();
+			//addDescProdHomePage();
+		}; 
+	  }  
+	  getFrag.open("GET","/wp-admin/admin-ajax.php/?action=get_the_fragments", true);
+	  getFrag.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	  getFrag.send();
+}
+
+function addBestseller(){
+	for(var i = 0; i < 8; i ++){
+		if(document.querySelectorAll(".cube-shop-prod-img-2 .products.columns-1")[i] !== undefined)
+		document.querySelectorAll(".cube-shop-prod-img-2 .products.columns-1")[i].style = "background: url(https://getgocube.com/wp-content/uploads/2021/10/bestseller.png) right top / 36% no-repeat";
+	}
+}
+
+function insertProductToHome(ProdHtml){
+	var Place = document.getElementById('home-product-placeholder-1');
+	document.getElementById('home-product-placeholder-2').innerHTML = ProdHtml;
+	Place.innerHTML = ProdHtml;
+}
+
+function getSibeBarCartFragment(){
+		console.log('clicked');
+		let frag;
+		var getFrag = new XMLHttpRequest();	
+	  getFrag.onreadystatechange = function() {
+	
+		 if (this.readyState == 4 && this.status == 200) {
+			
+			frag = this.response; 
+			parsedResponse = JSON.parse(frag);
+			console.log('parsedResponse',parsedResponse);
+			insertSibeBarToCart(parsedResponse.fragments['div.cube-header-cart-wrapper']);
+		}; 
+	  }  
+	  getFrag.open("GET","/wp-admin/admin-ajax.php/?action=get_the_fragments", true);
+	  getFrag.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	  getFrag.send();
+	  
+}
+
+function insertSibeBarToCart(SideBarHtml){
+	var Place = document.getElementsByClassName('cube-header-cart-wrapper');
+	if( Place[0] != null){
+		Place[0].outerHTML = SideBarHtml;
+		Place[0].style.display = 'block';
+		document.getElementsByClassName('header-cart-background')[0].style.display = 'block';
+		Place[0].classList.add("open-height-animation");
+		getCartCountFragment();
+		closeCart();
+	}
+	
+}
+//a.cart-container // cart-contents-count
+function getCartCountFragment(){
+	
+		let frag;
+		var getFrag = new XMLHttpRequest();	
+	  getFrag.onreadystatechange = function() {
+	  
+		 if (this.readyState == 4 && this.status == 200) {
+		
+			frag = this.response; 
+			parsedResponse = JSON.parse(frag);
+			
+			insertToCartCount(parsedResponse.fragments['div.cart-contents-count']);
+		}; 
+	  }  
+	  getFrag.open("GET","/wp-admin/admin-ajax.php/?action=get_the_fragments", true);
+	  getFrag.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	  getFrag.send();
+	  
+}
+
+function insertToCartCount(CountHtml){
+	var Place = document.getElementsByClassName('cart-contents-count');
+	if( Place[0] != null){
+		Place[0].outerHTML = CountHtml;
+		document.getElementsByClassName('cube-cart-contents')[0].onclick=function(){ getSibeBarCartFragment();}
+	}
+	
+}
+
+function closeCart(){
+	var Cart = document.getElementsByClassName('cube-header-cart-wrapper');
+	if( Cart[0] != null){
+		Cart[0].onclick = function () { 
+			Cart[0].style.display = 'none';
+			document.getElementsByClassName('header-cart-background')[0].style.display = 'none';
+			Cart[0].classList.remove("open-height-animation");
+		};
+	}
+}
+
+function insertArrowToMobileButton(){
+	var MobileButton = document.getElementsByClassName('header-menu-mobile-button');
+	if(	MobileButton[0] != null	){
+		
+		var MainMenuItem = document.getElementById('menu-item-2270');
+			MainMenuItem.innerHTML += `<div id='mobile-sub-menu-button' onclick='toggleMobileShopSubMenu()' class='mobile-sub-menu-button' style='left: 74px; top: 6px;'></div>`;			
+	}
+	
+	document.getElementById("menu-item-2270").onclick = function () {
+		if(document.querySelector("#menu-item-2270 > ul").style.display == 'block'){
+			document.getElementById("mobile-sub-menu-button").style.background = 'url(https://getgocube.com/wp-content/themes/astra/assets/images/menu-arrow-blue.png) center right /21px no-repeat';
+		}else{
+			document.getElementById("mobile-sub-menu-button").style.background = 'url(https://getgocube.com/wp-content/themes/astra/assets/images/menu-arrow-white.png) center right /21px no-repeat';
+		}
+	}
+}
+
+function insertArrowToDesktopButton(){
+	var DesktopButton = document.getElementById('menu-item-1469');
+	var DesktopSubMenu = document.querySelector("#menu-item-1469 > ul");
+	
+	if(	DesktopButton != null	){
+			DesktopButton.innerHTML += `<div id="sub-menu-button" onclick="toggleShopSubMenu()" class="mobile-sub-menu-button" style="cursor:pointer;"></div>`;
+			var arrowButton = document.getElementById('sub-menu-button');
+			DesktopButton.onmouseover = function () {
+				
+				document.querySelector("#menu-item-1469 > ul").style.display = 'block';
+				document.getElementById("sub-menu-button").style.background = 'url(https://getgocube.com/wp-content/themes/astra/assets/images/menu-arrow-blue.png) center right / 12px no-repeat';
+			}
+
+			DesktopButton.onmouseout = function () {
+				
+				document.querySelector("#menu-item-1469 > ul").style.display = 'none';
+				document.getElementById("sub-menu-button").style.background = 'url(https://getgocube.com/wp-content/themes/astra/assets/images/menu-arrow-white.png) center right / 12px no-repeat';
+			}		
+	}
+	
+	document.querySelector("#menu-item-1469 > ul").onmouseover = function () {
+		document.getElementById("sub-menu-button").style.background = 'url(https://getgocube.com/wp-content/themes/astra/assets/images/menu-arrow-blue.png) center right / 12px no-repeat';
+	}
+	
+	document.querySelector("#menu-item-1469 > ul").onmouseout = function () {
+		document.getElementById("sub-menu-button").style.background = 'url(https://getgocube.com/wp-content/themes/astra/assets/images/menu-arrow-white.png) center right / 12px no-repeat';
+	}
+	
+}
+var MobileButtonStatus = true;
+function OpenMobileMenu(){
+	
+	var MobileButton = document.querySelector("#page > div.cube-header-wrapper > div > div.header-menu-mobile-button.post-page-none");
+	var MobileHeader = document.querySelector("#page > div.cube-header-wrapper > div > div.cube-header-menu-wrapper.inline-element.dont-show-desktop");
+	MobileHeader.style.overflow = "hidden";
+	MobileButton.onclick = function () { 
+		if(MobileButtonStatus){
+			MobileHeader.style.display = 'block';
+			MobileHeader.classList.add("open-mobile-menu-height-animation");
+			MobileHeader.classList.remove("close-mobile-menu-height-animation");
+			MobileButtonStatus = false;
+			
+		}else{
+			
+			setTimeout(function(){ MobileHeader.style.display = 'none'; }, 1000);
+			MobileHeader.classList.add("close-mobile-menu-height-animation");
+			MobileHeader.classList.remove("open-mobile-menu-height-animation");
+			MobileButtonStatus = true;
+			
+		}
+	};
+}
+
+
+var isMobileShopSubMenuOpen = true;
+function OpenMobileSubMenu(){
+	
+	var MobileSubButton = document.getElementById("mobile-sub-menu-button");
+	var SubMenu = document.querySelector("#menu-item-2270 > ul");
+	MobileSubButton.onclick = function () { 
+		if(isMobileShopSubMenuOpen){
+			SubMenu.style.display = 'block';
+			SubMenu.classList.add("open-height-animation");
+			SubMenu.classList.remove("close-height-animation");
+			isMobileShopSubMenuOpen = false;
+			document.getElementById('sub-menu-button').classList.add("active");
+		}else{
+			
+			SubMenu.style.display = 'none';
+			SubMenu.classList.add("close-height-animation");
+			SubMenu.classList.remove("open-height-animation");
+			isMobileShopSubMenuOpen = true;
+			document.getElementById('sub-menu-button').classList.add("active"); 
+		}
+	};
+}
+
+function StartButtonAnimation(){
+	setInterval(function(){
+		document.getElementsByClassName("scroll-down-arrow")[0].style.top = "81px";
+		document.getElementsByClassName("scroll-down-arrow")[0].animate({
+			top : "91px"
+		},400, function(){
+			document.getElementsByClassName("scroll-down-arrow")[0].animate({
+			top : "81px"
+			},1000)
+		})
+	},1500);
+	var ScrollDownButtonTop = window.innerHeight - 200;
+}
+
+function openPage(url){
+	 location.href = url;
+}
+
+/* jQuery(document).keydown(function(e) {
+	if(e.which == 13) FooterSubscribeMailChimp();
+	console.log('keydown test');
+});	 */
+
+document.addEventListener("keydown", event => {
+  if (event.isComposing || event.keyCode === 229) {
+    return;
+  }
+  // console.log('keydown test 2');
+  //if(e.which == 13) FooterSubscribeMailChimp();
+  // do something
+});
+
+
+
+
+
+function OpenVideoByYoutubeCode(code,fbVideo = false){
+	////console.log("window.availWidth",window.innerWidth);
+	let videoWidth;
+	if(window.innerWidth > 480){
+		videoWidth = parseInt(window.innerWidth*0.6);
+		videoWidth = fbVideo ? parseInt(videoWidth*0.6) : videoWidth;
+	}
+	else{
+		videoWidth = parseInt(window.innerWidth*0.9);
+	}
+	
+	const videoHeight = fbVideo ? videoWidth : videoWidth/16*9;
+	////console.log("video code",code);
+	const iframeCode = `<div class="wp-video-popup-wrapper" style="display: block;"><div class="wp-video-popup-close" onclick="CloseVideo()"></div>
+	<iframe class="wp-video-popup-video" src="https://www.youtube.com/embed/` + code + `?autoplay=1" data-wp-video-popup-url="https://www.youtube.com/embed/` + code + `?autoplay=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="autoplay" style="display: inline; height: `+ videoHeight +`px;"></iframe></div>`;
+	document.getElementById("video-wrapper").innerHTML = iframeCode;
+	document.getElementById("arena-video-popup-wrapper").style.display = "block";
+	 
+}
+
+
+
+
+
+
+
+function CloseVideo(){
+	stopVideo();
+	document.getElementById("arena-video-popup-wrapper").style.display = "none";
+}
+function stopVideo(){
+	document.getElementById("video-wrapper").innerHTML = "";
+}
+
+function EmitSusbsNewsletterEventGA(){
+	const check = localStorage.getItem('subscribe_newsletter');
+	if(check != "done"){
+			localStorage.setItem('subscribe_newsletter', "done");
+		if (typeof ga === 'function'){
+			 gtag('event', 'subscribe newsletter' ,{
+				 
+				'event_category': 'enhanced-ecommerce',			
+				'event_label': 'subscribe newsletter'
+			}); 
+			
+			console.log("event fired evntLable: ", 'subscribe newsletter');
+		}
+	}	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
